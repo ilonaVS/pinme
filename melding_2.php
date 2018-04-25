@@ -11,8 +11,9 @@
 <body>
 <?php include_once("nav.inc.php"); ?>
 
+<div class="main">
 
-<a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
+<a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
 
 
@@ -38,5 +39,6 @@
     
 </form>
 
+</div>
 </body>
 </html>
