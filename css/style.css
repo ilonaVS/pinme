@@ -139,4 +139,101 @@ form{
     background-image: url(../images/pinme_dossierbtn.png);
 }
 
+/*-------------------------------------------*/
+/* Melding toevoegen - image upload */
+
+h2 {
+    font-size: 18px;
+    color: #29c2de;
+    font-family: Open sans semibold;
+    text-align:center;
+    margin-top: 30px;
+    margin-bottom:15px;
+}
+.back_btn img {
+    display:block;
+    position:absolute;
+    width:20px;
+    top:30px;
+    left:25px;
+}
+input[type=file]{ 
+    opacity:0;
+}
+.button_upload {
+    padding:10px 10%;
+    width:60%;
+    margin:12px 20%;
+    border: none;
+    background-color:#29c2de;
+    color: #fff;
+    font-size:14px;
+    border-radius:50px;
+}
+.button_upload:active {
+    border: #29c2de 2px solid;
+    background-color: #fff;
+    color: #29c2de;
+}
+#first_input{
+    margin-top:130px;
+}
+.line_left, .line_right {
+    border:1px solid #29c2de;
+    width:20%;
+    position:absolute;
+    top:248px;
+}
+.line_left {
+    left:22%;
+}
+.line_right {
+    right:22%;
+}
+.center {
+    text-align:center;
+    font-size:14px;
+    color:#29c2de;
+    font-family: Open sans semibold;
+    display:block;
+}
+.button {
+    text-align:center;
+    padding:12px 0;
+    width:75%;
+    margin:20px 12.5%;
+    border: none;
+    background-color:#29c2de;
+    color: #fff;
+    font-family: Open sans;
+    font-size:14px;
+    border-radius:50px;
+}
+.hidden {
+    display:none;
+}
+
+/*-------------------------------------------*/
+/* Melding toevoegen - rubriek kiezen */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
