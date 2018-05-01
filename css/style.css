@@ -272,7 +272,6 @@ input[type=image]{
     display:block;
     margin:20px auto;
 }
-
 .btn_subrub {
     border:1px solid #29c2de; 
     background-color:#fff;
@@ -284,6 +283,23 @@ input[type=image]{
     border-radius:25px;
     margin-bottom: 20px;
     margin:0 10% 20px 10%;
+}
+
+/*-------------------------------------------*/
+/* Melding toevoegen - Subrubriek kiezen */
+
+.formfield textarea{
+    font-family: Open sans light;
+    font-size:12px;
+    padding:12px 12px;
+    margin:40px 5% 20px 5%;
+    width: 90%;
+    border: #29c2de 1px solid;
+    border-radius:15px;
+}
+::placeholder {
+    color: #29c2de;
+    opacity: 1; /* Firefox */
 }
 
 /*-------------------------------------------*/
