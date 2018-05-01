@@ -12,11 +12,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
     height:100%; /*Anders werkt Google maps niet*/
+    overflow:scroll;
 }
 
 html { 
     height: 100%; /*Anders werkt Google maps niet*/
-    overflow:hidden;
 }
 
 #container{
@@ -216,19 +216,33 @@ input[type=file]{
     opacity:0;
 }
 .button_upload {
-    padding:10px 10%;
-    width:60%;
-    margin:12px 20%;
+    padding:14px 0;
+    width:75%;
+    display:block;
+    margin:12px auto;
     border: none;
     background-color:#29c2de;
     color: #fff;
     font-size:14px;
     border-radius:50px;
+    text-align:center;
 }
 .button_upload:active {
     border: #29c2de 2px solid;
     background-color: #fff;
     color: #29c2de;
+}
+.button {
+    text-align:center;
+    padding:12px 0;
+    width:75%;
+    margin:20px 12.5%;
+    border: none;
+    background-color:#29c2de;
+    color: #fff;
+    font-family: Open sans;
+    font-size:14px;
+    border-radius:50px;
 }
 #first_input{
     margin-top:130px;
@@ -237,7 +251,7 @@ input[type=file]{
     border:1px solid #29c2de;
     width:20%;
     position:absolute;
-    top:248px;
+    top:258px;
 }
 .line_left {
     left:22%;
@@ -252,18 +266,11 @@ input[type=file]{
     font-family: Open sans semibold;
     display:block;
 }
-.button {
-    text-align:center;
-    padding:12px 0;
-    width:75%;
-    margin:20px 12.5%;
-    border: none;
-    background-color:#29c2de;
-    color: #fff;
-    font-family: Open sans;
-    font-size:14px;
-    border-radius:50px;
+#of {
+    margin-top:-12px;
+    margin-bottom:10px;
 }
+
 .hidden {
     display:none;
 }
