@@ -15,7 +15,7 @@
 <h2>Melding toevoegen</h2>
 <h3>Kies een rubriek</h3>
 
-<a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
+<a href="melding_2.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
 <form action="melding_4.php" method="post" id="uploadForm">
 <div class="grid_container">  

@@ -13,7 +13,7 @@
 
 <h2>Melding toevoegen</h2>
 
-<a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
+<a href="melding_3.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
 <div class="subrub">
     <img src="images/icon_afval.png" alt="icon">

@@ -13,10 +13,12 @@
 
 <h2>Melding toevoegen</h2>
 
-<a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
+<a href="melding_4.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
-<form action="melding_5.php" method="post" id="uploadForm">
-    <div class="formfield"> 
+
+<form action="melding_6.php" method="post" id="uploadForm">
+   
+    <div class="description"> 
         <textarea name="beschrijving" form="uploadForm" placeholder="Beschrijving (optioneel)" rows="8"></textarea>
     </div> 
    
@@ -24,7 +26,6 @@
         <input type="submit" value="Melding opslaan" name="submit" class="button">
     </div> 
     
-
 </form>
 
 

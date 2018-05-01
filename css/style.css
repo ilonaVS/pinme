@@ -230,7 +230,7 @@ input[type=file]{
 }
 
 /*-------------------------------------------*/
-/* Melding toevoegen - rubriek kiezen */
+/* Melding toevoegen - Rubriek kiezen */
 
 h3 {
     text-align:center;
@@ -253,7 +253,7 @@ input[type=image]{
 .grid_container {
     width:100%;
     display:grid;
-    grid-gap: 30px 40px;
+    grid-gap: 30px 15%;
     grid-template-columns: auto auto;
     justify-content: center;
 }
@@ -286,16 +286,27 @@ input[type=image]{
 }
 
 /*-------------------------------------------*/
-/* Melding toevoegen - Subrubriek kiezen */
+/* Melding toevoegen - Beschrijving toevoegen */
 
-.formfield textarea{
-    font-family: Open sans light;
-    font-size:12px;
+#uploadForm {
+    width:100%;
+}
+
+.description {
+    width:80%;
+    margin:40px 10% 20px 10%;
     padding:12px 12px;
-    margin:40px 5% 20px 5%;
-    width: 90%;
     border: #29c2de 1px solid;
     border-radius:15px;
+    
+}
+
+textarea{
+    width: 100%;
+    font-family: Open sans light;
+    font-size:12px;
+    border: none;
+    
 }
 ::placeholder {
     color: #29c2de;
