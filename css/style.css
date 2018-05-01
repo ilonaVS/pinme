@@ -298,7 +298,6 @@ input[type=image]{
     padding:12px 12px;
     border: #29c2de 1px solid;
     border-radius:15px;
-    
 }
 
 textarea{
@@ -306,11 +305,29 @@ textarea{
     font-family: Open sans light;
     font-size:12px;
     border: none;
-    
 }
 ::placeholder {
     color: #29c2de;
     opacity: 1; /* Firefox */
+}
+
+/*-------------------------------------------*/
+/* Melding toegevoegd - popup */
+.content_center {
+    
+}
+.melding_succes {
+    width:100%;
+    height:100%;
+}
+.melding_succes img {
+    width:200px;
+    display:block;
+    margin:45% auto 0 auto;
+}
+.melding_succes h3 {
+    font-size:20px;
+    margin-top:-30px;
 }
 
 /*-------------------------------------------*/
