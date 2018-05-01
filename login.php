@@ -39,7 +39,7 @@ if(!empty($_POST["login"])) {
 	
 	<div id="logo"></div>
 	
-	<form action="" method="post">
+	<form action="" method="post" class="data_form">
 				<h1>Inloggen</h1>
   
                

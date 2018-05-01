@@ -103,7 +103,7 @@ background: url(../img/achtergrondMechelen.png);
 
 /*-------------------------------------------*/
 /*registratie scherm*/
-form{
+.data_form{
 	margin: 0 auto;
 	width: 300px;
 	font-size: 30px;

@@ -14,9 +14,8 @@
 	
 	<div id="logo"></div>
 	
-	<form action="" method="post">
-				<h1>Registreren</h1>
-  
+	<form action="" method="post" id="register_form" class="data_form">
+              <h1>Registreren</h1>
                
 				<div class="formfield">
 					<input type="text" id="email" name="email" placeholder="E-mail">
