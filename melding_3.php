@@ -46,7 +46,7 @@
     
     <div class="formfield grid_item">
         <input type="image" src="images/icon_verkeer.png" name="submit" id="icon_verkeer" class="icons">
-        <label for="icon_verkeer" class="icon_label">Verkeer en parkeren</label>
+        <label for="icon_verkeer" class="icon_label">Verkeer en<br>parkeren</label>
     </div> 
 </div>   
 </form>

@@ -16,6 +16,7 @@ body {
 
 html { 
     height: 100%; /*Anders werkt Google maps niet*/
+    overflow:hidden;
 }
 
 #container{
@@ -235,20 +236,26 @@ h3 {
     text-align:center;
     color: #70405e;
     font-size:14px;
-    margin-top:10px;
-    margin-bottom: 20px;
+    margin-top:20px;
+    margin-bottom: 30px;
 }
 input[type=image]{ 
     width:80px;
 }
 .icon_label {
-    font-size:10px;
-    display:none;
+    font-size:12px;
+    text-align:center;
+    display:block;
+    margin-top:2px;
+    line-height:1.5em;
+    width:80px;
 }
 .grid_container {
+    width:100%;
     display:grid;
-    grid-gap: 40px 0px;
+    grid-gap: 30px 40px;
     grid-template-columns: auto auto;
+    justify-content: center;
 }
 .grid_item {
     justify-self: center;
