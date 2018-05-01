@@ -22,6 +22,15 @@ Bekijk alle meldingen in real-time
 en raadpleeg jouw persoonlijk dossier.</p>
 	</div>
 	
+	
+   <div id="informatie">
+	   
+	<div id="stap_info"></div>
+	<div id="stap_info"></div>
+	<div id="stap_info"></div>
+	</div>
+	
+	
 </div>
 	
 </body>

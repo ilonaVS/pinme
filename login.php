@@ -40,8 +40,8 @@ if(!empty($_POST["login"])) {
 	<div id="logo"></div>
 	
 	<form action="" method="post" class="data_form">
-				<h1>Inloggen</h1>
-  
+				<h1 class="titel">Inloggen</h1>
+ 
                
 				<div class="formfield">
 					<input type="text" id="email" name="email" placeholder="E-mail">
@@ -50,29 +50,31 @@ if(!empty($_POST["login"])) {
 					<input type="password" id="password" name="password" placeholder="Wachtwoord">
 				</div>
 
-
+<br>
 			
-			<div class="field-group">
-		<div><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
-		<label for="remember-me">wachtwoord onthouden</label>
-	</div>
-		</div>
 		
 		
 		
 				<div class="formfield">
 					<input type="submit" value="Inloggen" class="button">	
 				</div>
-        
+        	<div class="field-group">
+		<div><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+		<label for="remember-me">wachtwoord onthouden</label>
+	</div>
+		</div>
+		
+		<br><br><br>
+		
     </form>
    
-     	<p>Wachtwoord vergeten? <br><br>
-    Maak een nieuw account aan.
+     		<p>Wachtwoord vergeten?<br><br>
+    <a href="registreren.php">Maak een nieuw account aan.</a>
     
     
     </p>
 		
-    
+ 
 	
 </div>
 	

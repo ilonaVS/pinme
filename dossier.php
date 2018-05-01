@@ -33,14 +33,27 @@
 	<div id="dossiertjes">
 		
 			<div class="dossiertje">
-					<input type="start" value="Opgestart" class="button">	
+					<input type="start" value="" class="button">
+					
+						<p>Datum <br>
+						Plaats<br>
+						Aard</p>
+							
 				</div>
         <div class="dossiertje">
-					<input type="bezig" value="In behandeling" class="button">	
+					<input type="bezig" value="" class="button">	
+					
+					<p>Datum <br>
+						Plaats<br>
+						Aard</p>
 				</div>
        
        <div class="dossiertje">
-					<input type="einde" value="Afgerond" class="button">	
+					<input type="einde" value="" class="button">	
+					
+					<p>Datum <br>
+						Plaats<br>
+						Aard</p>
 				</div>
 		
 	</div>
