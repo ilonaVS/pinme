@@ -114,6 +114,7 @@ form{
 #googleMap {
     width: 100%;
     height:100%;
+    position:absolute;
 }
 
 /*-------------------------------------------*/
@@ -155,6 +156,44 @@ form{
 .main {
     margin-bottom:50px; /*zodat content onder navbar ook zichtbaar is*/
 }
+
+/*-------------------------------------------*/
+/* Melding toevoegen - locatie bepalen */
+
+.above_map {
+    position:relative;
+    font-family: Open sans;
+}
+.location_field{
+    font-size:14px;
+    padding:10px;
+    margin-left:5%;
+    margin-right:5%;
+    width: 90%;
+    background-color:#fff;
+    border-radius:25px;
+    border:none;
+    height:50px;
+    margin-top:10px;
+    text-align:center;
+    /*box-shadow:1px 1px 12px #707070;*/
+}
+.button_map {
+    text-align:center;
+    padding:12px 0;
+    width:170px;
+    position:absolute;
+    right:20px;
+    bottom:70px;
+    border: none;
+    background-color:#29c2de;
+    color: #fff;
+    font-family: Open sans semibold;
+    font-size:14px;
+    border-radius:50px;
+    box-shadow:1px 1px 12px #707070;
+}
+
 /*-------------------------------------------*/
 /* Melding toevoegen - image upload */
 

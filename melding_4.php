@@ -19,7 +19,7 @@
 <div class="subrub">
     <img src="images/icon_afval.png" alt="icon">
 
-    <form action="melding_5.php" method="post" enctype="multipart/form-data" id="uploadForm">
+    <form action="melding_5.php" method="post" id="uploadForm">
 
         <div class="formfield">  
             <input type="submit" value="Sluikstorten" name="submit" class="btn_subrub">
