@@ -35,6 +35,7 @@ html {
 }
 
 
+
 /*-------------------------------------------*/
 /*hoofdscherm -- registreren of inloggen*/
 
@@ -128,6 +129,21 @@ background: url(../img/achtergrondMechelen.png);
 	margin: 10px;
 	
 	
+}
+
+
+/*-------------------------------------------*/
+/*profiel scherm*/
+
+
+.profiel {
+	background-color:khaki;
+	 width: 100%;
+	 height: 100px;
+}
+
+h1{
+	font-size: 100px;
 }
 
 
@@ -413,7 +429,7 @@ textarea{
 	width: 100%;
 	text-align: center;
 	font-size: 30px;
-	 color: #70405e;
+	color: #70405e;
 	margin-top: 10%;
 	margin-bottom: 50px;
 }
