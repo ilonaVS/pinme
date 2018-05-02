@@ -139,7 +139,7 @@ background: url(../img/achtergrondMechelen.png);
 h1 {
     text-align:center;
     color: #29c2de;
-    font-family:Open sans semibold;
+    font-family:'Open Sans semibold';
     margin-top: 30px;
     margin-bottom:30px;
     font-size:26px;
@@ -152,9 +152,11 @@ h1 {
     width:80%;
     margin:20px 10%;
     color:#29c2de;
-    font-family:Open sans regular;
+    font-family:'Open Sans', regular;
+    font-size:14px;
     border:none;
     border-bottom:1px solid #29c2de;
+    padding-bottom:3px;
 }
 
 /*-------------------------------------------*/
