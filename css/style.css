@@ -47,13 +47,11 @@ background: url(../img/achtergrondMechelen.png);
 #logo{
 	width: 220px;
 	height: 120px;
-	background: url(../img/logo.png);
+	background-image: url(../img/logo.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0 auto;
-	margin-top: 35%;
-	
-	
+	margin-top: 35%;	
 }
 
 .knop{
@@ -149,10 +147,30 @@ h1{
 
 /*-------------------------------------------*/
 /*registratie scherm*/
-.data_form{
+/*.data_form{
 	margin: 0 auto;
 	width: 300px;
 	font-size: 30px;
+}*/
+h1 {
+    text-align:center;
+    color: #29c2de;
+    font-family:Open sans semibold;
+    margin-top: 30px;
+    margin-bottom:30px;
+    font-size:26px;
+}
+.data_form {
+    width:100%;
+}
+.data_form input[type=text], input[type=password] {
+    display:block;
+    width:80%;
+    margin:20px 10%;
+    color:#29c2de;
+    font-family:Open sans regular;
+    border:none;
+    border-bottom:1px solid #29c2de;
 }
 
 /*-------------------------------------------*/
