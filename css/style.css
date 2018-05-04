@@ -157,16 +157,12 @@ h1 {
 	margin: 20px 10%;
 }
 
-.field-group{
-	
-}
-
-.login p{
+.login a{
 	color: #72405E;
-	text-align: left;
-	margin-left: 20%;
-	width: 100%;
-	
+	text-align: center;
+    margin-top:10px;
+	display:block;
+	font-size:14px;
 }
 
 /*-------------------------------------------*/

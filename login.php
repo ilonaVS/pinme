@@ -49,17 +49,19 @@ if(!empty($_POST["login"])) {
         <div class="formfield">
             <input type="password" id="password" name="password" placeholder="Wachtwoord">
         </div>
-        <div class="formfield">
-            <input type="submit" value="Inloggen" class="button">	
-        </div>
+        <!--
         <div class="field-group">
 		    <input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
 		    <label for="remember-me">wachtwoord onthouden</label>
 		</div>
-		
+       -->
+        <div class="formfield">
+            <input type="submit" value="Inloggen" class="button">	
+        </div>
+
     </form>
    
-    <a href="#" class="checkbox">Wachtwoord vergeten?</a>
+    <a href="#">Wachtwoord vergeten?</a>
     <a href="registreren.php">Maak een nieuw account aan.</a>
 	
 </div>
