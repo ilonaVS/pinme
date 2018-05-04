@@ -172,7 +172,7 @@ h1 {
     width:80%;
 	margin: 20px 10%;
 }
-.login .button {
+.login .button, .registratie .button {
     width:50%;
     margin-left:25%;
     margin-right:25%;
