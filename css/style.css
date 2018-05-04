@@ -128,7 +128,7 @@ background: url(../img/achtergrondMechelen.png);
 	 height: 100px;
 }
 
-h1{
+.profiel h1{
 	font-size: 100px;
 }
 
@@ -146,15 +146,15 @@ h1 {
     font-family:'Open Sans semibold';
     margin-top: 30px;
     margin-bottom:30px;
-    font-size:26px;
+    font-size:28px;
 }
 .data_form {
     width:100%;
 }
 .data_form input[type=text], input[type=password] {
     display:block;
-    width:80%;
-    margin:20px 10%;
+    width:70%;
+    margin:30px 15%;
     color:#29c2de;
     font-family:'Open Sans';
     font-size:14px;
@@ -165,20 +165,29 @@ h1 {
 
 /*-------------------------------------------*/
 /*login scherm*/
-.field-group{
+.login {
+    width:100%;
+}
+.field-group{ /*indien 'wachtwoord onthouden' wel*/
     font-size: 14px;
 	color: gray;
     display:block;
     width:80%;
 	margin: 20px 10%;
 }
+.login .button {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
 
 .login a{
 	color: #72405E;
 	text-align: center;
-    margin-top:10px;
+    margin-top:15px;
 	display:block;
 	font-size:14px;
+    text-decoration: none;
 }
 
 /*-------------------------------------------*/

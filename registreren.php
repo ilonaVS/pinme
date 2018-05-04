@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="container" class="registratie">
+<div class="registratie">
 	
 	<div id="logo"></div>
 	

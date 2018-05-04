@@ -27,6 +27,7 @@ if(!empty($_POST["login"])) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Log in</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="css/flexboxgrid.css">
@@ -36,7 +37,7 @@ if(!empty($_POST["login"])) {
 </head>
 <body>
 
-<div id="container" class="login">
+<div class="login">
 	
 	<div id="logo"></div>
 	<h1 class="titel">Inloggen</h1>
