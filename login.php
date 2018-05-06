@@ -28,7 +28,7 @@ if(!empty($_POST["login"])) {
 <head>
 	<meta charset="UTF-8">
 	<title>Log in</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		
 	<link rel="stylesheet" href="css/flexboxgrid.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
