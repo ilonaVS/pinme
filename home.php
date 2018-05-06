@@ -10,6 +10,9 @@
     <title></title>
 </head>
 <body>
+
+
+
 <?php include_once("nav.inc.php"); ?>
 
 <div id="googleMap"></div>

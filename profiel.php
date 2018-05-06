@@ -12,18 +12,19 @@
 </head>
 
 <body>
+<?php include_once("nav.inc.php"); ?>
 <div id="container" class="profiel">
 	
 <h1>Profiel</h1>
 	
 
 	<form action="" method="post" class="data_form">
-        	<p>Huidige gebuikersnaam</p>
+        	<p>Huidig gebuikersnaam</p>
                 <div class="formfield">
             <input type="text" id="name" name="name" placeholder="Gebruikersnaam wijzigen">
         </div>  
         
-             <p>Huidige emailadres</p>     
+             <p>Huidigh emailadres</p>     
         <div class="formfield">
             <input type="text" id="email" name="email" placeholder="E-mail wijzigen">
         </div>

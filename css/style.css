@@ -35,7 +35,6 @@ html {
 }
 
 
-
 /*-------------------------------------------*/
 /*hoofdscherm -- registreren of inloggen*/
 
@@ -138,6 +137,7 @@ background: url(../img/achtergrondMechelen.png);
 p{
 	margin-left: 100px;
 	margin-bottom: -20px;
+	color: #72405E;
 }
 
 .profiel .data_form{
@@ -285,6 +285,41 @@ h1 {
 .main {
     margin-bottom:50px; /*zodat content onder navbar ook zichtbaar is*/
 }
+
+nav{
+	position: fixed;
+	width: 200px;
+	right: 50px;
+	  background-color: #fff;
+	z-index: 2;
+	bottom: 80px;
+	text-decoration: none;
+	color: black;
+	
+}
+
+
+.verborgen{
+	bottom: -20px;
+	text-decoration: none;
+	font-size: 25px;
+	
+}
+.nav a{
+	display: block;
+	height: 60px;
+	text-decoration: none;
+
+}
+nav li{
+	text-decoration: none;
+	font-size: 15px;
+	text-align: left;
+	padding: 10px;
+	
+}
+
+
 
 /*-------------------------------------------*/
 /* Melding toevoegen - locatie bepalen */
