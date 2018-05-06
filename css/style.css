@@ -122,8 +122,8 @@ background: url(../img/achtergrondMechelen.png);
 .profiel {
 	 width: 100%;
 	 height: 100px;
-	margin: 0 auto;
 }
+
 
 .profiel h1{
 <<<<<<< HEAD
@@ -131,8 +131,13 @@ background: url(../img/achtergrondMechelen.png);
     color: #29c2de;
     font-family:'Open Sans', semibold;
     margin-top: 30px;
-    margin-bottom:30px;
+    margin-bottom:100px;
     font-size:26px;
+}
+
+p{
+	margin-left: 100px;
+	margin-bottom: -20px;
 }
 
 .profiel .data_form{
@@ -142,6 +147,7 @@ background: url(../img/achtergrondMechelen.png);
 .profiel .button{
 	width: 200px;
 	text-align: center;
+	
 
 	
 	
@@ -150,6 +156,22 @@ background: url(../img/achtergrondMechelen.png);
 >>>>>>> 77a196e2e638f3546b8add84f573d780f8dae79c
 }
 
+.profiel input[type=text] {
+  	padding-top: 15px;
+    margin: 8px 0;
+	border: none;
+    
+}
+.profiel input[type=password] {
+ border: none;
+	padding-top: 20px;
+    
+}
+
+.profiel input[type=submit] {
+	margin-left: 200px;
+    
+}
 
 /*-------------------------------------------*/
 /*registratie scherm*/
