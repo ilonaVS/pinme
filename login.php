@@ -27,6 +27,7 @@ if(!empty($_POST["login"])) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Log in</title>
 		
 	<link rel="stylesheet" href="css/flexboxgrid.css">
@@ -36,7 +37,7 @@ if(!empty($_POST["login"])) {
 </head>
 <body>
 
-<div id="container" class="login">
+<div class="login">
 	
 	<div id="logo"></div>
 	<h1 class="titel">Inloggen</h1>
@@ -49,16 +50,16 @@ if(!empty($_POST["login"])) {
         <div class="formfield">
             <input type="password" id="password" name="password" placeholder="Wachtwoord">
         </div>
+        <!--
+        <div class="field-group">
+		    <input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+		    <label for="remember-me">wachtwoord onthouden</label>
+		</div>
+       -->
         <div class="formfield">
             <input type="submit" value="Inloggen" class="button">	
         </div>
-        <div class="field-group">
-		    <div>
-		    <input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
-		    <label for="remember-me">wachtwoord onthouden</label>
-	        </div>
-		</div>
-		
+
     </form>
    
     <a href="#">Wachtwoord vergeten?</a>
