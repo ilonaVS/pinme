@@ -19,5 +19,11 @@
 <script src="js/googleMaps.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=myMap"></script>
 
+<div>
+   <img href="">
+    <div># opgeloste meldingen</div>
+    
+</div>
+
 </body>
 </html>

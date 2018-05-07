@@ -39,14 +39,14 @@ html {
 /*hoofdscherm -- registreren of inloggen*/
 
 .hoofdscherm{
-background: url(../img/achtergrondMechelen.png);
+background: url(../images/achtergrondMechelen.png);
 	background-size: cover;
 }
 
 #logo{
 	width: 220px;
 	height: 120px;
-	background-image: url(../img/logo.png);
+	background-image: url(../images/logo.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0 auto;
@@ -71,10 +71,9 @@ background: url(../img/achtergrondMechelen.png);
 .hoofdscherm p{
 	text-align: center;
 	color: #72405E;
-	margin-top: 20px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	
+	margin: 20px auto;
 }
 
 
@@ -125,7 +124,6 @@ background: url(../img/achtergrondMechelen.png);
 
 
 .profiel h1{
-<<<<<<< HEAD
 	text-align:center;
     color: #29c2de;
     font-family:'Open Sans', semibold;
@@ -134,7 +132,7 @@ background: url(../img/achtergrondMechelen.png);
     font-size:26px;
 }
 
-p{
+.profiel p{
 	margin-left: 100px;
 	margin-bottom: -20px;
 	color: #72405E;
@@ -147,13 +145,7 @@ p{
 .profiel .button{
 	width: 200px;
 	text-align: center;
-	
-
-	
-	
-=======
-	font-size: 100px;
->>>>>>> 77a196e2e638f3546b8add84f573d780f8dae79c
+	font-size: 14px;
 }
 
 .profiel input[type=text] {
@@ -169,7 +161,7 @@ p{
 }
 
 .profiel input[type=submit] {
-	margin-left: 200px;
+	margin-left: 50px;
     
 }
 
@@ -183,11 +175,7 @@ p{
 h1 {
     text-align:center;
     color: #29c2de;
-<<<<<<< HEAD
     font-family:'Open Sans', semibold;
-=======
-    font-family:'Open Sans semibold';
->>>>>>> 77a196e2e638f3546b8add84f573d780f8dae79c
     margin-top: 30px;
     margin-bottom:30px;
     font-size:28px;
@@ -200,12 +188,8 @@ h1 {
     width:70%;
     margin:30px 15%;
     color:#29c2de;
-<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif;
-=======
-    font-family:'Open Sans';
     font-size:14px;
->>>>>>> 77a196e2e638f3546b8add84f573d780f8dae79c
     border:none;
     border-bottom:1px solid #29c2de;
     padding-bottom:3px;
