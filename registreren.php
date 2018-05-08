@@ -1,4 +1,43 @@
-<!DOCTYPE html>
+<?php
+    include_once("classes/User.class.php");
+	include_once("helpers/Security.class.php");
+    
+	session_start();
+	if(isset($_SESSION['email'])){
+		header("Location: home.php");
+	}
+    
+    try{
+    if( !empty($_POST)){
+        
+        //testing if password is secure
+        $security = new Security();
+        $security->password = $_POST['password'];
+        $security->passwordConfirmation = $_POST['password_confirmation'];
+        
+        //register new user
+        if( $security->passwordsAreSecure() ){
+            $userIn = $_POST['email'];
+            $user = new User(); 
+            $user->setEmail( $_POST['email'] );
+            $user->setPassword( $_POST['password'] );
+
+        	if($user->register()){
+                    //send to index after register
+                    session_start();
+                    $_SESSION['email']=$userIn;
+            		header('Location: info.php');
+        	}  
+        }
+     }
+    }
+    //if inputfields are empty, send error message
+    catch(Exception $e) {
+            $error= $e->getMessage();
+        } 
+    
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -17,6 +56,10 @@
 	<div id="logo"></div>
 	
 	<h1>Registreren</h1>
+	
+	<?php if (isset($error)):?>
+                <div class="error"><p><?php echo $error ?></p></div>
+    <?php endif; ?>
 	
 	<form action="" method="post" id="register_form" class="data_form">
               
