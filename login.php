@@ -1,28 +1,36 @@
 <?php
-session_start();
-if(!empty($_POST["login"])) {
-	$conn = mysqli_connect("localhost", "root", "", "blog_samples");
-	$sql = "Select * from members where member_name = '" . $_POST["member_name"] . "' and member_password = '" . md5($_POST["member_password"]) . "'";
-	$result = mysqli_query($conn,$sql);
-	$user = mysqli_fetch_array($result);
-	if($user) {
-			$_SESSION["member_id"]		   = $user["member_id"];
-			
-			if(!empty($_POST["remember"])) {
-				setcookie ("member_login",$_POST["member_name"],time()+ (10 * 365 * 24 * 60 * 60));
-				setcookie ("member_password",$_POST["member_password"],time()+ (10 * 365 * 24 * 60 * 60));
-			} else {
-				if(isset($_COOKIE["member_login"])) {
-					setcookie ("member_login","");
-				}
-				if(isset($_COOKIE["member_password"])) {
-					setcookie ("member_password","");
-				}
-			}
-	} else {
-		$message = "Invalid Login";
-	}
-}
+    include_once("classes/User.class.php");
+    include_once("helpers/Security.class.php");
+
+    session_start();
+    if(isset($_SESSION['email'])){
+      header("Location: home.php");
+    }
+
+    //user and password from post oproepen
+    //eerst kijken of het formulier al is verzonden anders geeft het een foutmelding
+    try{
+      if(!empty($_POST)){
+
+        $username = $_POST['email'];
+        $password= $_POST['password'];
+ 
+  // kan de user inloggen?   
+  $user = new User(); 
+        $user->setEmail( $_POST['email'] );
+        $user->setPassword( $_POST['password'] );
+        	if($user->login()){
+                session_start();
+                $_SESSION['email']=$userIn;
+            		header('Location: home.php');
+          }  
+          
+    }
+  }
+    catch(Exception $e) {
+            $error= $e->getMessage();
+        } 
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +50,10 @@ if(!empty($_POST["login"])) {
 	<div id="logo"></div>
 	<h1 class="titel">Inloggen</h1>
 	
+	<?php if (isset($error)):?>
+                <div class="error"><p><?php echo $error ?></p></div>
+    <?php endif; ?>
+	
 	<form action="" method="post" class="data_form">
                
         <div class="formfield">
@@ -52,7 +64,7 @@ if(!empty($_POST["login"])) {
         </div>
         <!--
         <div class="field-group">
-		    <input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+		    <input type="checkbox" name="remember" id="remember"/>
 		    <label for="remember-me">wachtwoord onthouden</label>
 		</div>
        -->
