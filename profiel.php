@@ -35,13 +35,11 @@
             <input type="submit" value="Onthouden" class="button">	
         </div>
         
-        
-          <div class="formfield">
-            <input type="submit" value="Uitloggen" class="button">	
-        </div>
-      
-		
     </form>
+    
+    <div class="button">
+        <a href="loguit.php">Uitloggen</a>	
+    </div>
 
 	
 </div>

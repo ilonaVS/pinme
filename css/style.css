@@ -146,6 +146,11 @@ background: url(../images/achtergrondMechelen.png);
 	width: 200px;
 	text-align: center;
 	font-size: 14px;
+    
+}
+.profiel .button a {
+    text-decoration:none;
+    color: #fff;
 }
 
 .profiel input[type=text] {
@@ -188,6 +193,17 @@ h1 {
     border:none;
     border-bottom:1px solid #29c2de;
     padding-bottom:3px;
+}
+.error {
+    text-align:center;
+    font-size:12px;
+    line-height:1.5em;
+    width:70%;
+    margin:30px 15%;
+    padding:10px;
+    display:block;
+    background-color:#72405E;
+    color:#fff;
 }
 
 /*-------------------------------------------*/
