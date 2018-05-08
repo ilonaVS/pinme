@@ -29,9 +29,35 @@
 
 
 <script>
-    /*Nog toe te voegen*/
-		
+
+var popup=document.querySelector(".popup_info");
+popup.addEventListener("click",goDown);
+
+var wissel=0; //to get popup closed & back open
+function goDown(){
+    if(wissel==0){
+        popup.style.bottom = -190 + 'px' ;
+        document.querySelector(".btn_down").setAttribute("src", "images/btn_up.png");
+        wissel=1;
+    } else {
+        popup.style.bottom = 50 + 'px' ;
+        document.querySelector(".btn_down").setAttribute("src", "images/btn_down.png");
+        wissel=0;
+    }
+    
+}
+
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
