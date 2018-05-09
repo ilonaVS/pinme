@@ -18,29 +18,24 @@
 <h1>Profiel</h1>
 	
 
-	<form action="" method="post" class="data_form">
-        	<p>Huidige gebruikersnaam</p>
-                <div class="formfield">
-            <input type="text" id="name" name="name" placeholder="Gebruikersnaam wijzigen">
-        </div>  
+	<form action="" method="post" class="data_form"> 
         
-             <p>Huidig emailadres</p>     
+            <p>Huidig emailadres</p>     
         <div class="formfield">
+            
             <input type="text" id="email" name="email" placeholder="E-mail wijzigen">
         </div>
         <div class="formfield">
             <input type="password" id="password" name="password" placeholder="Wachtwoord wijzigen">
         </div>
-        <div class="formfield">
-            <input type="submit" value="Onthouden" class="button">	
-        </div>
+        
+            <input type="submit" value="Opslaan" class="button">	
+       
         
     </form>
     
-    <div class="button">
-        <a href="loguit.php">Uitloggen</a>	
-    </div>
-
+    <a href="loguit.php" class="btn_loguit">Uitloggen
+    </a>
 	
 </div>
 

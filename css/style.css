@@ -115,14 +115,10 @@ background: url(../images/achtergrondMechelen.png);
 
 /*-------------------------------------------*/
 /*profiel scherm*/
-
-
 .profiel {
 	 width: 100%;
-	 height: 100px;
+	 
 }
-
-
 .profiel h1{
 	text-align:center;
     color: #29c2de;
@@ -133,40 +129,51 @@ background: url(../images/achtergrondMechelen.png);
 }
 
 .profiel p{
-	margin-left: 100px;
-	margin-bottom: -20px;
+	margin-left: 15%;
+	margin-bottom: -15px;
 	color: #72405E;
 }
-
+.profiel .formfield {
+    margin-bottom:10px;
+}
 .profiel .data_form{
 	margin: auto;
 }
 
 .profiel .button{
-	width: 200px;
+	width:60%;
 	text-align: center;
 	font-size: 14px;
-    
-}
-.profiel .button a {
-    text-decoration:none;
-    color: #fff;
+    margin-left:20%;
 }
 
-.profiel input[type=text] {
-  	padding-top: 15px;
-    margin: 8px 0;
-	border: none;
-    
+.btn_loguit {
+    /*Midden*/
+    margin:0px 30%;
+    /*Rechts positioneren*/
+    /*position: absolute;
+    right:20%;
+    bottom:100px;*/
+    padding:12px 35px;
+    text-decoration:none;
+    width:110px;
+    color:#72405E;
+    background-image:url(../images/logout_icon.png);
+    background-repeat:no-repeat;
+    background-size:30px;
+    background-position:0 center;
+    display:block;
+    height:40px;
+    text-align:right;
 }
+
+
 .profiel input[type=password] {
- border: none;
-	padding-top: 20px;
-    
+	margin-top:-10px;
 }
 
 .profiel input[type=submit] {
-	margin-left: 50px;
+	margin-left:20%;
     
 }
 
