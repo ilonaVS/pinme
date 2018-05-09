@@ -20,8 +20,8 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=myMap"></script>
 
 <div class="popup_info">
-    <img class="btn_down" src="images/btn_down.png" alt="btn_down">
-    <img class="logo_small" src="images/logo_small.png" alt="logo">
+    <img class="btn_down" src="images/pinme_backbtn.png" alt="btn_down">
+    <img class="logo_small" src="images/pinme_logo.png" alt="logo">
     <div class="home_info"># aangemaakte pins</div>
     <div class="home_info"># opgeloste pins</div>
     <div class="home_info"># gebruikers</div>
@@ -33,7 +33,6 @@
 var popup=document.querySelector(".popup_info");
 popup.addEventListener("click",goDown);
 
-var wissel=0; //to get popup closed & back open
 function goDown(){
         popup.style.bottom = -250 + 'px' ;
     

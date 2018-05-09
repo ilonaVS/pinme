@@ -337,13 +337,14 @@ nav li{
     bottom:50px;
 }
 .btn_down{
-    width:20%;
-    margin:10px 40%;
+    width:7%;
+    margin:10px 46.5%;
+    transform:rotate(-90deg);
 }
 .logo_small {
     z-index:100;
-    width:40%;
-    margin:10px 30% 30px 30%;
+    width:30%;
+    margin:10px 35% 30px 35%;
 }
 .home_info {
     text-align:center;
