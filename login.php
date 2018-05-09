@@ -47,8 +47,7 @@
 
 <div class="login">
 	
-	<div id="logo"></div>
-	<h1 class="titel">Inloggen</h1>
+	<img id="logo" src="images/pinme_logo.png" alt="logo">
 	
 	<?php if (isset($error)):?>
                 <div class="error"><p><?php echo $error ?></p></div>
@@ -74,8 +73,11 @@
 
     </form>
    
-    <a href="#">Wachtwoord vergeten?</a>
-    <a href="registreren.php">Maak een nieuw account aan.</a>
+    <p>Wachtwoord vergeten? <a href="#">Klik hier.</a></p>
+    
+    <p>Nieuwe gebruiker? <a href="registreren.php">Registreer nu.</a></p>
+    
+
 	
 </div>
 	

@@ -176,9 +176,9 @@ h1 {
     text-align:center;
     color: #29c2de;
     font-family:'Open Sans', semibold;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom:30px;
-    font-size:28px;
+    font-size:22px;
 }
 .data_form {
     width:100%;
@@ -211,6 +211,10 @@ h1 {
 .login {
     width:100%;
 }
+.login #logo, .registratie #logo {
+    width:40%;
+    margin:60px 30% 60px 30%;
+}
 .field-group{ /*indien 'wachtwoord onthouden' wel*/
     font-size: 14px;
 	color: gray;
@@ -223,14 +227,26 @@ h1 {
     margin-left:25%;
     margin-right:25%;
 }
+.login .button {
+    margin-bottom:30px;
+}
 
 .login a{
 	color: #72405E;
-	text-align: center;
-    margin-top:15px;
-	display:block;
-	font-size:14px;
+	
     text-decoration: none;
+    font-weight:bold;
+}
+.login p{
+    text-align: left;
+    margin-top:10px;
+    margin-left:15%;
+	font-size:14px;
+	color: #72405E;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin-bottom: 20px;
+    
 }
 
 /*-------------------------------------------*/

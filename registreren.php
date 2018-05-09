@@ -53,9 +53,8 @@
 
 <div class="registratie">
 	
-	<div id="logo"></div>
+	<img id="logo" src="images/pinme_logo.png" alt="logo">
 	
-	<h1>Registreren</h1>
 	
 	<?php if (isset($error)):?>
                 <div class="error"><p><?php echo $error ?></p></div>
