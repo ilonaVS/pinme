@@ -291,12 +291,13 @@ nav{
 	bottom: 70px;
 	color: #72405E;
     padding: 10px;
+	
 }
 
 
 .verborgen{
 	bottom: -50px;
-	font-size: 25px;
+	
 	
 }
 nav li a{
@@ -305,7 +306,7 @@ nav li a{
 
 }
 nav li{
-	font-size: 15px;
+	font-size: 25px;
 	text-align: left;
 	padding: 10px;
 	
