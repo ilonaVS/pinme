@@ -83,14 +83,18 @@ background: url(../images/achtergrondMechelen.png);
     width:100%;
 }
 #tekst{
-	margin:100px 7.5% 70px 7.5%;
-   	width: 85%;
+	margin:60px 10% 70px 10%;
+   	width: 80%;
+    font-size:14px;
+}
+.info #logo {
+    margin:100px 20% 0px 20%;
 }
 .info p{
 	color: gray;
 	text-align: center;
 	line-height: 22px;
-    margin-bottom:20px;
+    margin-bottom:16px;
 }
 #informatie{
 	display: flex;

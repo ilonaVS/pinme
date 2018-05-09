@@ -14,7 +14,7 @@
 
 <div class="info">
 	
-	<div id="logo"></div>
+	<img id="logo" src="images/pinme_logo.png" alt="logo">
 	
 	<div id="tekst">
 	<p>Dit is de meldingsapp van Mechelen. Met één pin help je Mechelen tot een betere stad.</p>
