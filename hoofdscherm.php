@@ -14,11 +14,12 @@
 
 <div id="container" class="hoofdscherm">
 	
-	<div id="logo"></div>
+	<img id="logo" src="images/pinme_logo.png" alt="logo">
 	
 	<div class="knop">Registreren</div>
 	
-	<p>Heeft u reeds een account? Log in.</p>
+	<p>Heeft u reeds een account?
+	<a href="login.php">Log in.</a></p> 
 	
 	
 </div>

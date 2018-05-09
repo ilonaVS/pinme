@@ -44,38 +44,34 @@ background: url(../images/achtergrondMechelen.png);
 }
 
 #logo{
-	width: 220px;
-	height: 120px;
-	background-image: url(../images/logo.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	margin-top: 35%;	
+	width:60%;	
+    margin:120px 20% 0px 20%;
 }
 
 .knop{
 	background-color: #3BBBD9;
-	width: 300px;
-	height: 60px;
-	border-radius: 50px 50px 50px 50px;
+	width: 60%;
+	border-radius: 50px;
 	color: white;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 150px;
-	line-height: 60px;
+	margin-top: 50px;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	
+	font-size: 16px;
+	padding:15px;
 }
 
-.hoofdscherm p{
+.hoofdscherm a, .hoofdscherm p{
 	text-align: center;
 	color: #72405E;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	margin: 20px auto;
+    
 }
-
+.hoofdscherm a{
+    font-weight:bold;
+}
 
 
 
