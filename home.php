@@ -19,12 +19,14 @@
 <script src="js/googleMaps.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=myMap"></script>
 
+
 <div class="popup_info">
     <img class="btn_down" src="images/pinme_backbtn.png" alt="btn_down">
     <img class="logo_small" src="images/pinme_logo.png" alt="logo">
     <div class="home_info"># aangemaakte pins</div>
     <div class="home_info"># opgeloste pins</div>
     <div class="home_info"># gebruikers</div>
+   
 </div>
 
 
