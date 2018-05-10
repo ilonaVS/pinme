@@ -14,7 +14,7 @@
 
 <div id="googleMap">
 
-  <iframe src="https://snazzymaps.com/embed/70364" width="100%" height="600px" style="border:none;"></iframe>
+  <iframe src="https://snazzymaps.com/embed/70364" width="100%" height="100%" style="border:none;"></iframe>
 </div>
     <!--
     <script src="js/googleMaps.js"></script>

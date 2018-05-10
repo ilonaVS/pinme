@@ -17,7 +17,7 @@
 
     <div id="googleMap">
      
-        <iframe src="https://snazzymaps.com/embed/70364" width="100%" height="600px" style="border:none;"></iframe>
+        <iframe src="https://snazzymaps.com/embed/70364" width="100%" height="100%" style="border:none;"></iframe>
 
     </div>
 
@@ -54,14 +54,13 @@
 
     <script>
         var knop = document.querySelector(".zoek");
-        var nav = document.querySelector(".verborgenrubrieken");
+        var rubrieken = document.querySelector(".verborgenrubrieken");
 
-        knop.addEventListener("click", menuOpenDicht);
+        knop.addEventListener("click", OpenDicht);
 
-        function menuOpenDicht(evt) {
-            nav.classList.toggle("verborgenrubrieken");
+        function OpenDicht(evt) {
+            rubrieken.classList.toggle("verborgenrubrieken");
         }
-
 
 
         var popup = document.querySelector(".popup_info");

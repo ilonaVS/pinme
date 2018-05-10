@@ -365,13 +365,11 @@ nav li{
 #zoeken{
 	position: absolute;
 	margin-left: 80%;
-	margin-top: 25%;
-	
+	margin-top: 25%;	
 }
 
 .verborgenrubrieken{ 
-	top: -500px;
-	
+	top: -800px;	
 }
 
 .zoek{
