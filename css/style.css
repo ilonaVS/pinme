@@ -59,6 +59,7 @@ background: url(../images/achtergrondMechelen.png);
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	padding:15px;
+	
 }
 
 .hoofdscherm a, .hoofdscherm p{
@@ -73,8 +74,13 @@ background: url(../images/achtergrondMechelen.png);
     font-weight:bold;
 }
 
+.login .button{
+	box-shadow:1px 1px 2px #9B9B9B;
+}
 
-
+.registratie .button{
+	box-shadow:1px 1px 2px #9B9B9B;
+}
 
 
 /*-------------------------------------------*/
@@ -177,6 +183,11 @@ background: url(../images/achtergrondMechelen.png);
     
 }
 
+.profiel .button{
+	box-shadow:1px 1px 2px #9B9B9B;
+}
+
+
 /*-------------------------------------------*/
 /*registratie scherm*/
 h1 {
@@ -198,8 +209,9 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-size:14px;
     border:none;
-    border-bottom:1px solid #29c2de;
     padding-bottom:3px;
+	border-bottom: 1px solid #ade8f2;
+	
 }
 .error {
     text-align:center;
@@ -212,6 +224,7 @@ h1 {
     background-color:#72405E;
     color:#fff;
 }
+
 
 /*-------------------------------------------*/
 /*login scherm*/
@@ -233,6 +246,7 @@ h1 {
     width:50%;
     margin-left:25%;
     margin-right:25%;
+	
 }
 .login .button {
     margin-bottom:30px;
@@ -240,7 +254,6 @@ h1 {
 
 .login a{
 	color: #72405E;
-	
     text-decoration: none;
     font-weight:bold;
 }
@@ -262,6 +275,7 @@ h1 {
     width: 100%;
     height:100%;
     position:absolute;
+	
 }
 
 /*-------------------------------------------*/
@@ -306,36 +320,111 @@ h1 {
 
 nav{
 	position: fixed;
-	width: 200px;
-    height:100px;
-	right: 50px;
-    background-color: #fff;
-	z-index: 2;
-	bottom: 70px;
-	color: #72405E;
-    padding: 10px;
-	
+	width: 180px;
+    height:60px;
+	right: 15px;
+    background-color: #29c2de;
+	z-index: ;
+	bottom: 120px;
+    border: none;
+    background-color:#29c2de;
+    border-radius:50px;
+    box-shadow:1px 1px 12px #9B9B9B;
+	padding-top: 10px;
+	z-index: 1;
+
 }
 
 
 .verborgen{
 	bottom: -50px;
 	
-	
 }
 nav li a{
 	display: block;
 	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	text-align:left;
+	line-height: 20px;
+	 font-family: Open sans semibold;
+	
 
 }
 nav li{
-	font-size: 25px;
+	font-size: 35px;
 	text-align: left;
-	padding: 10px;
+	padding-left: 25px;
 	
 }
 /*-------------------------------------------*/
 /* Home.php */
+
+
+
+#zoeken{
+	position: absolute;
+	margin-left: 80%;
+	margin-top: 25%;
+	
+}
+
+.verborgenrubrieken{ 
+	top: -500px;
+	
+}
+
+.zoek{
+	position: absolute;
+	background: url(../images/vegrootglas.png);
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	margin-left: 80%;
+	top: 5%;
+	z-index: 2;
+}
+
+#afval{
+	background-image: url(../images/icon_afval.png);
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	margin-bottom: 5px;
+	
+}
+#groen{
+	background-image: url(../images/icon_groen.png);
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	margin-bottom: 5px;
+}
+#overlast{
+	background-image: url(../images/icon_overlast.png);
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	margin-bottom: 5px;
+}
+#verkeer{
+	background-image: url(../images/icon_verkeer.png);
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	margin-bottom: 5px;
+}
+#straten{
+	background-image: url(../images/icon_straten.png);
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+}
+
+
+
+
+
 .popup_info {
     position:absolute;
     width:100%;
@@ -369,6 +458,7 @@ nav li{
 .above_map {
     position:relative;
     font-family: 'Open sans';
+	
 }
 .location_field{
     font-size:14px;
@@ -382,7 +472,8 @@ nav li{
     height:50px;
     margin-top:10px;
     text-align:center;
-    /*box-shadow:1px 1px 12px #707070;*/
+	z-index: 100px;
+    box-shadow:1px 1px 12px #707070;
 }
 .button_map {
     text-align:center;
@@ -399,6 +490,7 @@ nav li{
     border-radius:50px;
     box-shadow:1px 1px 12px #9B9B9B;
 }
+
 
 /*-------------------------------------------*/
 /* Melding toevoegen - image upload */
@@ -647,6 +739,23 @@ textarea{
     height:120px;
     float:left;
     margin-right:10px; 
+}
+
+#avatar{
+	background-image: url(../images/profieltjepng.png);
+	background-size: cover;
+	width: 120px;
+	height: 170px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.profiel h1{
+	text-align: center;
+	margin-bottom: 50px;
+	color: #70405e;
+	font-size: 15px;
 }
 
 

@@ -74,7 +74,7 @@
 					<input type="password" id="password_confirmation" name="password_confirmation" placeholder="Bevestiging wachtwoord">
 				</div>
 
-				<div class="formfield">
+				<div  class="formfield">
 					<input type="submit" value="Registreren" class="button">	
 				</div>
         

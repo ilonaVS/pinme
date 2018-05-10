@@ -15,12 +15,12 @@
 <?php include_once("nav.inc.php"); ?>
 <div class="profiel">
 	
-<h1>Profiel</h1>
+<div id="avatar"></div>
 	
-
+<h1>Huidig emailadres</h1> 
 	<form action="" method="post" class="data_form"> 
         
-            <p>Huidig emailadres</p>     
+                
         <div class="formfield">
             
             <input type="text" id="email" name="email" placeholder="E-mail wijzigen">

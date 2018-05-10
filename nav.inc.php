@@ -17,8 +17,8 @@
 
 	<nav class="verborgen">
 	<ul>
-		<li><a href="dossier.php">Persoonlijk dossier</a></li>
-		<li><a href="profiel.php">Profiel</a></li>
+		<li><a href="dossier.php">Bekijk persoonlijk dossier</a></li>
+		<li><a href="profiel.php">Bekijk profiel</a></li>
 	</ul>
 </nav>
 
