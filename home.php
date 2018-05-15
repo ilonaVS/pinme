@@ -17,7 +17,7 @@
 
     <div id="googleMap">
      
-        <iframe src="https://snazzymaps.com/embed/70364" width="100%" height="100%" style="border:none;"></iframe>
+        <iframe src="https://snazzymaps.com/embed/70364" id="googleMap"></iframe>
 
     </div>
 
@@ -67,7 +67,7 @@
         popup.addEventListener("click", goDown);
 
         function goDown() {
-            popup.style.bottom = -250 + 'px';
+            popup.style.display = 'none';
 
         }
     </script>
