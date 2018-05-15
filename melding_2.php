@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php 
+
+session_start();
+
+$_SESSION['locatie'] = $_POST['locatie'];
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +28,7 @@
 <form action="melding_3.php" method="post" enctype="multipart/form-data" id="uploadForm">
     <div class="formfield" id="first_input">
         <label for="image_upload" class="button_upload" id="choose_image">Voeg een foto toe</label>
-        <input type="file" name="image" id="image_upload" accept=".jpg, .jpeg, .png">
+        <input type="file" name="foto" id="image_upload" accept=".jpg, .jpeg, .png">
     </div>
     
     <div class="center">
