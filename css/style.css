@@ -473,6 +473,10 @@ nav li{
 	z-index: 100px;
     box-shadow:1px 1px 12px #707070;
 }
+input[type=text]{
+    color:#29c2de;
+}
+
 .button_map {
     text-align:center;
     padding:12px 0;
