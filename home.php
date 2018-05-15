@@ -29,6 +29,8 @@
     <div id="zoeken" class="verborgenrubrieken">
 
         <div id="afval"></div>
+        
+        <div id="gebouwen"></div>
 
         <div id="groen"></div>
 
@@ -47,7 +49,6 @@
         <div class="home_info"># aangemaakte pins</div>
         <div class="home_info"># opgeloste pins</div>
         <div class="home_info"># gebruikers</div>
-
     </div>
 
 

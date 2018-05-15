@@ -365,7 +365,7 @@ nav li{
 #zoeken{
 	position: absolute;
 	margin-left: 80%;
-	margin-top: 25%;	
+	margin-top: 25%;
 }
 
 .verborgenrubrieken{ 
@@ -376,51 +376,39 @@ nav li{
 	position: absolute;
 	background: url(../images/vegrootglas.png);
 	background-size: cover;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	margin-left: 80%;
 	top: 5%;
 	z-index: 2;
+    border-radius:50%;
+    box-shadow:1px 1px 12px #707070;
 }
 
-#afval{
-	background-image: url(../images/icon_afval.png);
+#afval, #gebouwen, #groen, #overlast, #verkeer, #straten {
 	width: 50px;
 	height: 50px;
 	background-size: cover;
-	margin-bottom: 5px;
-	
+	margin-top: 7px;
+}
+#afval {
+    background-image: url(../images/icon_afval.png);
+}
+#gebouwen{
+	background-image: url(../images/icon_gebouwen.png);
 }
 #groen{
 	background-image: url(../images/icon_groen.png);
-	width: 50px;
-	height: 50px;
-	background-size: cover;
-	margin-bottom: 5px;
 }
 #overlast{
 	background-image: url(../images/icon_overlast.png);
-	width: 50px;
-	height: 50px;
-	background-size: cover;
-	margin-bottom: 5px;
 }
 #verkeer{
 	background-image: url(../images/icon_verkeer.png);
-	width: 50px;
-	height: 50px;
-	background-size: cover;
-	margin-bottom: 5px;
 }
 #straten{
 	background-image: url(../images/icon_straten.png);
-	width: 50px;
-	height: 50px;
-	background-size: cover;
 }
-
-
-
 
 
 .popup_info {
