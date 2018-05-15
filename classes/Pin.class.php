@@ -112,7 +112,7 @@
         }
         
         /* Subrubrieken ophalen gelinkt aan rubriek */
-        public function getSubrubrieken 
+        public function getSubrubrieken()
         {
             $conn = Db::getInstance();
             $statement = $conn->prepare("SELECT subrubrieken.* FROM subrubrieken, rubrieken WHERE subrubrieken.rubriek_id = rubrieken.id");
@@ -120,7 +120,7 @@
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }
         
-        public function getSingleSubrub 
+        public function getSingleSubrub() 
         {
             $conn = Db::getInstance();
             $statement = $conn->prepare("SELECT id FROM subrubrieken WHERE name = :name");

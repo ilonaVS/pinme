@@ -1,9 +1,16 @@
 <?php 
 
+include_once("classes/Pin.class.php");
+
 //if image isset
 if (isset($_POST['foto'])) {
     $_SESSION['foto'] = $_POST['foto'];
 } //anders wordt er een lege string naar de database gestuurd
+
+
+//rubrieken ophalen uit database
+$pin = new Pin();
+$rubrieken = $pin->getRubrieken();
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -26,36 +33,38 @@ if (isset($_POST['foto'])) {
 <a href="melding_2.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
 <form action="melding_4.php" method="post" id="uploadForm">
+
 <div class="grid_container">  
     <div class="formfield grid_item">
-        <input type="image" src="images/icon_afval.png" name="rubriek1" id="icon_afval" class="icons">
-        <label for="icon_afval" class="icon_label">Afval</label> 
+        <input type="image" src="<?php echo $rubrieken[0]['icon_url']; ?>" name="rubriek1" id="icon_afval" class="icons">
+        <label for="icon_afval" class="icon_label"><?php echo $rubrieken[0]['name']; ?></label> 
+    </div> 
+      
+    <div class="formfield grid_item">
+        <input type="image" src="<?php echo $rubrieken[1]['icon_url']; ?>" name="rubriek2" id="icon_gebouwen" class="icons">
+        <label for="icon_gebouwen" class="icon_label"><?php echo $rubrieken[1]['name']; ?></label>  
     </div> 
     
     <div class="formfield grid_item">
-        <input type="image" src="images/icon_gebouwen.png" name="rubriek2" id="icon_gebouwen" class="icons">
-        <label for="icon_gebouwen" class="icon_label">Gebouwen</label>  
+        <input type="image" src="<?php echo $rubrieken[2]['icon_url']; ?>" name="rubriek3" id="icon_groen" class="icons">
+        <label for="icon_groen" class="icon_label"><?php echo $rubrieken[2]['name']; ?></label>  
     </div> 
     
     <div class="formfield grid_item">
-        <input type="image" src="images/icon_groen.png" name="rubriek3" id="icon_groen" class="icons">
-        <label for="icon_groen" class="icon_label">Groen</label>  
+        <input type="image" src="<?php echo $rubrieken[3]['icon_url']; ?>" name="rubriek4" id="icon_overlast" class="icons">
+        <label for="icon_overlast" class="icon_label"><?php echo $rubrieken[3]['name']; ?></label>
     </div> 
     
     <div class="formfield grid_item">
-        <input type="image" src="images/icon_overlast.png" name="rubriek4" id="icon_overlast" class="icons">
-        <label for="icon_overlast" class="icon_label">Overlast</label>
+        <input type="image" src="<?php echo $rubrieken[4]['icon_url']; ?>" name="rubriek5" id="icon_straten" class="icons">
+        <label for="icon_straten" class="icon_label"><?php echo $rubrieken[4]['name']; ?></label>  
     </div> 
     
     <div class="formfield grid_item">
-        <input type="image" src="images/icon_straten.png" name="rubriek5" id="icon_straten" class="icons">
-        <label for="icon_straten" class="icon_label">Straten</label>  
-    </div> 
-    
-    <div class="formfield grid_item">
-        <input type="image" src="images/icon_verkeer.png" name="rubriek6" id="icon_verkeer" class="icons">
-        <label for="icon_verkeer" class="icon_label">Verkeer en<br>parkeren</label>
-    </div> 
+        <input type="image" src="<?php echo $rubrieken[5]['icon_url']; ?>" name="rubriek6" id="icon_verkeer" class="icons">
+        <label for="icon_verkeer" class="icon_label"><?php echo $rubrieken[5]['name']; ?></label>
+    </div>
+
 </div>   
 </form>
 
