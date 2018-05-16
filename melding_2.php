@@ -2,7 +2,10 @@
 
 session_start();
 
-$_SESSION['locatie'] = $_POST['locatie'];
+if(isset($_POST['submit_stap1'])){
+    $_SESSION["locatie"] = $_POST['locatie'];
+}
+
 
 
 ?><!DOCTYPE html>
@@ -24,6 +27,7 @@ $_SESSION['locatie'] = $_POST['locatie'];
 <a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
 
+<?php var_dump($_SESSION['locatie']); ?>
 
 <form action="melding_3.php" method="post" enctype="multipart/form-data" id="uploadForm">
     <div class="formfield" id="first_input">
