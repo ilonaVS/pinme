@@ -1,12 +1,9 @@
 <?php 
 
-if (!isset($_SESSION)) 
-{
-    session_start();
-}
-if(isset($_POST['submit_stap1'])){
-    $_SESSION["locatie"] = $_POST['locatie'];
-}
+
+session_start();
+
+
 
 
 ?><!DOCTYPE html>
