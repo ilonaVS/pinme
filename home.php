@@ -15,14 +15,7 @@
 <body>
     <?php include_once( "nav.inc.php"); ?>
 
-    <div id="googleMap">
-     
-        <iframe src="https://snazzymaps.com/embed/70364" id="googleMap"></iframe>
-
-    </div>
-
-    <!--   <script src="js/googleMaps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=myMap"></script> -->
+    <div id="googleMap"></div>
 
     <div class="zoek"></div>
 
@@ -72,7 +65,9 @@
 
         }
     </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/googleMaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
 </body>
 
 </html>

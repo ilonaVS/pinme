@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php 
+
+if (!isset($_SESSION)) 
+{
+    session_start();
+}
+if(isset($_POST['submit_stap1'])){
+    $_SESSION["locatie"] = $_POST['locatie'];
+}
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +23,7 @@
 <body>
 <?php include_once("nav.inc.php"); ?>
 
-<div id="googleMap">
-  <!--<iframe src="https://snazzymaps.com/embed/70364" id="googleMap"></iframe>-->
-</div>
+<div id="googleMap"></div>
     
     
 
@@ -24,7 +33,7 @@
     </div> 
    
     <div class="formfield">  
-        <input type="submit" value="+ Melding toevoegen" name="submit" class="button_map above_map">
+        <input type="submit" value="+ Melding toevoegen" name="submit_stap1" class="button_map above_map">
     </div>
 
 </form>
