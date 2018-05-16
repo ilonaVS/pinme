@@ -1,23 +1,25 @@
 <?php 
 
-if (isset($_POST['subrubriek1'])) {
-    $_SESSION['subrubriek1'] = $_POST['subrubriek1'];
+session_start();
+
+/*Checken welke subrubriek gekozen en opslaan in session*/
+if (isset($_POST['subrub_1'])) {
+    $_SESSION['subrub'] = substr($_POST['subrub_1'], -1);
+} elseif (isset($_POST['subrub_2'])) {
+    $_SESSION['subrub'] = substr($_POST['subrub_2'], -1);
+} elseif (isset($_POST['subrub_3'])) {
+    $_SESSION['subrub'] = substr($_POST['subrub_3'], -1);
+} elseif (isset($_POST['subrub_4'])) {
+    $_SESSION['subrub'] = substr($_POST['subrub_4'], -1);
+} elseif (isset($_POST['subrub_5'])) {
+    $_SESSION['subrub'] = substr($_POST['subrub_5'], -1);
+} elseif (isset($_POST['subrub_6'])) {
+$_SESSION['subrub'] = substr($_POST['subrub_6'], -1);
+} elseif (isset($_POST['subrub_7'])) {
+$_SESSION['subrub'] = substr($_POST['subrub_7'], -1);
 }
-if (isset($_POST['subrubriek2'])) {
-    $_SESSION['subrubriek2'] = $_POST['subrubriek2'];
-}
-if (isset($_POST['subrubriek3'])) {
-    $_SESSION['subrubriek3'] = $_POST['subrubriek3'];
-}
-if (isset($_POST['subrubriek4'])) {
-    $_SESSION['subrubriek4'] = $_POST['subrubriek4'];
-}
-if (isset($_POST['subrubriek5'])) {
-    $_SESSION['subrubriek5'] = $_POST['subrubriek5'];
-}
-if (isset($_POST['subrubriek6'])) {
-$_SESSION['subrubriek6'] = $_POST['subrubriek6'];
-}
+
+/* SQL uitvoeren om gegevens naar databank te sturen */
 
 ?><!DOCTYPE html>
 <html lang="en">

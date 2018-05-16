@@ -25,7 +25,6 @@ if( isset($_SESSION["rubriek"]) ){
     /*Haal rubriek op van gekozen rubriek en toon icon*/
     $rubriekImage = $pin->getSingleRub($rubriek);
     $subrubrieken = $pin->getSubrubrieken($rubriek);
-    
 }
 
 ?><!DOCTYPE html>
@@ -52,7 +51,7 @@ if( isset($_SESSION["rubriek"]) ){
     <form action="melding_5.php" method="post" id="uploadForm">
     <?php foreach($subrubrieken as $sr): ?>
         <div class="formfield">  
-            <input type="submit" value="<?php echo $sr['name']; ?>" name="<?php echo $sr['name']; ?>" class="btn_subrub">
+            <input type="submit" value="<?php echo $sr['name']; ?>" name="subrub_<?php echo $sr['id']; ?>" class="btn_subrub">
         </div>
     <?php endforeach; ?>
     </form>
