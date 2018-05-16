@@ -102,20 +102,22 @@
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }
         
-        public function getSingleRub()
+        public function getSingleRub($rubId)
         {
             $conn = Db::getInstance();
             $statement = $conn->prepare("SELECT icon_url FROM rubrieken WHERE id = :id");
-            $statement->bindValue(":id", $_POST['rubriek']); 
+            $statement->bindValue(":id", $this->getRub()); 
             /* Hier moeten we de id van de gekozen rubriek ophalen/koppelen */
-            return $statement->execute();
+            $statement->execute();
+            return $statement->fetch(PDO::FETCH_ASSOC);
         }
         
         /* Subrubrieken ophalen gelinkt aan rubriek */
-        public function getSubrubrieken()
+        public function getSubrubrieken($rubId)
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT subrubrieken.* FROM subrubrieken, rubrieken WHERE subrubrieken.rubriek_id = rubrieken.id");
+            $statement = $conn->prepare("SELECT subrubrieken.* FROM subrubrieken WHERE rubriek_id = :rubId");
+            $statement->bindValue(":rubId", $this->getRub()); 
             $statement->execute();
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }

@@ -1,26 +1,32 @@
 <?php 
 
-//ben niet zeker of dit juist is
-//mss nog issets gebruiken
-if (isset($_POST['rubriek1'])) {
-    $_SESSION['rubriek1'] = $_POST['rubriek1'];
-}
-if (isset($_POST['rubriek2'])) {
-    $_SESSION['rubriek2'] = $_POST['rubriek2'];
-}
-if (isset($_POST['rubriek3'])) {
-    $_SESSION['rubriek3'] = $_POST['rubriek3'];
-}
-if (isset($_POST['rubriek4'])) {
-    $_SESSION['rubriek4'] = $_POST['rubriek4'];
-}
-if (isset($_POST['rubriek5'])) {
-    $_SESSION['rubriek5'] = $_POST['rubriek5'];
-}
-if (isset($_POST['rubriek6'])) {
-    $_SESSION['rubriek6'] = $_POST['rubriek6'];
+include_once("classes/Pin.class.php");
+
+session_start();
+
+/* Checken welke rubriek icon werd aangeklikt*/
+if( isset($_POST['afval_x'], $_POST['afval_y']) ){
+    $_SESSION['rubriek'] = 1;
+} elseif( isset($_POST['gebouwen_x'], $_POST['gebouwen_y']) ){
+    $_SESSION['rubriek'] = 2;
+} elseif( isset($_POST['groen_x'], $_POST['groen_y']) ){
+    $_SESSION['rubriek'] = 3;
+} elseif( isset($_POST['overlast_x'], $_POST['overlast_y']) ){
+    $_SESSION['rubriek'] = 4;
+} elseif( isset($_POST['straten_x'], $_POST['straten_y']) ){
+    $_SESSION['rubriek'] = 5;
+} elseif( isset($_POST['verkeer_x'], $_POST['verkeer_y']) ){
+    $_SESSION['rubriek'] = 6;
 }
 
+if( isset($_SESSION["rubriek"]) ){
+    $pin = new Pin();
+    $rubriek = $pin->setRub($_SESSION['rubriek']);
+    /*Haal rubriek op van gekozen rubriek en toon icon*/
+    $rubriekImage = $pin->getSingleRub($rubriek);
+    $subrubrieken = $pin->getSubrubrieken($rubriek);
+    
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -41,29 +47,14 @@ if (isset($_POST['rubriek6'])) {
 <a href="melding_3.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
 <div class="subrub">
-    <img src="images/icon_afval.png" alt="icon">
+    <img src="<?php echo $rubriekImage["icon_url"]; ?>" alt="icon">
 
     <form action="melding_5.php" method="post" id="uploadForm">
-
+    <?php foreach($subrubrieken as $sr): ?>
         <div class="formfield">  
-            <input type="submit" value="Sluikstorten" name="subrubriek1" class="btn_subrub">
+            <input type="submit" value="<?php echo $sr['name']; ?>" name="<?php echo $sr['name']; ?>" class="btn_subrub">
         </div>
-    
-        <div class="formfield">  
-            <input type="submit" value="Zwerfvuil" name="subrubriek2" class="btn_subrub">
-        </div>
-    
-        <div class="formfield">  
-            <input type="submit" value="Huisvuil" name="subrubriek3" class="btn_subrub">
-        </div>
-    
-        <div class="formfield">  
-            <input type="submit" value="Hondenpoep" name="subrubriek4" class="btn_subrub">
-        </div>
-
-        <div class="formfield">  
-            <input type="submit" value="Andere" name="subrubriek5" class="btn_subrub">
-        </div>
+    <?php endforeach; ?>
     </form>
 </div>
 </body>
