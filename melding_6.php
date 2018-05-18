@@ -41,7 +41,7 @@ if( isset($_POST['opslaan'])){
     <title>PinME - Melding toevoegen</title>
 </head>
 <body>
-<?php echo $imgId['id']; ?>
+
 <div class="melding_succes">
    
     <img src="images/icon_melding_succes.png" alt="melding succes">
