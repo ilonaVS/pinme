@@ -1,16 +1,13 @@
 <?php 
-
+include_once("classes/Image.class.php");
 include_once("classes/Pin.class.php");
 
 session_start();
 
 if( isset($_POST['foto']) ){
-    $_SESSION['foto'] = $_POST['foto'];
+    $_SESSION['foto'] = $compImg;
     
 }
-
-
-
 
 //rubrieken ophalen uit database
 $pin = new Pin();
