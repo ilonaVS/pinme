@@ -3,7 +3,7 @@
 	include_once("helpers/Security.class.php");
     
 	session_start();
-	if(isset($_SESSION['email'])){
+	if(isset($_SESSION['user'])){
 		header("Location: home.php");
 	}
     
@@ -17,16 +17,16 @@
         
         //register new user
         if( $security->passwordsAreSecure() ){
-            $userIn = $_POST['email'];
             $user = new User(); 
             $user->setEmail( $_POST['email'] );
             $user->setPassword( $_POST['password'] );
 
         	if($user->register()){
                     //send to index after register
+                    $id= $user->getIdbyEmail();
                     session_start();
-                    $_SESSION['email']=$userIn;
-            		header('Location: info.php');
+                    $_SESSION['user']=$id['id'];
+            		header('Location: home.php');
         	}  
         }
      }

@@ -9,12 +9,14 @@
         private $streetName;
         private $houseNr;
         private $city;
+        private $location;
         //image
         private $image;
         //categorie
         private $rub;
         private $subRub;
         private $description;
+        private $userId;
         
         /* Setters */
         
@@ -48,6 +50,12 @@
             return $this;
         }
         
+        public function setLocation($location)
+        {
+            $this->location = $location;
+            return $this;
+        }
+        
         public function setImage($image)
         {
             $this->image = $image;
@@ -69,6 +77,18 @@
         public function setDescription($description)
         {
             $this->description = $description;
+            return $this;
+        }
+        
+        public function setStatus($status)
+        {
+            $this->status = $status;
+            return $this;
+        }
+        
+        public function setUserId($userId)
+        {
+            $this->userId = $userId;
             return $this;
         }
         
@@ -99,6 +119,11 @@
             return $this->city;
         }
         
+        public function getLocation()
+        {
+            return $this->location;
+        }
+        
         public function getImage()
         {
             return $this->image;
@@ -119,13 +144,27 @@
             return $this->description;
         }
         
+        public function getStatus()
+        {
+            return $this->status;
+        }
+        
+        public function getUserId()
+        {
+            return $this->userId;
+        }
+        
         /* Functions */
         
-        /* Huidige locatie lat en lng in database */
-        
-        
-        
-        /* Locatie wijzigen */
+        /* Checken of locatie al in database zit */
+        public function existLocation(){
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT * FROM locations WHERE lng = :lng AND lat = :lat ");
+            $statement->bindValue(':lng', $this->getLng());
+            $statement->bindValue(':lat', $this->getLat()); 
+            $statement->execute();
+            return $statement->fetch(PDO::FETCH_ASSOC);
+        }
         
         
         
@@ -158,13 +197,13 @@
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }
         
-        public function getSingleSubrub() 
+        public function getSingleSubrub($subName) 
         {
             $conn = Db::getInstance();
             $statement = $conn->prepare("SELECT id FROM subrubrieken WHERE name = :name");
-            $statement->bindValue(":name", $_POST['subrubriek']); 
-            /* Hier moeten we de id van de gekozen subrubriek ophalen/koppelen */
-            return $statement->execute();
+            $statement->bindValue(":name", $subName); 
+            $statement->execute();
+            return $statement->fetch(PDO::FETCH_ASSOC);
         }
         
         /* Locatie opslaan in locaties-tabel en hiervan id returnen */
@@ -176,9 +215,18 @@
             $statement->bindValue(":streetname", $this->getStreetName());
             $statement->bindValue(":houseNr", $this->getHouseNr());
             $statement->bindValue(":city", $this->getCity());
+            $result = $statement->execute();          
+            return $result;
         }
-        public function getLocationId(){
-            
+        public function getLocationId($streetName, $houseNr, $city){
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT id FROM locations WHERE streetname = :streetname AND house_nr = :houseNr AND city = :city");
+            $statement->bindValue(":streetname", $streetName);
+            $statement->bindValue(":houseNr", $houseNr);
+            $statement->bindValue(":city", $city);
+            $statement->execute();
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            return $result;
         }
         
         /* Afbeelding ophalen uit images-tabel en hiervan id returnen*/
@@ -186,6 +234,7 @@
         $conn = Db::getInstance();
         $statement = $conn->prepare("SELECT id FROM images WHERE name = :name");
         $statement->bindValue(":name", $imgName);
+        $statement->execute();
         $result=$statement->fetch(PDO::FETCH_ASSOC);
         return $result;
         }
@@ -198,10 +247,10 @@
             $statement->bindValue(":location", $this->getLocation());
             $statement->bindValue(":img", $this->getImage());
             $statement->bindValue(":description", $this->getDescription());
-            $statement->bindValue(":status", $this->getStatus());
+            $statement->bindValue(":status", 1);
             $statement->bindValue(":rub", $this->getRub());
             $statement->bindValue(":subrub", $this->getSubRub());
-            $statement->bindValue(":user", $_SESSION['user']);
+            $statement->bindValue(":user", $this->getUserId());
             $result = $statement->execute();
             return $result;
         }

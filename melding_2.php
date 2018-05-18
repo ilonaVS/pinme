@@ -1,6 +1,7 @@
 <?php 
 
 include_once("classes/Image.class.php");
+include_once("classes/Pin.class.php");
 
 session_start();
 
@@ -8,10 +9,36 @@ if(isset($_POST['submit_stap1'])){
     $_SESSION["locatie"] = $_POST['locatie'];
 }
 
+/* Location long name */
+$location = explode(",", $_SESSION["locatie"]);
+$street_nr = explode(" ", $location[0]);
+/* straat: $street_nr[0] & huisnr: $street_nr[1] */
+$zip_city = explode(" ", $location[1]);
+/* zipcode: $zip_city[0] & city: $zip_city[1] */
 
+/* Location lng & lat */
+$address = $street_nr[0].','.$street_nr[1].','.$zip_city[1].','.'Belgium';
+$url = 'http://maps.google.com/maps/api/geocode/json?address='.$address.'&sensor=false';
+$json = @file_get_contents($url);
+$output= json_decode($json);
+$status = $output->status;
 
+if($status == "OK"){
+    $_SESSION['lat'] = $output->results[0]->geometry->location->lat;
+    $_SESSION['lng'] = $output->results[0]->geometry->location->lng;
+}
 
-
+/* Locatie opslaan in database */
+$pin = new Pin();
+if($pin->existLocation() === FALSE){
+    $pin->setLng($_SESSION['lng']);
+    $pin->setLat($_SESSION['lat'] );
+    $pin->setStreetName($street_nr[0]);
+    $pin->setHouseNr($street_nr[1]);
+    $pin->setCity($zip_city[1]);
+    $pin->saveLocation();
+} 
+$_SESSION["locatieId"] = $pin->getLocationId($street_nr[0], $street_nr[1], $zip_city[1]);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -31,10 +58,6 @@ if(isset($_POST['submit_stap1'])){
 
 <a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
-
-<?php if(isset($_FILES['foto'])){ 
-    var_dump($fileName); 
-} ?>
 
 <form action="melding_3.php" method="post" enctype="multipart/form-data" id="uploadForm">
     <div class="preview">

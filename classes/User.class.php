@@ -80,15 +80,13 @@
         $statement = $conn->prepare("SELECT id FROM `users` WHERE email = :email");
         $statement->bindValue(":email", $this->getEmail());
         $statement->execute();
-        $result = $statement->fetch(PDO::FETCH_OBJ);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
         
         return $result;
     }
 
     public function loggedInUser(){
-        $this->setEmail($_SESSION['email']);
-        $idArray = $this->getIdbyEmail();
-        $id=$idArray->id;
+        $id = $_SESSION["user"];
         return $id;
     }
 

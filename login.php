@@ -3,7 +3,7 @@
     include_once("helpers/Security.class.php");
 
     session_start();
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['user'])){
       header("Location: home.php");
     }
 
@@ -20,9 +20,10 @@
         $user->setEmail( $_POST['email'] );
         $user->setPassword( $_POST['password'] );
         	if($user->login()){
-                session_start();
-                $_SESSION['email']=$userIn;
-            		header('Location: home.php');
+                $id= $user->getIdbyEmail();
+                //send to index after register
+                $_SESSION['user']=$id['id'];
+                header('Location: home.php');
           }  
           
     }
