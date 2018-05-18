@@ -28,10 +28,10 @@ if( isset($_POST['opslaan'])){
     $image = new Image();
     $pin->setLocation($_SESSION['locatie']);//deze eerst toevoegen aan tabel locaties
     
-    $image->setFileDir($_SESSION['foto']);
-    $image->saveImage(); 
-    
-    /*$pin->setImage($_SESSION['foto']);*/
+    /* Image id ophalen om aan pin te koppelen*/
+    $imgId = $pin->getImgId($_SESSION['foto']);
+    $pin->setImage($imgId);
+
    
     $pin->setRub($_SESSION['rubriek']);
     $pin->setSubRub($_SESSION['subrub']);
