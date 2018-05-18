@@ -6,6 +6,9 @@
         //location
         private $lng;
         private $lat;
+        private $streetName;
+        private $houseNr;
+        private $city;
         //image
         private $image;
         //categorie
@@ -24,6 +27,24 @@
         public function setLat($lat)
         {
             $this->lat = $lat;
+            return $this;
+        }
+        
+        public function setStreetName($streetName)
+        {
+            $this->streetName = $streetName;
+            return $this;
+        }
+        
+        public function setHouseNr($houseNr)
+        {
+            $this->houseNr = $houseNr;
+            return $this;
+        }
+        
+        public function setCity($city)
+        {
+            $this->city = $city;
             return $this;
         }
         
@@ -61,6 +82,21 @@
         public function getLat()
         {
             return $this->lat;
+        }
+        
+        public function getStreetName()
+        {
+            return $this->streetName;
+        }
+        
+        public function getHouseNr()
+        {
+            return $this->houseNr;
+        }
+        
+        public function getCity()
+        {
+            return $this->city;
         }
         
         public function getImage()
@@ -131,6 +167,28 @@
             return $statement->execute();
         }
         
+        /* Locatie opslaan in locaties-tabel en hiervan id returnen */
+        public function saveLocation(){
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("INSERT INTO locations (lng, lat, streetname, house_nr, city) VALUES(:lng, :lat, :streetname, :houseNr, :city)");
+            $statement->bindValue(":lng", $this->getLng());
+            $statement->bindValue(":lat", $this->getLat());
+            $statement->bindValue(":streetname", $this->getStreetName());
+            $statement->bindValue(":houseNr", $this->getHouseNr());
+            $statement->bindValue(":city", $this->getCity());
+        }
+        public function getLocationId(){
+            
+        }
+        
+        /* Afbeelding ophalen uit images-tabel en hiervan id returnen*/
+        public function getImgId($imgName){
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT id FROM images WHERE name = :name");
+        $statement->bindValue(":name", $imgName);
+        $result=$statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+        }
         
         /* Melding toevoegen */
         public function createPin()

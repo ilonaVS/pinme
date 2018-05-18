@@ -1,49 +1,15 @@
 <?php 
 
+include_once("classes/Image.class.php");
+
 session_start();
 
 if(isset($_POST['submit_stap1'])){
     $_SESSION["locatie"] = $_POST['locatie'];
 }
 
-if( !empty($_POST) ){
-if( isset($_POST['submit']) ){
-    //if image is chosen
-    try{
-        if(isset($_FILES['foto'])){
-            //make new image & set variables
-            $image = new Image();
-            $image->setFileName($_FILES['image']['name']);
-            $image->setFileSize($_FILES['image']['size']);
-            $image->setFileTmp($_FILES['image']['tmp_name']);
-            $image->setFileType($_FILES['image']['type']);
-            $image->setFileDir("uploads/".$_FILES['image']['name']);
-            $image->setFileExt(strtolower((explode('.',$_FILES['image']['name']))[count(explode('.',$_FILES['image']['name']))-1]));
-                
-            //get variables to upload and save image on database
-            $fileTmp = $image->getFileTmp();
-            $fileDir = $image->getFileDir();
-            $fileName = $image->getFileName(); 
-            $fileSize = $image->getFileSize();
-            
-            //upload image & save on database
-            if( move_uploaded_file($fileTmp, $fileDir) ){
-                
-                //compress image if bigger than 2MB
-                $imageDestination = "uploads/"."cp-".$fileName;
-                if($fileSize > 2097152){
-                    $compImg = $image->compressImage($imageDestination);
-                } else {
-                    $compImg = $fileDir;
-                }
-            }
-        }
-    }
-    catch(Exception $e){
-        $error= $e->getMessage();
-    }
-}
-}
+
+
 
 
 
@@ -65,6 +31,10 @@ if( isset($_POST['submit']) ){
 
 <a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
+
+<?php if(isset($_FILES['foto'])){ 
+    var_dump($fileName); 
+} ?>
 
 <form action="melding_3.php" method="post" enctype="multipart/form-data" id="uploadForm">
     <div class="preview">

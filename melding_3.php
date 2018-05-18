@@ -4,9 +4,37 @@ include_once("classes/Pin.class.php");
 
 session_start();
 
-if( isset($_POST['foto']) ){
-    $_SESSION['foto'] = $compImg;
+/*
+if( isset($_POST['submit']) ){
+    $_SESSION['foto'] = ;
     
+}*/
+
+if(isset($_POST['submit'])){
+    //if image is chosen
+    
+        if(isset($_FILES['foto'])){
+            //make new image & set variables
+            $image = new Image();
+            $image->setFileName($_FILES['foto']['name']);
+            $image->setFileSize($_FILES['foto']['size']);
+            $image->setFileTmp($_FILES['foto']['tmp_name']);
+            $image->setFileType($_FILES['foto']['type']);
+            $image->setFileDir("uploads/".$_FILES['foto']['name']);
+            $image->setFileExt(strtolower((explode('.',$_FILES['foto']['name']))[count(explode('.',$_FILES['foto']['name']))-1]));
+                
+            //get variables to upload and save image on database
+            $fileTmp = $image->getFileTmp();
+            $fileDir = $image->getFileDir();
+            $fileName = $image->getFileName(); 
+            $fileSize = $image->getFileSize();
+            
+            //upload image & save on database
+            if( move_uploaded_file($fileTmp, $fileDir) ){  
+                $_SESSION['foto'] = $fileName;
+                $image->saveImage();
+            }
+        }
 }
 
 //rubrieken ophalen uit database
@@ -30,8 +58,6 @@ $rubrieken = $pin->getRubrieken();
 
 <h2>Melding toevoegen</h2>
 <h3>Kies een rubriek</h3>
-
-
 
 <a href="melding_2.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 

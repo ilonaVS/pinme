@@ -8,6 +8,7 @@
         private $fileType;
         private $fileDir;
         private $fileExt;
+        private $pinId;
         
     /*Setters*/
         
@@ -45,6 +46,11 @@
             return $this;
     }
         
+    public function setPinId($pinId){
+            $this->pinId = $pinId;
+            return $this;
+    }
+        
     /*Getters*/
     
     public function getFileName()
@@ -77,6 +83,11 @@
         return $this->fileExt;
     }
         
+    public function getPinId()
+    {
+        return $this->pinId;
+    }
+        
     //compress uploaded image
     function compressImage($imageCompress){
         $fileDir = $this->getFileDir();
@@ -94,6 +105,18 @@
 
             return $imageCompress;
     }
+        
+    /* Afbeelding opslaan in images-tabel en hiervan id returnen*/
+    public function saveImage(){
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("INSERT INTO images(name, url) VALUES(:name, :url)");
+        $statement->bindValue(":name", $this->getFileName());
+        $statement->bindValue(":url", $this->getFileDir());
+        $result = $statement->execute();
+        return $result;
+    }
+        
+    
         
     
     }

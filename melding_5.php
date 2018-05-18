@@ -1,5 +1,8 @@
 <?php 
 
+include_once("classes/Pin.class.php");
+include_once("classes/Image.class.php");
+
 session_start();
 
 /*Checken welke subrubriek gekozen en opslaan in session*/
@@ -20,6 +23,20 @@ $_SESSION['subrub'] = substr($_POST['subrub_7'], -1);
 }
 
 /* SQL uitvoeren om gegevens naar databank te sturen */
+if( isset($_POST['opslaan'])){
+    $pin = new Pin();
+    $image = new Image();
+    $pin->setLocation($_SESSION['locatie']);//deze eerst toevoegen aan tabel locaties
+    
+    $image->setFileDir($_SESSION['foto']);
+    $image->saveImage(); 
+    
+    /*$pin->setImage($_SESSION['foto']);*/
+   
+    $pin->setRub($_SESSION['rubriek']);
+    $pin->setSubRub($_SESSION['subrub']);
+    $pin->setDescription($_POST['beschrijving']);
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -40,14 +57,14 @@ $_SESSION['subrub'] = substr($_POST['subrub_7'], -1);
 <a href="melding_4.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 
 
-<form action="melding_6.php" method="post" id="uploadForm">
+<form action="" method="post" id="uploadForm">
    
     <div class="description"> 
         <textarea name="beschrijving" form="uploadForm" placeholder="Beschrijving (optioneel)" rows="8"></textarea>
     </div> 
    
     <div class="formfield">  
-        <input type="submit" value="Melding opslaan" name="submit" class="button">
+        <input type="submit" value="Melding opslaan" name="opslaan" class="button">
     </div> 
     
 </form>
