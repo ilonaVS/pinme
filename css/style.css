@@ -692,7 +692,7 @@ textarea{
 	width: 100%;
     justify-content: center;
 }
-.status a {
+.status a, .status_all a {
     text-decoration:none;
     color: #29c2de;
 }
@@ -702,9 +702,19 @@ textarea{
 	text-align: center;
 	background-color: #fff;
 	border-radius: 20px;
-	padding:20px 0;
+	padding:15px 0;
     margin:10px 1%;
 	width: 30%;
+}
+.status_all {
+    font-size: 13px;
+	border: 2px solid #29c2de;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 20px;
+	padding:15px 0;
+    margin:10px 3%;
+	width: 94%;
 }
 .dossiers{
     width:100%;

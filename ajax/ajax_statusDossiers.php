@@ -2,7 +2,6 @@
 
   
 include_once("../classes/Pin.class.php");
-include_once("../classes/User.class.php");
 
     session_start();
 
