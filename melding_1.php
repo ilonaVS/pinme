@@ -1,8 +1,9 @@
 <?php 
+include_once("checkLogin.inc.php");
 
-
-session_start();
-
+if(!isset($_SESSION)){
+    session_start();
+}
 
 
 

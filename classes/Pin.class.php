@@ -167,7 +167,6 @@
         }
         
         
-        
         /* Rubrieken ophalen */
         public function getRubrieken()
         {
@@ -255,9 +254,43 @@
             return $result;
         }
         
+        /* Alle meldingen ophalen */
+        public function getAllPins()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.streetname, locations.house_nr, locations.city, statussen.status_name, rubrieken.icon_url, rubrieken.name FROM pins, locations, statussen, rubrieken WHERE pins.user_id = :userId AND pins.location_id = locations.id AND pins.status_id = statussen.id AND pins.rubriek_id = rubrieken.id ORDER BY pins.date DESC");
+            $statement->bindValue(":userId", $this->getUserId());
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        
+        /* Meldingen per status ophalen */
+        public function getAllByStatus($status)
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.streetname, locations.house_nr, locations.city, statussen.status_name, rubrieken.icon_url, rubrieken.name FROM pins, locations, statussen, rubrieken WHERE pins.user_id = :userId AND pins.location_id = locations.id AND pins.status_id = statussen.id AND pins.status_id = :status AND pins.rubriek_id = rubrieken.id ORDER BY pins.date DESC");
+            $statement->bindValue(":userId", $this->getUserId());
+            $statement->bindValue(":status", $status);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        
+        /* Meldingen locatie en icon_url ophalen voor Google-maps markers*/
+        public function getPinsLocation()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url FROM pins, locations, rubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id");
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
         
         
+      
         
+
         
         
         

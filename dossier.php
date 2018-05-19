@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+include_once("checkLogin.inc.php");
+include_once("classes/Pin.class.php");
+include_once("classes/User.class.php");
+
+if(!isset($_SESSION)){
+    session_start();
+}
+
+$pin = new Pin();
+$pin->setUserId($_SESSION['user']);
+$collection = $pin->getAllPins();
+//$collection = $pin->getAllByStatus(1);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -21,105 +35,55 @@
 	
 	<div class="statusfilters">
 	    <div class="status">
-            <a href="#">Opgestart</a>
+            <a href="#" class="link1" id="1">Opgestart</a>
         </div>
         
         <div class="status">
-            <a href="#">In behandeling</a>
+            <a href="#" class="link1" id="2">In behandeling</a>
         </div>
        
        <div class="status">
-            <a href="#">Afgerond</a>	
+            <a href="#" class="link1" id="3">Afgerond</a>	
        </div>
         
     </div>
+    <div class="status_all">
+            <a href="#" class="link1" id="all">Toon alle meldingen</a>	
+       </div>
 	
-	<div class="dossiers">
-		
+	<div class="dossiers" id="dospak">
+
+		<?php foreach($collection as $c): ?>
         <div class="dossier">
-            <img src="images/icon_afval.png" alt="icon" class="dossier_rubicon">
+            <img src="<?php echo $c['icon_url']; ?>" alt="icon" class="dossier_rubicon">
             <div class="dossier_info">
                 <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
+                <div id="<?php echo htmlspecialchars($c['status_id']); ?>" class="statusname"><?php echo $c['status_name']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
+                <div><?php echo $c['name']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
+                <div><?php echo $c['streetname'].' '.$c['house_nr']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
+                <div><?php echo date('d/m/Y',strtotime($c['date'])); ?></div>
             </div>				
         </div>
+		<?php endforeach; ?>
 		
-		
-		<div class="dossier">
-            <img src="images/icon_gebouwen.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
-		
-		
-		<div class="dossier">
-            <img src="images/icon_groen.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
-        
-        <div class="dossier">
-            <img src="images/icon_straten.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
         
 	</div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="js/clickDossier.js"></script>
+
+
 </body>
 </html>

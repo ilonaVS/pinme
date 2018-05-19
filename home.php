@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php 
+include_once("checkLogin.inc.php");
+include_once("classes/Pin.class.php");
+
+$pin = new Pin();
+$collection = $pin->getPinsLocation();
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -66,7 +73,9 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/googleMaps.js"></script>
+    
+
+    <script src="js/homeGoogleMaps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
 </body>
 

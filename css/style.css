@@ -696,7 +696,7 @@ textarea{
 	width: 100%;
     justify-content: center;
 }
-.status a {
+.status a, .status_all a {
     text-decoration:none;
     color: #29c2de;
 }
@@ -706,9 +706,19 @@ textarea{
 	text-align: center;
 	background-color: #fff;
 	border-radius: 20px;
-	padding:20px 0;
+	padding:15px 0;
     margin:10px 1%;
 	width: 30%;
+}
+.status_all {
+    font-size: 13px;
+	border: 2px solid #29c2de;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 20px;
+	padding:15px 0;
+    margin:10px 3%;
+	width: 94%;
 }
 .dossiers{
     width:100%;
@@ -716,10 +726,10 @@ textarea{
 }
 .dossier{
     width: 90%;
-    height:150px;
+    height:110px;
 	margin:20px 5%;
     padding-left:10px;
-    padding-top:15px;
+    padding-top:10px;
 	border-radius: 5em;
 	background-color:#fff;
     box-shadow:1px 1px 12px #D6D6D6;
@@ -727,22 +737,22 @@ textarea{
 .dossier_info{
     font-size:12px;
     color:#707070;
-    margin-bottom:10px;
+    margin-bottom:5px;
 }
 .dossier_info img, .dossier_info div{
     display:inline-block;
     vertical-align: middle;
 }
 .dossier_info img{
-    width:22px;
-    height:22px;
-    margin-right:5px;
+    width:18px;
+    height:18px;
+    margin-right:2px;
 }
 .dossier .dossier_rubicon {
-    width:120px;
-    height:120px;
+    width:90px;
+    height:90px;
     float:left;
-    margin-right:10px; 
+    margin-right:5px; 
 }
 
 

@@ -1,8 +1,10 @@
 <?php 
-
+include_once("checkLogin.inc.php");
 include_once("classes/Pin.class.php");
 
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 
 /* Checken welke rubriek icon werd aangeklikt*/
 if( isset($_POST['afval_x'], $_POST['afval_y']) ){

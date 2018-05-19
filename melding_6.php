@@ -1,10 +1,13 @@
 <?php 
-
+include_once("checkLogin.inc.php");
 include_once("classes/Image.class.php");
 include_once("classes/Pin.class.php");
 include_once("classes/User.class.php");
 
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
+
 if(isset($_POST['beschrijving'])){
     $_SESSION['beschrijving'] = $_POST['beschrijving'];
 } else {
@@ -25,8 +28,14 @@ if( isset($_POST['opslaan'])){
     $pin->setSubRub($_SESSION['subrub']['id']);
     $pin->setDescription($_SESSION['beschrijving']);
     $pin->setUserId($_SESSION['user']);
-    $pin->createPin();
-    
+
+    if($pin->createPin()){
+        unset($_SESSION['foto']);
+        unset($_SESSION['rubriek']);
+        unset($_SESSION['subrub']);
+        unset($_SESSION['beschrijving']);
+        unset($_SESSION['locatie']);
+    }
 }
 
 ?><!DOCTYPE html>
