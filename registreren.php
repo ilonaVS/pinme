@@ -34,7 +34,7 @@
             		header('Location: home.php');
         	}  
         } else {
-            $error = "Je wachtwoord moet minstens 9 karakters bevatten.";
+            $error = "Je wachtwoord moet overeenkomen en minstens 8 tekens lang zijn.";
         }
         }
      }
