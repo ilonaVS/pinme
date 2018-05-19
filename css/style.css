@@ -39,6 +39,24 @@ html {
 /*-------------------------------------------*/
 /*hoofdscherm -- registreren of inloggen*/
 
+#cirkel{
+	background-color:#29c2de;
+	width: 800px;
+	height: 800px;
+	left: -210px;
+	bottom: 63%;
+	overflow: hidden;
+	border-radius: 50%;
+	position: fixed;
+	z-index: -4;
+	box-shadow:10px 4px 20px #9B9B9B;
+
+}
+#register_form{
+	padding-top: 20%;
+}
+
+
 .hoofdscherm{
 background: url(../images/achtergrondMechelen.png);
 	background-size: cover;
@@ -258,8 +276,23 @@ h1 {
 
 /*-------------------------------------------*/
 /*login scherm*/
+
+
+#vlak{
+	margin-bottom: 70px;
+	background-color: #fff;
+	padding: 5px;
+	margin: 10px;
+	margin-bottom: 50px;
+	box-shadow:5px -6px 50px -10px black;
+	border-radius: 2px;
+}
 .login {
     width:100%;
+	background-color: #29c2de;
+	height: 100%;
+	
+	
 }
 .login #logo, .registratie #logo {
     width:40%;
@@ -289,13 +322,12 @@ h1 {
 }
 .login p{
     text-align: left;
-    margin-top:10px;
+    margin-top:0px;
     margin-left:15%;
 	font-size:14px;
 	color: #72405E;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
     
 }
 

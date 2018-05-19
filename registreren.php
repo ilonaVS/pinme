@@ -57,14 +57,17 @@
 </head>
 <body>
 
+<div id="cirkel"></div>
+
 <div class="registratie">
 	
-	<img id="logo" src="images/pinme_logo.png" alt="logo">
+	<img id="logo" src="images/logo_wit.png" alt="logo">
 	
 	
 	<?php if (isset($error)):?>
                 <div class="error"><p><?php echo $error ?></p></div>
     <?php endif; ?>
+	
 	
 	<form action="" method="post" id="register_form" class="data_form">
               
