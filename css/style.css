@@ -573,7 +573,7 @@ input[type=file]{
     border:1px solid #29c2de;
     width:20%;
     position:absolute;
-    top:258px;
+    top:268px;
 }
 .line_left {
     left:22%;
@@ -602,6 +602,32 @@ input[type=file]{
 .preview {
     width:80%;
     margin:20px 10% 5px 10%;
+}
+
+.step_non_active {
+    width:6px;
+    height:6px;
+    margin-right:8px;
+    background-color:#C2E9F3;
+    border-radius:50%;
+}
+.formsteps {
+    display:flex;
+    flex-direction: row;
+    width:66px;
+    margin:20px auto 0px auto;
+    vertical-align: middle;
+}
+.step_active {
+    width:10px;
+    height:10px;
+    margin-right:8px;
+    margin-top:-2px;
+    background-color:#29c2de;
+    border-radius:50%;
+}
+.last {
+    margin-right:0px;
 }
 
 /*-------------------------------------------*/
@@ -635,6 +661,8 @@ input[type=image]{
 .grid_item {
     justify-self: center;
 }
+
+
 
 /*-------------------------------------------*/
 /* Melding toevoegen - Subrubriek kiezen */
