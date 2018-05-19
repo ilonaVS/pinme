@@ -5,6 +5,7 @@
     class User {
         private $email;
         private $password;
+        private $id;
         
     /*Setters*/
         
@@ -25,6 +26,12 @@
         $this->password = $password;
         return $this;
     }
+        
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
     
     /*Getters*/
         
@@ -36,6 +43,11 @@
     public function getPassword()
     {
         return $this->password;
+    }
+        
+    public function getId()
+    {
+        return $this->id;
     }
 
         
@@ -51,7 +63,7 @@
     }
 
     
-      public function login() {
+    public function login() {
         $conn = Db::getInstance();    
         $statement = $conn->prepare("select * from users where email = :email");
         $statement->bindValue(":email", $this->getEmail());
@@ -88,6 +100,27 @@
     public function loggedInUser(){
         $id = $_SESSION["user"];
         return $id;
+    }
+        
+    public function getDetails()
+    {
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM `users` WHERE id = :id");
+        $statement->bindValue(":id", $this->getId());
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+        
+    public function editUser()
+    {
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("UPDATE users SET email = :email, password = :password WHERE id = :id");
+        $statement->bindValue(":email", $this->getEmail());
+        $statement->bindValue(":password", $this->getPassword());
+        $statement->bindValue(":id", $this->loggedInUser());
+        $result = $statement->execute();
+        return $result;
     }
 
 
