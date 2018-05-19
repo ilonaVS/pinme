@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+
+include_once("classes/Pin.class.php");
+include_once("classes/User.class.php");
+
+session_start();//zodat session user gebruikt kan worden
+
+$pin = new Pin();
+$pin->setUserId($_SESSION['user']);
+$collection = $pin->getAllPins();
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -35,88 +48,29 @@
     </div>
 	
 	<div class="dossiers">
-		
+	
+		<?php foreach($collection as $pin): ?>
         <div class="dossier">
-            <img src="images/icon_afval.png" alt="icon" class="dossier_rubicon">
+            <img src="<?php echo $pin['icon_url']; ?>" alt="icon" class="dossier_rubicon">
             <div class="dossier_info">
                 <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
+                <div><?php echo $pin['status_id']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
+                <div><?php echo $pin['name']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
+                <div><?php echo $pin['streetname'].' '.$pin['house_nr']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
+                <div><?php echo $pin['date']; ?></div>
             </div>				
         </div>
+		<?php endforeach; ?>
 		
-		
-		<div class="dossier">
-            <img src="images/icon_gebouwen.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
-		
-		
-		<div class="dossier">
-            <img src="images/icon_groen.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
-        
-        <div class="dossier">
-            <img src="images/icon_straten.png" alt="icon" class="dossier_rubicon">
-            <div class="dossier_info">
-                <img src="images/dossier_klok.png" alt="icon">
-                <div>Status</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_pin.png" alt="icon">
-                <div>Rubriek</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_locatie.png" alt="icon">
-                <div>Plaats</div>
-            </div>
-            <div class="dossier_info">
-                <img src="images/dossier_kalender.png" alt="icon">
-                <div>Datum</div>
-            </div>				
-        </div>
         
 	</div>
 

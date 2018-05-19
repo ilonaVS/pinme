@@ -167,7 +167,6 @@
         }
         
         
-        
         /* Rubrieken ophalen */
         public function getRubrieken()
         {
@@ -255,9 +254,20 @@
             return $result;
         }
         
+        /* Alle meldingen ophalen */
+        public function getAllPins()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.streetname, locations.house_nr, locations.city, statussen.name, rubrieken.icon_url, rubrieken.name FROM pins, locations, statussen, rubrieken WHERE pins.user_id = :userId AND pins.location_id = locations.id AND pins.status_id = statussen.id AND pins.rubriek_id = rubrieken.id ORDER BY pins.date DESC");
+            $statement->bindValue(":userId", $this->getUserId());
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
         
+
         
-        
+
         
         
         
