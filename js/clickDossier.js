@@ -1,8 +1,6 @@
 $(document).ready(function(){
     
     $(".link1").click(function(e){
-	console.log("hi?1");
-        
       
     var status = $(this).attr("id");
 
@@ -16,7 +14,8 @@ $(document).ready(function(){
                 var collection= res.collection;
    
 				$( "#dospak div" ).remove();
-                //loop over collection
+                
+                //loop over collection van dossiers
                 for(var x=0 ; x<collection.length; x++){
                      
 					var newLoad= `<div class="dossier">
@@ -41,7 +40,7 @@ $(document).ready(function(){
                     
 			$("#dospak").prepend(newLoad);
 			$("#dospak div").first().slideDown();
-                    console.log("gelukt");
+                   
 				}
 			
 				
