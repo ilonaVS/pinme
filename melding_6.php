@@ -28,8 +28,14 @@ if( isset($_POST['opslaan'])){
     $pin->setSubRub($_SESSION['subrub']['id']);
     $pin->setDescription($_SESSION['beschrijving']);
     $pin->setUserId($_SESSION['user']);
-    $pin->createPin();
-    
+
+    if($pin->createPin()){
+        unset($_SESSION['foto']);
+        unset($_SESSION['rubriek']);
+        unset($_SESSION['subrub']);
+        unset($_SESSION['beschrijving']);
+        unset($_SESSION['locatie']);
+    }
 }
 
 ?><!DOCTYPE html>

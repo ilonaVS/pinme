@@ -34,8 +34,9 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
     [ 51.024548, 4.477532, 5, 'icon_straten.png'],
     [ 51.033180, 4.475461, 4, 'icon_gebouwen.png'],
     [ 51.029560, 4.481885, 1, 'icon_afval.png'],
-    [ 51.029598, 4.474217, 6, 'icon_verkeer.png']   
-    
+    [ 51.029598, 4.474217, 6, 'icon_verkeer.png'],   
+    [ 51.022083, 4.484892, 6, 'icon_verkeer.png'],
+    [ 51.022701, 4.474384, 1, 'icon_afval.png']
     ];
     
 
