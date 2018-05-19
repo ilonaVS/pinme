@@ -56,10 +56,18 @@ $_SESSION["locatieId"] = $pin->getLocationId($street_nr[0], $street_nr[1], $zip_
 <body>
 <?php include_once("nav.inc.php"); ?>
 
-<div class="main">
+<div class="main" id="form_step2">
 
 <a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
+
+<div class="formsteps">
+    <div class="step_non_active"></div>
+    <div class="step_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_non_active last"></div>
+</div>
 
 <form action="melding_3.php" method="post" enctype="multipart/form-data" id="uploadForm">
     <div class="preview">

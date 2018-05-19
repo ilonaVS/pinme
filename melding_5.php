@@ -28,10 +28,16 @@ if (isset($_POST['subrub'])) {
 <body>
 <?php include_once("nav.inc.php"); ?>
 
+<a href="melding_4.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 <h2>Melding toevoegen</h2>
 
-<a href="melding_4.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
-
+<div class="formsteps">
+    <div class="step_non_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_active last"></div>
+</div>
 
 
 <form action="melding_6.php" method="post" id="uploadForm">

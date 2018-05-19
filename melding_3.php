@@ -55,10 +55,19 @@ $rubrieken = $pin->getRubrieken();
 <?php include_once("nav.inc.php"); ?>
 <div class="main">
 
-<h2>Melding toevoegen</h2>
-<h3>Kies een rubriek</h3>
-
 <a href="melding_2.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
+<h2>Melding toevoegen</h2>
+
+
+<div class="formsteps">
+    <div class="step_non_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_active"></div>
+    <div class="step_non_active"></div>
+    <div class="step_non_active last"></div>
+</div>
+
+<h3>Kies een rubriek</h3>
 
 <form action="melding_4.php" method="POST" id="uploadForm">
 
