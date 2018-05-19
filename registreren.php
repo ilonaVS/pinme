@@ -2,7 +2,9 @@
     include_once("classes/User.class.php");
 	include_once("helpers/Security.class.php");
     
-	session_start();
+	if(!isset($_SESSION)){
+    session_start();
+    }
 	if(isset($_SESSION['user'])){
 		header("Location: home.php");
 	}
