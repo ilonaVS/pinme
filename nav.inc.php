@@ -17,21 +17,26 @@
 
 	<nav class="verborgen">
 	<ul>
-		<li><a href="dossier.php">Bekijk persoonlijk dossier</a></li>
-		<li><a href="profiel.php">Bekijk profiel</a></li>
+		<li><a href="dossier.php">Bekijk jouw meldingen</a></li>
+		<li><a href="profiel.php">Instellingen</a></li>
 	</ul>
 </nav>
+
 
 
 	<script>
 	
 		var knop = document.querySelector("#dossier_btn");
 		var nav = document.querySelector(".verborgen");
+		var nav2 = document.querySelector(".verborgen2");
 		
 		knop.addEventListener("click", menuOpenDicht);
 		function menuOpenDicht(evt){
 			nav.classList.toggle("verborgen");
+	
 		}
+		
+	
 		
 	</script>
 

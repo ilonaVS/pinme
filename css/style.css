@@ -13,6 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     height:100%; /*Anders werkt Google maps niet*/
     overflow:auto;
+	
 }
 
 html { 
@@ -42,6 +43,7 @@ html {
 background: url(../images/achtergrondMechelen.png);
 	background-size: cover;
 }
+
 
 #logo{
 	width:60%;	
@@ -340,6 +342,8 @@ nav{
 	bottom: -50px;
 	
 }
+
+
 nav li a{
 	display: block;
 	text-decoration: none;
@@ -741,14 +745,17 @@ textarea{
     margin-right:10px; 
 }
 
+
+
+
 #avatar{
-	background-image: url(../images/profieltjepng.png);
+	background-image: url(../images/avatar.png);
 	background-size: cover;
-	width: 120px;
-	height: 170px;
+	width: 80px;
+	height: 80px;
 	margin: 0 auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 100px;
+	margin-bottom: 10px;
 }
 
 .profiel h1{

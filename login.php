@@ -47,7 +47,7 @@
 <body>
 
 <div class="login">
-	
+
 	<img id="logo" src="images/pinme_logo.png" alt="logo">
 	
 	<?php if (isset($error)):?>
