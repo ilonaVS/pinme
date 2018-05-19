@@ -3,7 +3,9 @@ include_once("checkLogin.inc.php");
 include_once("classes/Pin.class.php");
 include_once("classes/User.class.php");
 
-session_start();//zodat session user gebruikt kan worden
+if(!isset($_SESSION)){
+    session_start();
+}
 
 $pin = new Pin();
 $pin->setUserId($_SESSION['user']);
