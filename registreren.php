@@ -7,15 +7,20 @@
 		header("Location: home.php");
 	}
     
-    try{
     if( !empty($_POST)){
         
         //testing if password is secure
         $security = new Security();
         $security->password = $_POST['password'];
         $security->passwordConfirmation = $_POST['password_confirmation'];
+        $security->email = $_POST['email'];
         
         //register new user
+        if($security->checkEmail()){
+            $error = "Dit emailadres is reeds in gebruik. Gelieve een ander e-mailadres te kiezen.";
+        } elseif($security->emailValidate()){
+            $error = "Gebruik een geldig emailadres.";
+        } else {
         if( $security->passwordsAreSecure() ){
             $user = new User(); 
             $user->setEmail( $_POST['email'] );
@@ -28,13 +33,12 @@
                     $_SESSION['user']=$id['id'];
             		header('Location: home.php');
         	}  
+        } else {
+            $error = "Je wachtwoord moet minstens 9 karakters bevatten.";
+        }
         }
      }
-    }
-    //if inputfields are empty, send error message
-    catch(Exception $e) {
-            $error= $e->getMessage();
-        } 
+
     
 
 ?><!DOCTYPE html>

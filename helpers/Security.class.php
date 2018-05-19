@@ -4,6 +4,7 @@
         public $password;
         public $passwordConfirmation;
         public $currentPassword;
+        public $email;
         
         //check if passwords are secure to use in my signup process
         public function passwordsAreSecure(){
@@ -32,6 +33,13 @@
                 return false;
             }
         }
+        
+        public function emailValidate(){
+
+            if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+                return true;
+            }
+        }
 
         public function currentPassword(){
             $conn = Db::getInstance();
@@ -48,6 +56,21 @@
                 else{
                     return false;                    
                 }
+            }
+        }
+        
+        public function checkEmail(){
+            $conn = Db::getInstance();
+            $user = new User();
+            $statement = $conn->prepare("select email from users where email = :email");
+            $statement->bindValue(":email", $this->email);
+            $statement->execute();
+            $result = $statement->fetch(PDO::FETCH_OBJ);
+            
+            if($result){
+                return true;
+            } else {
+                return false;
             }
         }
         
