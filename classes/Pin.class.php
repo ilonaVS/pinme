@@ -265,7 +265,7 @@
             return $result;
         }
         
-        
+        /* Meldingen per status ophalen */
         public function getAllByStatus($status)
         {
             $conn = Db::getInstance();
@@ -277,6 +277,15 @@
             return $result;
         }
         
+        /* Meldingen locatie en icon_url ophalen voor Google-maps markers*/
+        public function getPinsLocation()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url FROM pins, locations, rubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id");
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
         
         
       

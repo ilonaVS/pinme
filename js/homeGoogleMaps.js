@@ -25,8 +25,17 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
     var iconBase = '../pinme/images/';
     var locations = [
-	[ 50.995659, 4.530104, 2, 'icon_afval.png'],
-	[ 51.012688, 4.440343, 1, 'icon_groen.png']
+	[ 50.995659, 4.530104, 1, 'icon_afval.png'],
+	[ 51.012688, 4.440343, 2, 'icon_groen.png'],
+    [ 51.023304, 4.482139, 2, 'icon_groen.png'],
+    [ 51.025135, 4.481775, 3, 'icon_overlast.png'],
+    [ 51.023663, 4.476057, 4, 'icon_gebouwen.png'],
+    [ 50.865631, 3.619565, 5, 'icon_straten.png'],  
+    [ 51.024548, 4.477532, 5, 'icon_straten.png'],
+    [ 51.033180, 4.475461, 4, 'icon_gebouwen.png'],
+    [ 51.029560, 4.481885, 1, 'icon_afval.png'],
+    [ 51.029598, 4.474217, 6, 'icon_verkeer.png']   
+    
     ];
     
 
