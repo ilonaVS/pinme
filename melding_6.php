@@ -4,7 +4,10 @@ include_once("classes/Image.class.php");
 include_once("classes/Pin.class.php");
 include_once("classes/User.class.php");
 
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
+
 if(isset($_POST['beschrijving'])){
     $_SESSION['beschrijving'] = $_POST['beschrijving'];
 } else {

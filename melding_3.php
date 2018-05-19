@@ -3,13 +3,9 @@ include_once("checkLogin.inc.php");
 include_once("classes/Image.class.php");
 include_once("classes/Pin.class.php");
 
-session_start();
-
-/*
-if( isset($_POST['submit']) ){
-    $_SESSION['foto'] = ;
-    
-}*/
+if(!isset($_SESSION)){
+    session_start();
+}
 
 if(isset($_POST['submit'])){
     //if image is chosen
