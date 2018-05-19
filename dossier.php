@@ -65,7 +65,7 @@ $collection = $pin->getAllPins();
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div><?php echo $c['date']; ?></div>
+                <div><?php echo date('d/m/Y',strtotime($c['date'])); ?></div>
             </div>				
         </div>
 		<?php endforeach; ?>

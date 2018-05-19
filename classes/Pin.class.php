@@ -265,15 +265,12 @@
             return $result;
         }
         
-        /* Get status by id */
-        public function getStatusName($statusId)
+        /* Change date format */
+        public function changeDateFormat()
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT name FROM statussen WHERE id = :id");
-            $statement->bindValue(":id", $statusId);
-            $statement->execute();
-            $result = $statement->fetch(PDO::FETCH_ASSOC);
-            return $result;
+            $statement = $conn->prepare("SELECT date FROM pins");
+            
         }
 
         
