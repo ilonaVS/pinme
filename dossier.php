@@ -10,7 +10,6 @@ $pin->setUserId($_SESSION['user']);
 $collection = $pin->getAllPins();
 
 
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,25 +47,25 @@ $collection = $pin->getAllPins();
     </div>
 	
 	<div class="dossiers">
-	
-		<?php foreach($collection as $pin): ?>
+
+		<?php foreach($collection as $c): ?>
         <div class="dossier">
-            <img src="<?php echo $pin['icon_url']; ?>" alt="icon" class="dossier_rubicon">
+            <img src="<?php echo $c['icon_url']; ?>" alt="icon" class="dossier_rubicon">
             <div class="dossier_info">
                 <img src="images/dossier_klok.png" alt="icon">
-                <div><?php echo $pin['status_id']; ?></div>
+                <div><?php echo $c['status_name']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_pin.png" alt="icon">
-                <div><?php echo $pin['name']; ?></div>
+                <div><?php echo $c['name']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_locatie.png" alt="icon">
-                <div><?php echo $pin['streetname'].' '.$pin['house_nr']; ?></div>
+                <div><?php echo $c['streetname'].' '.$c['house_nr']; ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div><?php echo $pin['date']; ?></div>
+                <div><?php echo $c['date']; ?></div>
             </div>				
         </div>
 		<?php endforeach; ?>
