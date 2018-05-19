@@ -609,6 +609,7 @@ input[type=image]{
 
 .subrub {
     width:100%;
+    margin-bottom:60px;
 }
 .subrub img {
     width:100px;
