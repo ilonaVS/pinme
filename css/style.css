@@ -712,7 +712,7 @@ textarea{
 }
 .dossier{
     width: 90%;
-    height:150px;
+    height:130px;
 	margin:20px 5%;
     padding-left:10px;
     padding-top:15px;
@@ -730,13 +730,13 @@ textarea{
     vertical-align: middle;
 }
 .dossier_info img{
-    width:22px;
-    height:22px;
+    width:18px;
+    height:18px;
     margin-right:5px;
 }
 .dossier .dossier_rubicon {
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
     float:left;
     margin-right:10px; 
 }
