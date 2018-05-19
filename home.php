@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+include_once("checkLogin.inc.php");
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

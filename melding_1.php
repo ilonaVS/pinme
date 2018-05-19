@@ -1,5 +1,5 @@
 <?php 
-
+include_once("checkLogin.inc.php");
 
 session_start();
 

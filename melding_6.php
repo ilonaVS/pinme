@@ -1,5 +1,5 @@
 <?php 
-
+include_once("checkLogin.inc.php");
 include_once("classes/Image.class.php");
 include_once("classes/Pin.class.php");
 include_once("classes/User.class.php");
