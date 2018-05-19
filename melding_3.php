@@ -35,6 +35,8 @@ if(isset($_POST['submit'])){
                 $image->saveImage();
             }
         }
+} elseif(isset($_POST['submit_zonder'])){
+    $_SESSION['foto'] = "no image";
 }
 
 //rubrieken ophalen uit database

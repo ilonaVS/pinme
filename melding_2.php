@@ -83,7 +83,7 @@ $_SESSION["locatieId"] = $pin->getLocationId($street_nr[0], $street_nr[1], $zip_
     </div> 
     
     <div class="formfield visible" id="zonder_foto">  
-        <input type="submit" value="Ga verder zonder foto" name="submit" class="button" >
+        <input type="submit" value="Ga verder zonder foto" name="submit_zonder" class="button" >
     </div> 
     <!-- Wannr op btn 'voeg foto toe' geklikt is, komt de btn 'toevoegen' tevoorschijn en verdwijnt btn 'ga verder zonder foto'-->
     <div class="formfield hidden" id="foto_toevoegen">  
