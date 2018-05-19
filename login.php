@@ -48,13 +48,16 @@
 
 <div class="login">
 
+
+  
 	<img id="logo" src="images/logo_wit.png" alt="logo">
 	
 	<?php if (isset($error)):?>
                 <div class="error"><p><?php echo $error ?></p></div>
     <?php endif; ?>
-	<div id="vlak">
-	
+    
+	<div id="blok">
+	<div class="lala">
 	<form action="" method="post" class="data_form">
                
         <div class="formfield">
@@ -74,15 +77,15 @@
         </div>
 
     </form>
-  </div>
+
+ 
     <p>Wachtwoord vergeten? <a href="#">Klik hier.</a></p>
     
     <p>Nieuwe gebruiker? <a href="registreren.php">Registreer nu.</a></p>
+    </div>
     
-
-	
-</div>
-	
-	
+    
+	</div>
+	</div>
 </body>
 </html>
