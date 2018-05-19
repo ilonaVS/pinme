@@ -11,7 +11,7 @@
     public function setEmail($email)
     {
       if(empty($email)){
-            throw new exception("Gelieve een e-mailadres in te vullen.");
+            throw new Exception("Gelieve een e-mailadres in te vullen.");
       }
         $this->email = $email;
         return $this;
@@ -20,7 +20,7 @@
     public function setPassword($password)
     {
         if(empty($password)){
-            throw new exception("Gelieve een wachtwoord in te vullen.");
+            throw new Exception("Gelieve een wachtwoord in te vullen.");
         }
         $this->password = $password;
         return $this;
