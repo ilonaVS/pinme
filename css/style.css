@@ -90,11 +90,9 @@ background: url(../images/achtergrondMechelen.png);
 
 #lijn{
 	position: absolute;
-	left: -290px;
-	top: -300px;
 	background-color:#29c2de;
-	width: 900px;
-	height: 900px;
+	width: 90px;
+	height: 90px;
 	bottom: 100px;
 	overflow: hidden;
 	border-radius: 50%;
@@ -104,7 +102,9 @@ background: url(../images/achtergrondMechelen.png);
 
 }
 .info{
-    width:100vw;
+	background-color:#29c2de;
+    width:100%;
+
 	
 }
 #tekst{
