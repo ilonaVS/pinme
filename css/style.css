@@ -800,7 +800,7 @@ textarea{
 	font-size: 30px;
 	color: #70405e;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .dossier_scherm{
 	width: 100%;
@@ -812,27 +812,37 @@ textarea{
 }
 .status a, .status_all a {
     text-decoration:none;
-    color: #29c2de;
+    text-transform: uppercase;
 }
 .statusfilters .status{
-	font-size: 13px;
-	border: 2px solid #29c2de;
+	font-size: 10px;
 	text-align: center;
-	background-color: #fff;
-	border-radius: 20px;
-	padding:15px 0;
+	border-radius: 10px;
+	padding:20px 0;
     margin:10px 1%;
 	width: 30%;
 }
 .status_all {
     font-size: 13px;
-	border: 2px solid #29c2de;
 	text-align: center;
-	background-color: #fff;
-	border-radius: 20px;
-	padding:15px 0;
-    margin:10px 3%;
+	border-radius: 10px;
+	padding:20px 0;
+    margin:0px 3% 10px 3%;
 	width: 94%;
+}
+.status_active {
+    background-color: #29c2de;
+    
+}
+.status_active a {
+    color: #fff;
+}
+.status_non_active {
+    background-color:#C2E9F3;
+    
+}
+.status_non_active a {
+    color:#29c2de;
 }
 .dossiers{
     width:100%;
@@ -841,12 +851,13 @@ textarea{
 .dossier{
     width: 90%;
     height:110px;
-	margin:20px 5%;
+	margin:10px 5%;
     padding-left:10px;
     padding-top:10px;
-	border-radius: 5em;
+	/*border-radius: 5em;*/
 	background-color:#fff;
-    box-shadow:1px 1px 12px #D6D6D6;
+    border-bottom: 2px solid #C2E9F3;
+    /*box-shadow:1px 1px 12px #D6D6D6;*/
 }
 .dossier_info{
     font-size:12px;

@@ -34,20 +34,20 @@ $collection = $pin->getAllPins();
 	<h1>Mijn dossier</h1>
 	
 	<div class="statusfilters">
-	    <div class="status">
+	    <div class="status status_non_active">
             <a href="#" class="link1" id="1">Opgestart</a>
         </div>
         
-        <div class="status">
+        <div class="status status_non_active">
             <a href="#" class="link1" id="2">In behandeling</a>
         </div>
        
-       <div class="status">
+       <div class="status status_non_active">
             <a href="#" class="link1" id="3">Afgerond</a>	
        </div>
         
     </div>
-    <div class="status_all">
+    <div class="status_all status_active">
             <a href="#" class="link1" id="all">Toon alle meldingen</a>	
        </div>
 	
