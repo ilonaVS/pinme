@@ -53,13 +53,15 @@ if( isset($_POST['opslaan'])){
 
 <div class="melding_succes">
       
-    <img src="images/icon_melding_succes1.png" alt="melding succes">
+    <img src="images/icon_melding_succes1.png" alt="melding succes" class="img_succes">
  
 
 
     <h3>Melding opgeslagen!</h3>
-    
-  <p><a href="home.php">Ga verder</a></p>
+   
+  <div class="btn_forward">     
+  <a href="home.php">Ga verder <img src="images/pinme_forwardbtn.png"></a>
+  </div>
 
 </div>
 

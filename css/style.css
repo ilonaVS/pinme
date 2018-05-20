@@ -762,36 +762,35 @@ textarea{
 
 /*-------------------------------------------*/
 /* Melding toegevoegd - popup */
-.content_center {
-    
-}
 .melding_succes {
     width:100%;
-    height:100%;
 }
-.melding_succes img {
+.melding_succes .img_succes {
     width:200px;
     display:block;
-    margin:45% auto 0 auto;
+    margin:150px auto 0 auto;
 }
 .melding_succes h3 {
     font-size:20px;
    
 }
-.melding_succes p{
-	margin-top: 40%;
-	margin-left: 60%;
-}
-
-.melding_succes p a{
+.melding_succes a{
 	font-size: 14px;
-
 	text-decoration: none;
 	color:#29c2de;
-
 }
-
-
+.btn_forward {
+    display:block;
+    width:90px;
+	margin-top:220px;
+    margin-left:55%;
+}
+.btn_forward a img {
+    width:12px;
+    height:12px;
+    margin-bottom:-2px;
+    margin-left:2px;
+}
 
 /*-------------------------------------------*/
 /* Persoonlijk dossier */
