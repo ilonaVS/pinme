@@ -52,12 +52,19 @@ if( isset($_POST['opslaan'])){
 <body>
 
 <div class="melding_succes">
-   
+      
     <img src="images/icon_melding_succes1.png" alt="melding succes">
+ 
+
 
     <h3>Melding opgeslagen!</h3>
     
+  <p><a href="home.php">Ga verder</a></p>
+
 </div>
+
+
+
 
 </body>
 </html>

@@ -776,8 +776,22 @@ textarea{
 }
 .melding_succes h3 {
     font-size:20px;
-    margin-top:-30px;
+   
 }
+.melding_succes p{
+	margin-top: 40%;
+	margin-left: 60%;
+}
+
+.melding_succes p a{
+	font-size: 14px;
+
+	text-decoration: none;
+	color:#29c2de;
+
+}
+
+
 
 /*-------------------------------------------*/
 /* Persoonlijk dossier */
