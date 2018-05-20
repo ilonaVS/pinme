@@ -795,6 +795,44 @@ textarea{
 /*-------------------------------------------*/
 /* Persoonlijk dossier */
 
+#icon_dossier{
+	background-image: url(../images/icon_dossier.png);
+	background-size: cover;
+	width: 50px;
+	height:40px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+}
+
+
+#blok2{
+	z-index: -5;
+	background-color: #29c2de;
+	position: fixed;
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: 50%;
+	left: -200px;
+	box-shadow:20px 20px 90px gray;
+}
+
+#dospak{
+	background-color: #ffffff;
+	padding: 5px;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow:1px 1px 12px gray;
+	border-radius: 2px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 10%;
+	left: 5%;
+	
+}
+
 .dossier_scherm h1{
 	text-align: center;
 	font-size: 30px;
@@ -804,6 +842,7 @@ textarea{
 }
 .dossier_scherm{
 	width: 100%;
+	margin-top: ;
 }
 .statusfilters{
 	display: flex;
@@ -860,7 +899,7 @@ textarea{
     /*box-shadow:1px 1px 12px #D6D6D6;*/
 }
 .dossier_info{
-    font-size:12px;
+    font-size:10px;
     color:#707070;
     margin-bottom:5px;
 }
@@ -869,18 +908,17 @@ textarea{
     vertical-align: middle;
 }
 .dossier_info img{
-    width:18px;
-    height:18px;
+    width:10px;
+    height:10px;
     margin-right:2px;
 }
 .dossier .dossier_rubicon {
-    width:90px;
-    height:90px;
+    width:50px;
+    height:50px;
     float:left;
     margin-right:5px; 
+	
 }
-
-
 
 
 #avatar{

@@ -29,9 +29,13 @@ $collection = $pin->getAllPins();
 
 <?php include_once("nav.inc.php"); ?>
 
+
+<div id="icon_dossier"></div>
 <div class="dossier_scherm">
 
-	<h1>Mijn dossier</h1>
+
+	
+	<!--<h1>Mijn dossier</h1>-->
 	
 	<div class="statusfilters">
 	    <div class="status status_non_active">
@@ -51,7 +55,7 @@ $collection = $pin->getAllPins();
             <a href="#" class="link1" id="all">Toon alle meldingen</a>	
        </div>
 	
-	<div class="dossiers" id="dospak">
+	<div class="dossiers" id="dospak" style="overflow-y: scroll; height:56%;">
 
 		<?php foreach($collection as $c): ?>
         <div class="dossier">
@@ -77,7 +81,7 @@ $collection = $pin->getAllPins();
 		
         
 	</div>
-
+<div id="blok2"></div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
