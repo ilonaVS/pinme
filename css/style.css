@@ -889,17 +889,15 @@ textarea{
 }
 .dossier{
     width: 90%;
-    height:110px;
+    height:100px;
 	margin:10px 5%;
     padding-left:10px;
     padding-top:10px;
-	/*border-radius: 5em;*/
 	background-color:#fff;
     border-bottom: 2px solid #C2E9F3;
-    /*box-shadow:1px 1px 12px #D6D6D6;*/
 }
 .dossier_info{
-    font-size:10px;
+    font-size:11px;
     color:#707070;
     margin-bottom:5px;
 }
@@ -908,16 +906,16 @@ textarea{
     vertical-align: middle;
 }
 .dossier_info img{
-    width:10px;
-    height:10px;
+    width:12px;
+    height:12px;
     margin-right:2px;
 }
 .dossier .dossier_rubicon {
-    width:50px;
-    height:50px;
+    width:55px;
+    height:55px;
     float:left;
+    margin-top:5px;
     margin-right:5px; 
-	
 }
 
 
