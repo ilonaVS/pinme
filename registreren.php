@@ -19,9 +19,9 @@
         
         //register new user
         if($security->checkEmail()){
-            $error = "Dit emailadres is reeds in gebruik. Gelieve een ander e-mailadres te kiezen.";
+            $error = "<p>Dit emailadres is reeds in gebruik. Gelieve een ander e-mailadres te kiezen of <a href='login.php'>log je in</a>.</p>";
         } elseif($security->emailValidate()){
-            $error = "Gebruik een geldig emailadres.";
+            $error = "<p>Gebruik een geldig emailadres.</p>";
         } else {
         if( $security->passwordsAreSecure() ){
             $user = new User(); 
@@ -36,7 +36,7 @@
             		header('Location: home.php');
         	}  
         } else {
-            $error = "Je wachtwoord moet overeenkomen en minstens 8 tekens lang zijn.";
+            $error = "<p>Je wachtwoord moet overeenkomen en minstens 8 tekens lang zijn.</p>";
         }
         }
      }
@@ -65,7 +65,7 @@
 	
 	
 	<?php if (isset($error)):?>
-                <div class="error"><p><?php echo $error ?></p></div>
+                <div class="error"><?php echo $error ?></div>
     <?php endif; ?>
 	
 	

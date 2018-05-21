@@ -53,7 +53,7 @@ html {
 
 }
 #register_form{
-	padding-top: 20%;
+	padding-top: 30px;
 }
 
 
@@ -248,11 +248,12 @@ h1 {
 }
 .data_form {
     width:100%;
+    margin-top:20px;
 }
 .data_form input[type=text], input[type=password] {
     display:block;
     width:70%;
-    margin:30px 15%;
+    margin:0px 15% 30px 15%;
     color:#29c2de;
     font-family: 'Open Sans', sans-serif;
     font-size:14px;
@@ -266,11 +267,16 @@ h1 {
     font-size:12px;
     line-height:1.5em;
     width:70%;
-    margin:30px 15%;
+    margin:10px 15% -10px 15%;
     padding:10px;
     display:block;
     background-color:#72405E;
     color:#fff;
+}
+.error a {
+    text-decoration:none;
+    color: #fff;
+    font-weight:bold;
 }
 
 
