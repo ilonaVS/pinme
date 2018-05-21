@@ -122,6 +122,23 @@
         $result = $statement->execute();
         return $result;
     }
+        
+    /* Info over  aantal gebruikers */
+         public function allUsers(){
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM users");
+        $statement->execute();
+        
+        return $statement;
+        }
+        
+        
+        public function getAmountUsers()
+        {
+            $statement = $this->allUsers();
+            $count = $statement->rowCount();
+            return $count;
+        }
 
 
 

@@ -1,9 +1,15 @@
 <?php 
 include_once("checkLogin.inc.php");
 include_once("classes/Pin.class.php");
+include_once("classes/User.class.php");
 
 $pin = new Pin();
 $collection = $pin->getPinsLocation();
+$countPins = $pin->getAmountPins();
+$countFixedPins = $pin->getAmountFixedPins();
+
+$user = new User();
+$countUsers = $user->getAmountUsers();
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -46,9 +52,10 @@ $collection = $pin->getPinsLocation();
     <div class="popup_info">
         <img class="btn_down" src="images/pinme_backbtn.png" alt="btn_down">
         <img class="logo_small" src="images/pinme_logo.png" alt="logo">
-        <div class="home_info"># aangemaakte pins</div>
-        <div class="home_info"># opgeloste pins</div>
-        <div class="home_info"># gebruikers</div>
+        <div class="home_info"><?php echo $countUsers; ?> gebruikers</div>
+        <div class="home_info"><?php echo $countPins; ?> aangemaakte pins</div>
+        <div class="home_info"><?php echo $countFixedPins; ?> opgeloste pins</div>
+        
     </div>
 
 

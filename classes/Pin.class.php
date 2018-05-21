@@ -287,8 +287,40 @@
             return $result;
         }
         
+        /* Info over  aantal meldingen */
+        public function allPins(){
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM pins");
+        $statement->execute();
         
-      
+        return $statement;
+        }
+        
+        
+        public function getAmountPins()
+        {
+            $statement = $this->allPins();
+            $count = $statement->rowCount();
+            return $count;
+        }
+        
+        /* Info over aantal opgeloste pins */
+        public function allFixedPins()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT * FROM pins WHERE status_id = 3");
+            $statement->execute();
+            return $statement;
+        }
+        
+        public function getAmountFixedPins()
+        {
+            $statement = $this->allFixedPins();
+            $count = $statement->rowCount();
+            return $count;
+            
+        }
+
         
 
         
