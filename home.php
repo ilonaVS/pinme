@@ -34,17 +34,23 @@ $countUsers = $user->getAmountUsers();
 
     <div id="zoeken" class="verborgenrubrieken">
 
-        <div id="afval"></div>
+        <input type="checkbox" id="afval" name="filter">
+        <label for="afval"><img src="images/icon_afval.png" alt="filter button" style="width:50px; height:50px;"></label>
         
-        <div id="gebouwen"></div>
-
-        <div id="groen"></div>
-
-        <div id="overlast"></div>
-
-        <div id="verkeer"></div>
-
-        <div id="straten"></div>
+        <input type="checkbox" id="gebouwen" name="filter">
+        <label for="gebouwen"><img src="images/icon_gebouwen.png" alt="filter button" style="width:50px; height:50px;"></label>
+        
+        <input type="checkbox" id="groen" name="filter">
+        <label for="groen"><img src="images/icon_groen.png" alt="filter button" style="width:50px; height:50px;"></label>
+        
+        <input type="checkbox" id="overlast" name="filter">
+        <label for="overlast"><img src="images/icon_overlast.png" alt="filter button" style="width:50px; height:50px;"></label>
+        
+        <input type="checkbox" id="straten" name="filter">
+        <label for="straten"><img src="images/icon_straten.png" alt="filter button" style="width:50px; height:50px;"></label>
+        
+        <input type="checkbox" id="verkeer" name="filter">
+        <label for="verkeer"><img src="images/icon_verkeer.png" alt="filter button" style="width:50px; height:50px;"></label>
 
     </div>
 
@@ -83,6 +89,7 @@ $countUsers = $user->getAmountUsers();
     
 
     <script src="js/homeGoogleMaps.js"></script>
+    <!--<script src="js/home.js"></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
 </body>
 
