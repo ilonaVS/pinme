@@ -28,7 +28,9 @@ $countUsers = $user->getAmountUsers();
 <body>
     <?php include_once( "nav.inc.php"); ?>
 
-    <div id="googleMap"></div>
+    <ion-content scroll="false" data-tap-disabled="true">
+    <div id="googleMap" onclick=""></div>
+    </ion-content>
 
     <div class="zoek"></div>
 
@@ -58,9 +60,9 @@ $countUsers = $user->getAmountUsers();
     <div class="popup_info">
         <img class="btn_down" src="images/pinme_backbtn.png" alt="btn_down">
         <img class="logo_small" src="images/pinme_logo.png" alt="logo">
-        <div class="home_info"><?php echo $countUsers; ?> gebruikers</div>
-        <div class="home_info"><?php echo $countPins; ?> aangemaakte pins</div>
-        <div class="home_info"><?php echo $countFixedPins; ?> opgeloste pins</div>
+        <div class="home_info"><?php echo htmlspecialchars($countUsers); ?> gebruikers</div>
+        <div class="home_info"><?php echo htmlspecialchars($countPins); ?> aangemaakte pins</div>
+        <div class="home_info"><?php echo htmlspecialchars($countFixedPins); ?> opgeloste pins</div>
         
     </div>
 

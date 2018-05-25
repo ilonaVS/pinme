@@ -60,7 +60,7 @@ if( isset($_POST['opslaan'])){
     <h3>Melding opgeslagen!</h3>
    
   <div class="btn_forward">     
-  <a href="home.php">Ga verder <img src="images/pinme_forwardbtn.png"></a>
+  <a href="index.php">Ga verder <img src="images/pinme_forwardbtn.png"></a>
   </div>
 
 </div>

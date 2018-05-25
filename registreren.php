@@ -6,7 +6,7 @@
     session_start();
     }
 	if(isset($_SESSION['user'])){
-		header("Location: home.php");
+		header("Location: index.php");
 	}
     
     if( !empty($_POST)){
@@ -33,7 +33,7 @@
                     $id= $user->getIdbyEmail();
                     session_start();
                     $_SESSION['user']=$id['id'];
-            		header('Location: home.php');
+            		header('Location: index.php');
         	}  
         } else {
             $error = "<p>Je wachtwoord moet overeenkomen en minstens 8 tekens lang zijn.</p>";

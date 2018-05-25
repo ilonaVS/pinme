@@ -59,22 +59,22 @@ $collection = $pin->getAllPins();
 
 		<?php foreach($collection as $c): ?>
         <div class="dossier">
-            <img src="<?php echo $c['icon_url']; ?>" alt="icon" class="dossier_rubicon">
+            <img src="<?php echo htmlspecialchars($c['icon_url']); ?>" alt="icon" class="dossier_rubicon">
             <div class="dossier_info">
                 <img src="images/dossier_klok.png" alt="icon">
-                <div id="<?php echo htmlspecialchars($c['status_id']); ?>" class="statusname"><?php echo $c['status_name']; ?></div>
+                <div id="<?php echo htmlspecialchars($c['status_id']); ?>" class="statusname"><?php echo htmlspecialchars($c['status_name']); ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_pin.png" alt="icon">
-                <div><?php echo $c['name']; ?></div>
+                <div><?php echo htmlspecialchars($c['name']); ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_locatie.png" alt="icon">
-                <div><?php echo $c['streetname'].' '.$c['house_nr']; ?></div>
+                <div><?php echo htmlspecialchars($c['streetname'].' '.$c['house_nr']); ?></div>
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div><?php echo date('d/m/Y',strtotime($c['date'])); ?></div>
+                <div><?php echo htmlspecialchars(date('d/m/Y',strtotime($c['date']))); ?></div>
             </div>				
         </div>
 		<?php endforeach; ?>
@@ -83,6 +83,7 @@ $collection = $pin->getAllPins();
 	</div>
 <div id="blok2"></div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

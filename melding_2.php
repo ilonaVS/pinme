@@ -83,7 +83,7 @@ $_SESSION["locatieId"] = $pin->getLocationId($street_nr[0], $street_nr[1], $zip_
     
     <div class="formfield visible" id="first_input">
         <label for="image_upload" class="button_upload" id="choose_image">Voeg een foto toe</label>
-        <input type="file" name="foto" id="image_upload" accept=".jpg, .jpeg, .png" onchange="filePreview(this);">
+        <input type="file" name="foto" id="image_upload" accept=".jpg, .jpeg, .png, .JPG" onchange="filePreview(this);">
     </div>
     
     <div class="center">

@@ -4,7 +4,7 @@
 
     session_start();
     if(isset($_SESSION['user'])){
-      header("Location: home.php");
+      header("Location: index.php");
     }
 
     //user and password from post oproepen
@@ -23,7 +23,7 @@
                 $id= $user->getIdbyEmail();
                 //send to index after register
                 $_SESSION['user']=$id['id'];
-                header('Location: home.php');
+                header('Location: index.php');
           }  
           
     }
@@ -51,13 +51,14 @@
 
   
 	<img id="logo" src="images/logo_wit.png" alt="logo">
-	
-	<?php if (isset($error)):?>
-                <div class="error"><p><?php echo $error ?></p></div>
-    <?php endif; ?>
     
 	<div id="blok">
 	<div class="lala">
+	
+	<?php if (isset($error)):?>
+                <div class="error"><p><?php echo $error ?></p></div>
+    	<?php endif; ?>
+
 	<form action="" method="post" class="data_form">
                
         <div class="formfield">

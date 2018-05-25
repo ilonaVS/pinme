@@ -27,7 +27,7 @@ if(!isset($_SESSION)){
 
 <form action="melding_2.php" method="post" id="uploadForm">
     <div class="formfield">  
-        <input type="text" name="locatie" value="Huidige locatie" class="above_map location_field" id="adres">
+        <input type="text" name="locatie" value="htmlspecialchars(Huidige locatie)" class="above_map location_field" id="adres">
     </div> 
    
     <div class="formfield">  

@@ -42,7 +42,7 @@ if( isset($_SESSION["rubriek"]) ){
 </head>
 <body>
 <?php include_once("nav.inc.php"); ?>
-
+<div class="main">
 <a href="melding_3.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 <h2>Melding toevoegen</h2>
 
@@ -64,6 +64,7 @@ if( isset($_SESSION["rubriek"]) ){
         </div>
     <?php endforeach; ?>
     </form>
+</div>
 </div>
 </body>
 </html>

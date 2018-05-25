@@ -8,7 +8,7 @@
 <body>
 
 <div class="navbar">
-  <a href="home.php" id="home_btn" class="nav_btn">Home</a>
+  <a href="index.php" id="home_btn" class="nav_btn">Home</a>
   <a href="melding_1.php" id="melding_btn" class="nav_btn">Melding</a>
   
   <a href="#" id="dossier_btn" class="nav_btn">Dossier</a>
@@ -17,7 +17,7 @@
 
 	<nav class="verborgen">
 	<ul>
-		<li><a href="dossier.php">Bekijk jouw meldingen</a></li>
+		<li><a href="dossier.php">Mijn meldingen</a></li>
 		<li><a href="profiel.php">Instellingen</a></li>
 	</ul>
 </nav>
