@@ -170,11 +170,12 @@
         /* Functions */
         
         /* Checken of locatie al in database zit */
-        public function existLocation($lng, $lat){
+        public function existLocation($streetName, $houseNr, $city){
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT * FROM locations WHERE lng = :lng AND lat = :lat ");
-            $statement->bindValue(':lng', $lng);
-            $statement->bindValue(':lat', $lat); 
+            $statement = $conn->prepare("SELECT * FROM locations WHERE streetname = :streetname AND house_nr = :housenr AND city = :city ");
+            $statement->bindValue(":streetname", $streetName);
+            $statement->bindValue(":housenr", $houseNr);
+            $statement->bindValue(":city", $city); 
             $statement->execute();
             return $statement->fetch(PDO::FETCH_ASSOC);
         }

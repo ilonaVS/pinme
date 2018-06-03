@@ -26,7 +26,7 @@ $zip_city = explode(" ", $location[1]);
 
 /* Location lng & lat */
 $address = $streetname_url.','.$streetnr.','.$zip_city[1].','.'Belgium';
-$url = 'http://maps.google.com/maps/api/geocode/json?address='.$address.'&sensor=false';
+$url = 'https://maps.google.com/maps/api/geocode/json?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&address='.$address.'&sensor=false';
 $json = @file_get_contents($url);
 $output= json_decode($json);
 $status = $output->status;
@@ -39,7 +39,7 @@ if($status == "OK"){
 /* Locatie opslaan in database */
 $pin = new Pin();
 
-if($pin->existLocation($_SESSION['lat'], $_SESSION['lng']) === NULL){
+if($pin->existLocation($streetname, $streetnr, $zip_city[1]) === false){
     $pin->setLng($_SESSION['lng']);
     $pin->setLat($_SESSION['lat']);
     $pin->setStreetName($streetname);
