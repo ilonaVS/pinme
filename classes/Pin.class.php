@@ -17,6 +17,8 @@
         private $subRub;
         private $description;
         private $userId;
+        //publiek of niet
+        private $publicPin;
         
         /* Setters */
         
@@ -92,6 +94,12 @@
             return $this;
         }
         
+        public function setPublicPin($publicPin)
+        {
+            $this->publicPin = $publicPin;
+            return $this;
+        }
+        
         /* Getters */
         
         public function getLng()
@@ -152,6 +160,11 @@
         public function getUserId()
         {
             return $this->userId;
+        }
+        
+        public function getPublicPin()
+        {
+            return $this->publicPin;
         }
         
         /* Functions */
@@ -242,7 +255,7 @@
         public function createPin()
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("INSERT INTO pins (location_id, img_id, description, status_id, rubriek_id, subrubriek_id, user_id) VALUES(:location, :img, :description, :status, :rub, :subrub, :user)");
+            $statement = $conn->prepare("INSERT INTO pins (location_id, img_id, description, status_id, rubriek_id, subrubriek_id, user_id, public) VALUES(:location, :img, :description, :status, :rub, :subrub, :user, :public)");
             $statement->bindValue(":location", $this->getLocation());
             $statement->bindValue(":img", $this->getImage());
             $statement->bindValue(":description", $this->getDescription());
@@ -250,6 +263,7 @@
             $statement->bindValue(":rub", $this->getRub());
             $statement->bindValue(":subrub", $this->getSubRub());
             $statement->bindValue(":user", $this->getUserId());
+            $statement->bindValue(":public", $this->getPublicPin());
             $result = $statement->execute();
             return $result;
         }
@@ -281,7 +295,7 @@
         public function getPinsLocation()
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id");
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id AND pins.public=1");
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;
@@ -291,7 +305,7 @@
         public function getAfvalLocation()
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id AND rubriek.id=1");
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id AND rubriek.id=1 AND pins.public=1");
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;

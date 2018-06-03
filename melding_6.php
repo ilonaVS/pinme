@@ -13,6 +13,11 @@ if(isset($_POST['beschrijving'])){
 } else {
     $_SESSION['beschrijving'] = "";
 }
+if(isset($_POST['public'])){
+    $_SESSION['public'] = 1;
+} else {
+    $_SESSION['public'] = 0;
+}
 
 
 /* SQL uitvoeren om gegevens naar databank te sturen */
@@ -28,6 +33,7 @@ if( isset($_POST['opslaan'])){
     $pin->setSubRub($_SESSION['subrub']['id']);
     $pin->setDescription($_SESSION['beschrijving']);
     $pin->setUserId($_SESSION['user']);
+    $pin->setPublicPin($_SESSION['public']);
 
     if($pin->createPin()){
         unset($_SESSION['foto']);
@@ -35,6 +41,7 @@ if( isset($_POST['opslaan'])){
         unset($_SESSION['subrub']);
         unset($_SESSION['beschrijving']);
         unset($_SESSION['locatie']);
+        unset($_SESSION['public']);
     }
 }
 

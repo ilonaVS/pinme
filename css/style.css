@@ -20,7 +20,7 @@ html {
     height: 100%; /*Anders werkt Google maps niet*/
 }
 
-input[type=file], input[type=text], input[type=password], input[type=submit], input[type=checkbox], textarea {
+input[type=file], input[type=text], input[type=password], input[type=submit], textarea {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
@@ -745,6 +745,39 @@ textarea{
     color: #29c2de;
     opacity: 1; /* Firefox */
 }
+.checkbox{
+    display: block;
+    position: relative;
+    width:80%;
+    margin:30px 10% 80px 10%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 30px;
+    font-size:14px;
+    color:#29c2de;
+    line-height:1.5em;
+}
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: #29c2de 1px solid;
+    border-radius:5px;
+    display:block;
+    margin-right:5px;
+}
+.checkbox input:checked ~ .checkmark {
+    background-color: #29c2de;
+}
+
 
 /*-------------------------------------------*/
 /* Melding toegevoegd - popup */

@@ -44,8 +44,13 @@ if (isset($_POST['subrub'])) {
    
     <div class="description"> 
         <textarea name="beschrijving" form="uploadForm" placeholder="Beschrijving (optioneel)" rows="8"></textarea>
-    </div> 
-   
+    </div>
+    <div class="formfield">
+    <label class="checkbox">
+     <input type="checkbox" name="public" id="public" checked="checked">
+     <span class="checkmark"></span>
+     Ik ga akkoord om deze melding publiek te plaatsen.</label> 
+    </div>
     <div class="formfield">  
         <input type="submit" value="Melding opslaan" name="opslaan" class="button">
     </div> 
