@@ -281,7 +281,7 @@
         public function getPinsLocation()
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url FROM pins, locations, rubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id");
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id");
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;

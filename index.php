@@ -68,7 +68,7 @@ $countUsers = $user->getAmountUsers();
 
 
 
-    <script>
+<script>
         var knop = document.querySelector(".zoek");
         var rubrieken = document.querySelector(".verborgenrubrieken");
 
@@ -86,13 +86,16 @@ $countUsers = $user->getAmountUsers();
             popup.style.display = 'none';
 
         }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+</script>
+<script>
 
-    <script src="js/homeGoogleMaps.js"></script>
-    <!--<script src="js/home.js"></script>-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Om markers via php en js op kaart te krijgen: -->   
+<?php include_once('js/homeGoogleMaps.php'); ?>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
 </body>
 
 </html>

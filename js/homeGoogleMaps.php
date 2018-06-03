@@ -1,23 +1,15 @@
+<script>
 var map;
 var Markers = {};
 var infowindow;
-var iconBase = '../pinme/images/';
+var iconBase = '../pinme/';
 var locations = [
-	[ 50.995659, 4.530104, 1, 'icon_afval.png', '<p>Zwerfvuil<br>21/05/2018</p>'],
-	[ 51.012688, 4.440343, 2, 'icon_groen.png', '<p>Onkruid<br>16/05/2018</p>'],
-    [ 51.023304, 4.482139, 2, 'icon_groen.png', '<p>Onkruid<br>20/05/2018</p>'],
-    [ 51.025135, 4.481775, 3, 'icon_overlast.png', '<p>Geluidsoverlast<br>22/05/2018</p>'],
-    [ 51.023663, 4.476057, 4, 'icon_gebouwen.png', '<p>Bouwovertreding<br>22/05/2018</p>'],
-    [ 50.865631, 3.619565, 5, 'icon_straten.png', '<p>Beschadiging voetpad/fietspad<br>14/05/2018</p>'],  
-    [ 51.024548, 4.477532, 5, 'icon_straten.png','<p>Straatverlichting<br>15/05/2018</p>'],
-    [ 51.033180, 4.475461, 4, 'icon_gebouwen.png', '<p>Leegstand<br>17/05/2018</p>'],
-    [ 51.029560, 4.481885, 1, 'icon_afval.png', '<p>Sluikstorten<br>19/05/2018</p>'],
-    [ 51.029598, 4.474217, 6, 'icon_verkeer.png', '<p>Parkeren<br>21/05/2018</p>'],   
-    [ 51.022083, 4.484892, 6, 'icon_verkeer.png', '<p>Verkeerslicht<br>20/05/2018</p>'],
-    [ 51.022701, 4.474384, 1, 'icon_afval.png', '<p>Zwerfvuil<br>22/05/2018</p>']
+    <?php
+    foreach($collection as $key =>$c){
+        echo "[ ".$c['lat'].", ".$c['lng'].", ".$c['rubriek_id'].", '".$c['icon_url']."', '<p>".$c['name']." <br> ".date('d-m-Y', strtotime($c['date']))."<p>'],";
+    }
+    ?>
 ];
-
-/*var origin = new google.maps.LatLng(locations[0][2], locations[0][3]);*/
 
 function initMap() {
   var mapOptions = {
@@ -75,4 +67,5 @@ function initMap() {
 google.maps.event.addDomListener(window, 'load', initMap);
 }
 
+</script>
 
