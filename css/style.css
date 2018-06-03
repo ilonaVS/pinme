@@ -473,11 +473,6 @@ nav li{
 #afval, #gebouwen, #groen, #overlast, #verkeer, #straten {
 	margin-top: 10px;
 }
-input[type=checkbox]{
-    display:none;
-}
-
-
 .popup_info {
     position:absolute;
     width:100%;
@@ -501,8 +496,6 @@ input[type=checkbox]{
     font-size:14px;
     color:#72405E;
 }
-
-
 
 
 /*-------------------------------------------*/

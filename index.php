@@ -4,7 +4,12 @@ include_once("classes/Pin.class.php");
 include_once("classes/User.class.php");
 
 $pin = new Pin();
-$collection = $pin->getPinsLocation();
+if(isset($_POST['afval'])){
+    $collection = $pin->getAfvalLocation();
+} else {
+    $collection = $pin->getPinsLocation();
+}
+
 $countPins = $pin->getAmountPins();
 $countFixedPins = $pin->getAmountFixedPins();
 
@@ -35,25 +40,37 @@ $countUsers = $user->getAmountUsers();
     <div class="zoek"></div>
 
     <div id="zoeken" class="verborgenrubrieken">
-
-        <input type="checkbox" id="afval" name="filter">
-        <label for="afval"><img src="images/icon_afval.png" alt="filter button" style="width:50px; height:50px;"></label>
+    <form action="" method="post" id="rubriek_filters">
+       <input type="image" src="images/icon_afval.png" alt="Submit Form" name="afval" id="afval" style="width:50px; height:50px;">
+       
+       <input type="image" src="images/icon_gebouwen.png" alt="Submit Form" name="gebouwen" id="gebouwen" style="width:50px; height:50px;">
+       
+       <input type="image" src="images/icon_groen.png" alt="Submit Form" name="groen" id="groen" style="width:50px; height:50px;">
+       
+       <input type="image" src="images/icon_overlast.png" alt="Submit Form" name="overlast" id="overlast" style="width:50px; height:50px;">
+       
+       <input type="image" src="images/icon_straten.png" alt="Submit Form" name="straten" id="straten" style="width:50px; height:50px;">
+       
+       <input type="image" src="images/icon_verkeer.png" alt="Submit Form" name="verkeer" id="verkeer" style="width:50px; height:50px;">
+       
         
-        <input type="checkbox" id="gebouwen" name="filter">
+        <!--
+        <input type="checkbox" id="gebouwen" name="gebouwen">
         <label for="gebouwen"><img src="images/icon_gebouwen.png" alt="filter button" style="width:50px; height:50px;"></label>
         
-        <input type="checkbox" id="groen" name="filter">
+        <input type="checkbox" id="groen" name="groen">
         <label for="groen"><img src="images/icon_groen.png" alt="filter button" style="width:50px; height:50px;"></label>
         
-        <input type="checkbox" id="overlast" name="filter">
+        <input type="checkbox" id="overlast" name="overlast">
         <label for="overlast"><img src="images/icon_overlast.png" alt="filter button" style="width:50px; height:50px;"></label>
         
-        <input type="checkbox" id="straten" name="filter">
+        <input type="checkbox" id="straten" name="straten">
         <label for="straten"><img src="images/icon_straten.png" alt="filter button" style="width:50px; height:50px;"></label>
         
-        <input type="checkbox" id="verkeer" name="filter">
+        <input type="checkbox" id="verkeer" name="verkeer">
         <label for="verkeer"><img src="images/icon_verkeer.png" alt="filter button" style="width:50px; height:50px;"></label>
-
+        -->
+    </form>
     </div>
 
 
@@ -86,10 +103,10 @@ $countUsers = $user->getAmountUsers();
             popup.style.display = 'none';
 
         }
+        
 </script>
-<script>
 
-</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Om markers via php en js op kaart te krijgen: -->   

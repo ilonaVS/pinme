@@ -287,6 +287,18 @@
             return $result;
         }
         
+        /* Meldingen locatie en icon_url ophalen voor Google-maps markers voor AFVAL*/
+        public function getAfvalLocation()
+        {
+            $conn = Db::getInstance();
+            $statement = $conn->prepare("SELECT pins.*, locations.lat, locations.lng, rubrieken.icon_url, subrubrieken.name FROM pins, locations, rubrieken, subrubrieken WHERE pins.location_id = locations.id AND pins.rubriek_id = rubrieken.id AND pins.subrubriek_id = subrubrieken.id AND subrubrieken.rubriek_id = rubrieken.id AND rubriek.id=1");
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        
+        
+        
         /* Info over  aantal meldingen */
         public function allPins(){
         $conn = Db::getInstance();
