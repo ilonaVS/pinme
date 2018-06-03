@@ -13,13 +13,19 @@ if(isset($_POST['submit_stap1'])){
 
 /* Location long name */
 $location = explode(",", $_SESSION["locatie"]);
-$street_nr = explode(" ", $location[0]);
+
+$place = preg_split('/(?<=\D)(?=\d)|\d+\K/', $location[0]);
+$streetname = rtrim($place[0]);
+$streetname_url = preg_replace('/\s+/', '+', $streetname);
+$streetnr = $place[1];
+
 /* straat: $street_nr[0] & huisnr: $street_nr[1] */
+
 $zip_city = explode(" ", $location[1]);
 /* zipcode: $zip_city[0] & city: $zip_city[1] */
 
 /* Location lng & lat */
-$address = $street_nr[0].','.$street_nr[1].','.$zip_city[1].','.'Belgium';
+$address = $streetname_url.','.$streetnr.','.$zip_city[1].','.'Belgium';
 $url = 'http://maps.google.com/maps/api/geocode/json?address='.$address.'&sensor=false';
 $json = @file_get_contents($url);
 $output= json_decode($json);
@@ -32,15 +38,17 @@ if($status == "OK"){
 
 /* Locatie opslaan in database */
 $pin = new Pin();
-if($pin->existLocation() === FALSE){
+
+if($pin->existLocation($_SESSION['lat'], $_SESSION['lng']) === NULL){
     $pin->setLng($_SESSION['lng']);
-    $pin->setLat($_SESSION['lat'] );
-    $pin->setStreetName($street_nr[0]);
-    $pin->setHouseNr($street_nr[1]);
+    $pin->setLat($_SESSION['lat']);
+    $pin->setStreetName($streetname);
+    $pin->setHouseNr($streetnr);
     $pin->setCity($zip_city[1]);
     $pin->saveLocation();
 } 
-$_SESSION["locatieId"] = $pin->getLocationId($street_nr[0], $street_nr[1], $zip_city[1]);
+
+$_SESSION["locatieId"] = $pin->getLocationId($streetname, $streetnr, $zip_city[1]);
 
 ?><!DOCTYPE html>
 <html lang="en">
