@@ -936,14 +936,16 @@ textarea {
     .test li {
         display: inline;
         padding: 10px;
+	
 		
 		
     }
 	
 	.test a{
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 12px;
 		font-family: 'Raleway', sans-serif;
+		color: white;
 		
 	}
    
@@ -951,7 +953,8 @@ textarea {
 	.test{
 		position: absolute;
 		margin-top: 5%;
-		margin-left: 60%;
+		margin-left: 65%;
+		text-decoration: none;
 		
 	}
 	

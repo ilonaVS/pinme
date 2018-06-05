@@ -56,7 +56,7 @@
 
    <footer class="footer">
 
-        <h2>Copyright © <?php echo date("Y"); ?> Anne Geerkens en Ilona Vanseuningen. All rights reserved.</h2>
+     <h2>Copyright © <?php echo date("Y"); ?> Anne Geerkens en Ilona   Vanseuningen. All rights reserved.</h2>
 
 
     </footer>
