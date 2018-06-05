@@ -964,44 +964,32 @@ textarea{
 @media (min-width:480px){
 	
 	.landing{
+		background-image: url(../images/test2.png);
 		margin: 0 auto;
 		width: 100%;
 		height:100vh;
-		background-color: #b0ced5;
-	
+/*		background-color: #b0ced5;*/
 			
 	}
 	
-	
-	
-	img{
-		padding: 20px;
-	
-		z-index: 5;
-	}
-	
-	#tekst{
-		height: 100%;
-		width: 100%;
-	}
-	
+
 	.landing h1{
 		line-height: 45px;
 		font-size: 36px;
 		width: 50%;
-		padding-top: 20%;
-		margin-left: 10%;
-		color: white;
+		padding-top: 15%;
+		margin-left: 5%;
+		color: black;
 		margin-bottom: 20px;
 	}
 	
 	.landing p{
 		line-height: 35px;
-		font-size: 16px;
-		width: 50%;
+		font-size: 14px;
+		width: 30%;
 		height: 100px;
-		margin-left: 10%;
-		color: white;
+		margin-left: 5%;
+		color: black;
 	}
 	
 	.landing .button{
@@ -1011,9 +999,22 @@ textarea{
 		border-radius: 20px 20px 20px 20px;
 		text-align: center;
 		margin-top: 10%;
-		margin-left: 10%;
+		margin-left: 5%;
+		border-style: none;
+		color: white;
+		background-color: #29c2de;
 	}
 	
+	img{
+		margin-left: 50%;
+		position: absolute;
+		margin-top: 15%;
+	}
+	
+#logo_landing{
+		margin-top: 2%;
+		margin-left: 90%;
+	}
 
 }
 

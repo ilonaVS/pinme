@@ -12,8 +12,14 @@
 </head>
 <body>
 
+
+
+
 <div id="container" class="landing">
-	
+  
+        <img src="images/test.png" alt="" width="40%">
+        <img id="logo_landing" src="images/logo_wit.png" alt="logo" width="5%">
+
 
 <h1>De nieuwe meldingsapp van Mechelen</h1>
 
@@ -25,6 +31,9 @@
  <div class="formfield">
             <input type="submit" value="Download" class="button">	
         </div>
+        
+        
+      
 
 </div>
 
