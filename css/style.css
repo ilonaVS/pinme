@@ -1,1036 +1,949 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.clearfix:after{
-    content:"";
-    clear:both;
-    display:table;
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
 }
-
 body {
     font-family: 'Open Sans', sans-serif;
-    height:100%; /*Anders werkt Google maps niet*/
-    overflow:auto;
-	
+    height: 100%;
+    /*Anders werkt Google maps niet*/
+    overflow: auto;
 }
-
-html { 
-    height: 100%; /*Anders werkt Google maps niet*/
+html {
+    height: 100%;
+    /*Anders werkt Google maps niet*/
 }
-
-input[type=file], input[type=text], input[type=password], input[type=submit], textarea {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
--webkit-font-family: 'Open Sans', sans-serif;
--moz-font-family: 'Open Sans', sans-serif;
-font-family: 'Open Sans', sans-serif; 
+input[type=file],
+input[type=text],
+input[type=password],
+input[type=submit],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-font-family: 'Open Sans', sans-serif;
+    -moz-font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
-@media (max-width:480px){
-
-#container{
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	font-family: 'Open Sans', sans-serif;
-	margin: 0 auto;
-	
-	
-}
-
-#container a{
-	text-decoration: none;
-	color: #72405E;
-}
-
-
-/*-------------------------------------------*/
-/*hoofdscherm -- registreren of inloggen*/
-
-	
-#cirkel{
-	background-color:#29c2de;
-	width: 800px;
-	height: 800px;
-	left: -210px;
-	bottom: 60%;
-	overflow: hidden;
-	border-radius: 50%;
-	position: fixed;
-	z-index: -4;
-	box-shadow:10px 4px 20px #9B9B9B;
-
-}
-#register_form{
-	padding-top: 20px;
-}
-
-
-.hoofdscherm{
-background: url(../images/achtergrondMechelen.png);
-	background-size: cover;
-}
-
-
-#logo{
-	width:60%;	
-    margin:120px 20% 0px 20%;
-}
-
-.knop{
-	background-color: #3BBBD9;
-	width: 60%;
-	border-radius: 50px;
-	color: white;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 50px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	padding:15px;
-	
-}
-
-.hoofdscherm a, .hoofdscherm p{
-	text-align: center;
-	color: #72405E;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	margin: 20px auto;
-    
-}
-.hoofdscherm a{
-    font-weight:bold;
-}
-
-.login .button{
-	box-shadow:1px 1px 2px #9B9B9B;
-}
-
-.registratie .button{
-	box-shadow:1px 1px 2px #9B9B9B;
-}
-
-
-/*-------------------------------------------*/
-/*info scherm*/
-
-#lijn{
-	background-color:#29c2de;
-	width: 800px;
-	height: 800px;
-	left: -210px;
-	bottom: 50px;
-	overflow: hidden;
-	border-radius: 50%;
-	position: fixed;
-	z-index: -4;
-	box-shadow:1px 1px 2px #9B9B9B;
-
-
-}
-.info{
-	background-color:#29c2de;
-    width:100%;
-
-}
-#tekst{
-	margin:60px 0% 70px 10%;
-   	width: 80%;
-	height: 200px;
-    font-size:14px;
-	padding: 0px;
-
-}
-.info #logo {
-    margin:30% 20% 0px 20%;
-}
-.info p{
-	color: #ffffff;
-	text-align: center;
-	line-height: 22px;
-    margin-bottom:16px;
-}
-#informatie{
-	position: absolute;
-	width: 90px;
-	height: 90px;
-	border-radius: 50%;
-	text-align: center;
-	color:#ffffff;
-	font-size: 26px;
-	line-height: 90px;
-	background-color:#72405E;
-	box-shadow:1px 1px 2px #9B9B9B;
-	margin-left: 250px;
-	top: 85%;
-
-}
-.stap_info{
-	border-radius: 20px;
-	background-color:#72405E;
-	opacity: 0.8;
-	width: 80px;
-	height: 10px;
-	margin:10px;
-}
-
-
-/*-------------------------------------------*/
-/*profiel scherm*/
-.profiel {
-	 width: 100%;
-	 padding-bottom:60px;
-}
-.profiel h1{
-	text-align:center;
-    color: #29c2de;
-    font-family:'Open Sans', semibold;
-    margin-top: 30px;
-    margin-bottom:100px;
-    font-size:26px;
-}
-
-.profiel p{
-	margin-left: 15%;
-	margin-bottom: -15px;
-	color: #72405E;
-}
-.profiel .formfield {
-    margin-bottom:10px;
-}
-.profiel .data_form{
-	margin: auto;
-}
-
-.profiel .button{
-	width:60%;
-	text-align: center;
-	font-size: 14px;
-    margin-left:20%;
-}
-
-.btn_loguit {
-    /*Midden*/
-    margin:0px 30%;
-    /*Rechts positioneren*/
-    /*position: absolute;
+@media (max-width: 480px) {
+    #container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0 auto;
+    }
+    #container a {
+        text-decoration: none;
+        color: #72405E;
+    }
+    /*-------------------------------------------*/
+    /*hoofdscherm -- registreren of inloggen*/
+    #cirkel {
+        background-color: #29c2de;
+        width: 800px;
+        height: 800px;
+        left: -210px;
+        bottom: 60%;
+        overflow: hidden;
+        border-radius: 50%;
+        position: fixed;
+        z-index: -4;
+        box-shadow: 10px 4px 20px #9B9B9B;
+    }
+    #register_form {
+        padding-top: 20px;
+    }
+    .hoofdscherm {
+        background: url(../images/achtergrondMechelen.png);
+        background-size: cover;
+    }
+    #logo {
+        width: 60%;
+        margin: 120px 20% 0px 20%;
+    }
+    .knop {
+        background-color: #3BBBD9;
+        width: 60%;
+        border-radius: 50px;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        padding: 15px;
+    }
+    .hoofdscherm a,
+    .hoofdscherm p {
+        text-align: center;
+        color: #72405E;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+    .hoofdscherm a {
+        font-weight: bold;
+    }
+    .login .button {
+        box-shadow: 1px 1px 2px #9B9B9B;
+    }
+    .registratie .button {
+        box-shadow: 1px 1px 2px #9B9B9B;
+    }
+    /*-------------------------------------------*/
+    /*info scherm*/
+    #lijn {
+        background-color: #29c2de;
+        width: 800px;
+        height: 800px;
+        left: -210px;
+        bottom: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+        position: fixed;
+        z-index: -4;
+        box-shadow: 1px 1px 2px #9B9B9B;
+    }
+    .info {
+        background-color: #29c2de;
+        width: 100%;
+    }
+    #tekst {
+        margin: 60px 0% 70px 10%;
+        width: 80%;
+        height: 200px;
+        font-size: 14px;
+        padding: 0px;
+    }
+    .info #logo {
+        margin: 30% 20% 0px 20%;
+    }
+    .info p {
+        color: #ffffff;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+    #informatie {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        text-align: center;
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 90px;
+        background-color: #72405E;
+        box-shadow: 1px 1px 2px #9B9B9B;
+        margin-left: 250px;
+        top: 85%;
+    }
+    .stap_info {
+        border-radius: 20px;
+        background-color: #72405E;
+        opacity: 0.8;
+        width: 80px;
+        height: 10px;
+        margin: 10px;
+    }
+    /*-------------------------------------------*/
+    /*profiel scherm*/
+    .profiel {
+        width: 100%;
+        padding-bottom: 60px;
+    }
+    .profiel h1 {
+        text-align: center;
+        color: #29c2de;
+        font-family: 'Open Sans', semibold;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        font-size: 26px;
+    }
+    .profiel p {
+        margin-left: 15%;
+        margin-bottom: -15px;
+        color: #72405E;
+    }
+    .profiel .formfield {
+        margin-bottom: 10px;
+    }
+    .profiel .data_form {
+        margin: auto;
+    }
+    .profiel .button {
+        width: 60%;
+        text-align: center;
+        font-size: 14px;
+        margin-left: 20%;
+    }
+    .btn_loguit {
+        /*Midden*/
+        margin: 0px 30%;
+        /*Rechts positioneren*/
+        /*position: absolute;
     right:20%;
     bottom:100px;*/
-    padding:12px 35px;
-    text-decoration:none;
-    width:110px;
-    color:#72405E;
-    background-image:url(../images/logout_icon.png);
-    background-repeat:no-repeat;
-    background-size:30px;
-    background-position:0 center;
-    display:block;
-    height:40px;
-    text-align:right;
-}
-
-
-.profiel input[type=password] {
-	margin-top:-10px;
-}
-
-.profiel input[type=submit] {
-	margin-left:20%;
-    
-}
-
-.profiel .button{
-	box-shadow:1px 1px 2px #9B9B9B;
-}
-
-
-/*-------------------------------------------*/
-/*registratie scherm*/
-h1 {
-    text-align:center;
-    color: #29c2de;
-    font-family:'Open Sans', semibold;
-    margin-top: 15px;
-    margin-bottom:30px;
-    font-size:22px;
-}
-.data_form {
-    width:100%;
-    margin-top:20px;
-}
-.data_form input[type=text], input[type=password] {
-    display:block;
-    width:70%;
-    margin:0px 15% 30px 15%;
-    color:#29c2de;
-    font-family: 'Open Sans', sans-serif;
-    font-size:14px;
-    border:none;
-    padding-bottom:3px;
-	border-bottom: 1px solid #ade8f2;
-	
-}
-.error {
-    text-align:center;
-    font-size:12px;
-    line-height:1.5em;
-    width:70%;
-    margin:10px 15% -10px 15%;
-    padding:10px;
-    display:block;
-    background-color:#72405E;
-    color:#fff;
-    z-index:5;
-}
-.error a {
-    text-decoration:none;
-    color: #fff;
-    font-weight:bold;
-}
-
-
-/*-------------------------------------------*/
-/*login schem*/
-
-
-.login #logo {
-    width:40%;
-    margin:35px 30% 35px 30%;
-}
-
-.registratie #logo {
-    width:40%;
-    margin:40px 30% 50px 30%;
-}
-.field-group{ /*indien 'wachtwoord onthouden' wel*/
-    font-size: 14px;
-	color: gray;
-    display:block;
-    width:80%;
-	margin: 20px 10%;
-}
-.login .button, .registratie .button {
-    width:50%;
-    margin-left:25%;
-    margin-right:25%;
-	
-}
-.login .button {
-    margin-bottom:30px;
-}
-
-.login a{
-	color: #72405E;
-    text-decoration: none;
-    font-weight:bold;
-}
-.login p{
-    text-align: left;
-    margin-top:0px;
-    margin-left:15%;
-	font-size:14px;
-	color: #72405E;
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 10px;
-    
-}
-
-/*-------------------------------------------*/
-/* Google maps api */
-#googleMap {
-    width: 100%;
-    height:100%;
-    position:absolute;
-	border:none;
-}
-
-/*-------------------------------------------*/
-/* Navigatie-menu (bottom) */
-.navbar {
-    overflow: hidden;
-    background-color: #fff;
-    position: fixed;
-    z-index:10;
-    bottom: 0;
-    width: 100%;
-    height:50px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-left:18%;
-    box-shadow:0px -6px 40px -18px #9B9B9B;
-}
-.navbar a {
-    display:block;
-    text-align: center;
-    width:40%;
-    text-decoration: none;
-    text-indent:-9999px;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding-bottom:5px;
-}
-.navbar #home_btn {
-    background-image: url(../images/pinME_homebtn.png);
-}
-.navbar #melding_btn {
-    background-image: url(../images/pinme_meldingbtn.png);
-}
-.navbar #dossier_btn {
-    background-image: url(../images/pinme_dossierbtn.png);
-}
-.main {
-    padding-bottom:60px; /*zodat content onder navbar ook zichtbaar is*/
-}
-
-nav{
-	position: fixed;
-	right: 15px;
-	bottom: 60px;
-	z-index: 1;
-}
-.verborgen{
-	bottom: -80px;
-	
-}
-nav li a{
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	font-size: 12px;
-	text-align:center;
-    font-family: 'Open Sans', 'semibold';
-    padding: 15px;
-}
-nav li{
-    width: 180px;
-    background-color:#29c2de;
-	border-radius:25px;
-    box-shadow:1px 1px 12px #9B9B9B;
-	text-align: center;
-    margin-bottom:10px;
-	
-}
-/*-------------------------------------------*/
-/* Home.php */
-
-
-
-#zoeken{
-	position: absolute;
-	margin-left: 80%;
-	margin-top: 25%;
-}
-
-.verborgenrubrieken{ 
-	top: -800px;	
-}
-
-.zoek{
-	position: absolute;
-	background: url(../images/vegrootglas.png);
-	background-size: cover;
-	width: 50px;
-	height: 50px;
-	margin-left: 80%;
-	top: 5%;
-	z-index: 2;
-    border-radius:50%;
-    box-shadow:1px 1px 12px #707070;
-}
-
-#afval, #gebouwen, #groen, #overlast, #verkeer, #straten {
-	margin-top: 10px;
-}
-.popup_info {
-    position:absolute;
-    width:100%;
-    background-color:#fff;
-    height:280px;
-    bottom:50px;
-}
-.btn_down{
-    width:7%;
-    margin:10px 46.5%;
-    transform:rotate(-90deg);
-}
-.logo_small {
-    z-index:100;
-    width:30%;
-    margin:10px 35% 30px 35%;
-}
-.home_info {
-    text-align:center;
-    margin-bottom:20px;
-    font-size:14px;
-    color:#72405E;
-}
-
-
-/*-------------------------------------------*/
-/* Melding toevoegen - locatie bepalen */
-
-.above_map {
-    position:relative;
-    font-family: 'Open sans';
-	
-}
-.location_field{
-    font-size:14px;
-    padding:10px;
-    margin-left:5%;
-    margin-right:5%;
-    width: 90%;
-    background-color:#fff;
-    border-radius:25px;
-    border:none;
-    height:50px;
-    margin-top:10px;
-    text-align:center;
-	z-index: 100px;
-    box-shadow:1px 1px 12px #707070;
-}
-input[type=text]{
-    color:#29c2de;
-}
-
-.button_map {
-    text-align:center;
-    padding:12px 0;
-    width:170px;
-    position:absolute;
-    right:20px;
-    bottom:70px;
-    border: none;
-    background-color:#29c2de;
-    color: #fff;
-    font-family: Open sans semibold;
-    font-size:14px;
-    border-radius:50px;
-    box-shadow:1px 1px 12px #9B9B9B;
-}
-
-
-/*-------------------------------------------*/
-/* Melding toevoegen - image upload */
-
-h2 {
-    font-size: 18px;
-    color: #29c2de;
-    font-family: 'Open Sans', sans-serif;
-    text-align:center;
-    margin-top: 30px;
-    margin-bottom:15px;
-}
-.back_btn img {
-    display:block;
-    position:absolute;
-    width:20px;
-    top:30px;
-    left:25px;
-}
-input[type=file]{ 
-    opacity:0;
-}
-.button_upload {
-    padding:14px 0;
-    width:75%;
-    display:block;
-    margin:-30px auto 15px auto;
-    border: none;
-    background-color:#29c2de;
-    color: #fff;
-    font-size:14px;
-    border-radius:50px;
-    text-align:center;
-    display:block;
-}
-.button_upload:active {
-    border: #29c2de 2px solid;
-    background-color: #fff;
-    color: #29c2de;
-}
-.button {
-    text-align:center;
-    padding:12px 0;
-    width:75%;
-    margin:20px 12.5%;
-    border: none;
-    background-color:#29c2de;
-    color: #fff;
-    font-family: Open sans;
-    font-size:14px;
-    border-radius:50px;
-    display:block;
-}
-#first_input{
-    margin-top:130px;
-}
-.line_left, .line_right {
-    border:1px solid #29c2de;
-    width:20%;
-    position:absolute;
-    top:248px;
-}
-.line_left {
-    left:22%;
-}
-.line_right {
-    right:22%;
-}
-.center {
-    text-align:center;
-    font-size:14px;
-    color:#29c2de;
-    font-family: 'Open sans semibold';
-    display:block;
-}
-#of {
-    margin-top:-12px;
-    margin-bottom:10px;
-    font-family: 'Open Sans', sans-serif; 
-}
-.visible {
-    display:block;
-}
-
-.hidden {
-    display:none;
-}
-.preview {
-    width:80%;
-    margin:20px 10% 5px 10%;
-}
-
-.step_non_active {
-    width:6px;
-    height:6px;
-    margin-right:8px;
-    background-color:#C2E9F3;
-    border-radius:50%;
-}
-.formsteps {
-    display:flex;
-    flex-direction: row;
-    width:66px;
-    margin:20px auto 0px auto;
-    vertical-align: middle;
-}
-.step_active {
-    width:10px;
-    height:10px;
-    margin-right:8px;
-    margin-top:-2px;
-    background-color:#29c2de;
-    border-radius:50%;
-}
-.last {
-    margin-right:0px;
-}
-
-/*-------------------------------------------*/
-/* Melding toevoegen - Rubriek kiezen */
-
-h3 {
-    text-align:center;
-    color: #70405e;
-    font-size:14px;
-    margin-top:20px;
-    margin-bottom: 30px;
-}
-input[type=image]{ 
-    width:80px;
-}
-.icon_label {
-    font-size:12px;
-    text-align:center;
-    display:block;
-    margin-top:2px;
-    line-height:1.5em;
-    width:80px;
-}
-.grid_container {
-    width:100%;
-    display:grid;
-    grid-gap: 30px 15%;
-    grid-template-columns: auto auto;
-    justify-content: center;
-}
-.grid_item {
-    justify-self: center;
-}
-
-
-
-/*-------------------------------------------*/
-/* Melding toevoegen - Subrubriek kiezen */
-
-.subrub {
-    width:100%;
-    margin-bottom:60px;
-}
-.subrub img {
-    width:100px;
-    display:block;
-    margin:20px auto;
-}
-.btn_subrub {
-    border:1px solid #29c2de; 
-    background-color:#fff;
-    color:#29c2de; 
-    font-size:16px;
-    font-family: Open sans light;
-    width:80%;
-    height:50px;
-    border-radius:25px;
-    margin-bottom: 20px;
-    margin:0 10% 20px 10%;
-}
-
-/*-------------------------------------------*/
-/* Melding toevoegen - Beschrijving toevoegen */
-
-#uploadForm {
-    width:100%;
-}
-
-.description {
-    width:80%;
-    margin:40px 10% 20px 10%;
-    padding:12px 12px;
-    border: #29c2de 1px solid;
-    border-radius:15px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-textarea{
-    width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size:12px;
-    border: none;
-}
-::placeholder {
-    font-family: 'Open Sans', sans-serif;
-    color: #29c2de;
-    opacity: 1; /* Firefox */
-}
-.checkbox{
-    display: block;
-    position: relative;
-    width:80%;
-    margin:30px 10% 80px 10%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-left: 30px;
-    font-size:14px;
-    color:#29c2de;
-    line-height:1.5em;
-}
-.checkbox input {
-    position: absolute;
-    opacity: 0;
-}
-.checkbox .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    border: #29c2de 1px solid;
-    border-radius:5px;
-    display:block;
-    margin-right:5px;
-}
-.checkbox input:checked ~ .checkmark {
-    background-color: #29c2de;
-}
-
-
-/*-------------------------------------------*/
-/* Melding toegevoegd - popup */
-.melding_succes {
-    width:100%;
-}
-.melding_succes .img_succes {
-    width:200px;
-    display:block;
-    margin:30% auto 0 auto;
-}
-.melding_succes h3 {
-    font-size:20px;
-   
-}
-.melding_succes a{
-	font-size: 14px;
-	text-decoration: none;
-	color:#29c2de;
-}
-.btn_forward {
-    display:block;
-    width:90px;
-	margin-top:55%;
-    margin-left:55%;
-}
-.btn_forward a img {
-    width:12px;
-    height:12px;
-    margin-bottom:-2px;
-    margin-left:2px;
-}
-
-/*-------------------------------------------*/
-/* Persoonlijk dossier */
-
-#icon_dossier{
-	background-image: url(../images/icon_dossier.png);
-	background-size: cover;
-	width: 50px;
-	height:40px;
-	margin: 0 auto;
-	margin-top: 20px;
-
-}
-
-
-#blok2{
-	z-index: -5;
-	background-color: #29c2de;
-	position: fixed;
-	width: 800px;
-	height: 800px;
-	border-radius: 50%;
-	overflow: hidden;
-	top: 50%;
-	left: -200px;
-	box-shadow:20px 20px 90px gray;
-}
-
-#dospak{
-	background-color: #ffffff;
-	padding: 5px;
-	width: 90%;
-	margin: 0 auto;
-	box-shadow:1px 1px 12px gray;
-	border-radius: 2px;
-	overflow: hidden;
-	position: fixed;
-    top:34%;
-	bottom: 10%;
-	left: 5%;
-	
-}
-
-.dossier_scherm h1{
-	text-align: center;
-	font-size: 30px;
-	color: #70405e;
-	margin-top: 30px;
-	margin-bottom: 20px;
-}
-.dossier_scherm{
-	width: 100%;
-	margin-top: ;
-}
-.statusfilters{
-	display: flex;
-	width: 100%;
-    justify-content: center;
-}
-.status a, .status_all a {
-    text-decoration:none;
-    text-transform: uppercase;
-}
-.statusfilters .status{
-	font-size: 10px;
-	text-align: center;
-	border-radius: 10px;
-	padding:20px 0;
-    margin:10px 1%;
-	width: 30%;
-}
-.status_all {
-    font-size: 13px;
-	text-align: center;
-	border-radius: 10px;
-	padding:20px 0;
-    margin:0px 3% 10px 3%;
-	width: 94%;
-}
-.status_active {
-    background-color: #29c2de;
-    
-}
-.status_active a {
-    color: #fff;
-}
-.status_non_active {
-    background-color:#C2E9F3;
-    
-}
-.status_non_active a {
-    color:#29c2de;
-}
-.dossiers{
-    width:100%;
-    margin-bottom:80px;
-}
-.dossier{
-    width: 90%;
-    height:100px;
-	margin:10px 5%;
-    padding-left:10px;
-    padding-top:10px;
-	background-color:#fff;
-    border-bottom: 2px solid #C2E9F3;
-}
-.dossier_info{
-    font-size:11px;
-    color:#707070;
-    margin-bottom:5px;
-}
-.dossier_info img, .dossier_info div{
-    display:inline-block;
-    vertical-align: middle;
-}
-.dossier_info img{
-    width:12px;
-    height:12px;
-    margin-right:2px;
-}
-.dossier .dossier_rubicon {
-    width:55px;
-    height:55px;
-    float:left;
-    margin-top:5px;
-    margin-right:5px; 
-}
-
-
-#avatar{
-	background-image: url(../images/avatar.png);
-	background-size: cover;
-	width: 80px;
-	height: 80px;
-	margin: 0 auto;
-	margin-top: 100px;
-	margin-bottom: 10px;
-}
-
-.profiel h1{
-	text-align: center;
-	margin-bottom: 50px;
-	color: #70405e;
-	font-size: 15px;
-}
-
-	
-
-.login {
-    width:100%;
-	background-color: #29c2de;
-	height: 100%;
-	
-}
-
-#blok{
-	
-	background-color: #ffffff;
-	position: fixed;
-	width: 800px;
-	height: 800px;
-	border-radius: 50%;
-	overflow: scroll;
-	top: 35%;
-	left: -200px;
-	box-shadow:20px 20px 90px black;
-
-}
-.lala{
-	width: 100vw;
-	/*margin: auto;*/
-	padding-top: 6%;
-	margin-left: 25%;
-    
-}
-	
-}
-
-@media (min-width:480px){
-	
-	.landing{
-		background-image: url(../images/test2.png);
-		margin: 0 auto;
-		width: 100%;
-		height:100vh;
-/*		background-color: #b0ced5;*/
-			
-	}
-	
-
-	.landing h1{
-		line-height: 45px;
-		font-size: 36px;
-		width: 50%;
-		padding-top: 15%;
-		margin-left: 5%;
-		color: black;
-		margin-bottom: 20px;
-	}
-	
-	.landing p{
-		line-height: 35px;
-		font-size: 14px;
-		width: 30%;
-		height: 100px;
-		margin-left: 5%;
-		color: black;
-	}
-	
-	.landing .button{
-		padding: 10px;
-		padding-right: 25px;
-		padding-left: 25px;
-		border-radius: 20px 20px 20px 20px;
-		text-align: center;
-		margin-top: 10%;
-		margin-left: 5%;
-		border-style: none;
-		color: white;
-		background-color: #29c2de;
-	}
-	
-	img{
-		margin-left: 50%;
+        padding: 12px 35px;
+        text-decoration: none;
+        width: 110px;
+        color: #72405E;
+        background-image: url(../images/logout_icon.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: 0 center;
+        display: block;
+        height: 40px;
+        text-align: right;
+    }
+    .profiel input[type=password] {
+        margin-top: -10px;
+    }
+    .profiel input[type=submit] {
+        margin-left: 20%;
+    }
+    .profiel .button {
+        box-shadow: 1px 1px 2px #9B9B9B;
+    }
+    /*-------------------------------------------*/
+    /*registratie scherm*/
+    h1 {
+        text-align: center;
+        color: #29c2de;
+        font-family: 'Open Sans', semibold;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+    .data_form {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .data_form input[type=text],
+    input[type=password] {
+        display: block;
+        width: 70%;
+        margin: 0px 15% 30px 15%;
+        color: #29c2de;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        border: none;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #ade8f2;
+    }
+    .error {
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5em;
+        width: 70%;
+        margin: 10px 15% -10px 15%;
+        padding: 10px;
+        display: block;
+        background-color: #72405E;
+        color: #fff;
+        z-index: 5;
+    }
+    .error a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    /*-------------------------------------------*/
+    /*login schem*/
+    .login #logo {
+        width: 40%;
+        margin: 35px 30% 35px 30%;
+    }
+    .registratie #logo {
+        width: 40%;
+        margin: 40px 30% 50px 30%;
+    }
+    .field-group {
+        /*indien 'wachtwoord onthouden' wel*/
+        font-size: 14px;
+        color: gray;
+        display: block;
+        width: 80%;
+        margin: 20px 10%;
+    }
+    .login .button,
+    .registratie .button {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .login .button {
+        margin-bottom: 30px;
+    }
+    .login a {
+        color: #72405E;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .login p {
+        text-align: left;
+        margin-top: 0px;
+        margin-left: 15%;
+        font-size: 14px;
+        color: #72405E;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 10px;
+    }
+    /*-------------------------------------------*/
+    /* Google maps api */
+    #googleMap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: none;
+    }
+    /*-------------------------------------------*/
+    /* Navigatie-menu (bottom) */
+    .navbar {
+        overflow: hidden;
+        background-color: #fff;
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-left: 18%;
+        box-shadow: 0px -6px 40px -18px #9B9B9B;
+    }
+    .navbar a {
+        display: block;
+        text-align: center;
+        width: 40%;
+        text-decoration: none;
+        text-indent: -9999px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        padding-bottom: 5px;
+    }
+    .navbar #home_btn {
+        background-image: url(../images/pinME_homebtn.png);
+    }
+    .navbar #melding_btn {
+        background-image: url(../images/pinme_meldingbtn.png);
+    }
+    .navbar #dossier_btn {
+        background-image: url(../images/pinme_dossierbtn.png);
+    }
+    .main {
+        padding-bottom: 60px;
+        /*zodat content onder navbar ook zichtbaar is*/
+    }
+    nav {
+        position: fixed;
+        right: 15px;
+        bottom: 60px;
+        z-index: 1;
+    }
+    .verborgen {
+        bottom: -80px;
+    }
+    nav li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Open Sans', 'semibold';
+        padding: 15px;
+    }
+    nav li {
+        width: 180px;
+        background-color: #29c2de;
+        border-radius: 25px;
+        box-shadow: 1px 1px 12px #9B9B9B;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    /*-------------------------------------------*/
+    /* Home.php */
+    #zoeken {
+        position: absolute;
+        margin-left: 80%;
+        margin-top: 25%;
+    }
+    .verborgenrubrieken {
+        top: -800px;
+    }
+    .zoek {
+        position: absolute;
+        background: url(../images/vegrootglas.png);
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        margin-left: 80%;
+        top: 5%;
+        z-index: 2;
+        border-radius: 50%;
+        box-shadow: 1px 1px 12px #707070;
+    }
+    #afval,
+    #gebouwen,
+    #groen,
+    #overlast,
+    #verkeer,
+    #straten {
+        margin-top: 10px;
+    }
+    .popup_info {
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        height: 280px;
+        bottom: 50px;
+    }
+    .btn_down {
+        width: 7%;
+        margin: 10px 46.5%;
+        transform: rotate(-90deg);
+    }
+    .logo_small {
+        z-index: 100;
+        width: 30%;
+        margin: 10px 35% 30px 35%;
+    }
+    .home_info {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #72405E;
+    }
+    /*-------------------------------------------*/
+    /* Melding toevoegen - locatie bepalen */
+    .above_map {
+        position: relative;
+        font-family: 'Open sans';
+    }
+    .location_field {
+        font-size: 14px;
+        padding: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 25px;
+        border: none;
+        height: 50px;
+        margin-top: 10px;
+        text-align: center;
+        z-index: 100px;
+        box-shadow: 1px 1px 12px #707070;
+    }
+    input[type=text] {
+        color: #29c2de;
+    }
+    .button_map {
+        text-align: center;
+        padding: 12px 0;
+        width: 170px;
+        position: absolute;
+        right: 20px;
+        bottom: 70px;
+        border: none;
+        background-color: #29c2de;
+        color: #fff;
+        font-family: Open sans semibold;
+        font-size: 14px;
+        border-radius: 50px;
+        box-shadow: 1px 1px 12px #9B9B9B;
+    }
+    /*-------------------------------------------*/
+    /* Melding toevoegen - image upload */
+    h2 {
+        font-size: 18px;
+        color: #29c2de;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .back_btn img {
+        display: block;
+        position: absolute;
+        width: 20px;
+        top: 30px;
+        left: 25px;
+    }
+    input[type=file] {
+        opacity: 0;
+    }
+    .button_upload {
+        padding: 14px 0;
+        width: 75%;
+        display: block;
+        margin: -30px auto 15px auto;
+        border: none;
+        background-color: #29c2de;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 50px;
+        text-align: center;
+        display: block;
+    }
+    .button_upload:active {
+        border: #29c2de 2px solid;
+        background-color: #fff;
+        color: #29c2de;
+    }
+    .button {
+        text-align: center;
+        padding: 12px 0;
+        width: 75%;
+        margin: 20px 12.5%;
+        border: none;
+        background-color: #29c2de;
+        color: #fff;
+        font-family: Open sans;
+        font-size: 14px;
+        border-radius: 50px;
+        display: block;
+    }
+    #first_input {
+        margin-top: 130px;
+    }
+    .line_left,
+    .line_right {
+        border: 1px solid #29c2de;
+        width: 20%;
+        position: absolute;
+        top: 248px;
+    }
+    .line_left {
+        left: 22%;
+    }
+    .line_right {
+        right: 22%;
+    }
+    .center {
+        text-align: center;
+        font-size: 14px;
+        color: #29c2de;
+        font-family: 'Open sans semibold';
+        display: block;
+    }
+    #of {
+        margin-top: -12px;
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .visible {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    .preview {
+        width: 80%;
+        margin: 20px 10% 5px 10%;
+    }
+    .step_non_active {
+        width: 6px;
+        height: 6px;
+        margin-right: 8px;
+        background-color: #C2E9F3;
+        border-radius: 50%;
+    }
+    .formsteps {
+        display: flex;
+        flex-direction: row;
+        width: 66px;
+        margin: 20px auto 0px auto;
+        vertical-align: middle;
+    }
+    .step_active {
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+        margin-top: -2px;
+        background-color: #29c2de;
+        border-radius: 50%;
+    }
+    .last {
+        margin-right: 0px;
+    }
+    /*-------------------------------------------*/
+    /* Melding toevoegen - Rubriek kiezen */
+    h3 {
+        text-align: center;
+        color: #70405e;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    input[type=image] {
+        width: 80px;
+    }
+    .icon_label {
+        font-size: 12px;
+        text-align: center;
+        display: block;
+        margin-top: 2px;
+        line-height: 1.5em;
+        width: 80px;
+    }
+    .grid_container {
+        width: 100%;
+        display: grid;
+        grid-gap: 30px 15%;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+    .grid_item {
+        justify-self: center;
+    }
+    /*-------------------------------------------*/
+    /* Melding toevoegen - Subrubriek kiezen */
+    .subrub {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .subrub img {
+        width: 100px;
+        display: block;
+        margin: 20px auto;
+    }
+    .btn_subrub {
+        border: 1px solid #29c2de;
+        background-color: #fff;
+        color: #29c2de;
+        font-size: 16px;
+        font-family: Open sans light;
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        margin: 0 10% 20px 10%;
+    }
+    /*-------------------------------------------*/
+    /* Melding toevoegen - Beschrijving toevoegen */
+    #uploadForm {
+        width: 100%;
+    }
+    .description {
+        width: 80%;
+        margin: 40px 10% 20px 10%;
+        padding: 12px 12px;
+        border: #29c2de 1px solid;
+        border-radius: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    textarea {
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        border: none;
+    }
+    ::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        color: #29c2de;
+        opacity: 1;
+        /* Firefox */
+    }
+    .checkbox {
+        display: block;
+        position: relative;
+        width: 80%;
+        margin: 30px 10% 80px 10%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding-left: 30px;
+        font-size: 14px;
+        color: #29c2de;
+        line-height: 1.5em;
+    }
+    .checkbox input {
+        position: absolute;
+        opacity: 0;
+    }
+    .checkbox .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: #29c2de 1px solid;
+        border-radius: 5px;
+        display: block;
+        margin-right: 5px;
+    }
+    .checkbox input:checked ~ .checkmark {
+        background-color: #29c2de;
+    }
+    /*-------------------------------------------*/
+    /* Melding toegevoegd - popup */
+    .melding_succes {
+        width: 100%;
+    }
+    .melding_succes .img_succes {
+        width: 200px;
+        display: block;
+        margin: 30% auto 0 auto;
+    }
+    .melding_succes h3 {
+        font-size: 20px;
+    }
+    .melding_succes a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #29c2de;
+    }
+    .btn_forward {
+        display: block;
+        width: 90px;
+        margin-top: 55%;
+        margin-left: 55%;
+    }
+    .btn_forward a img {
+        width: 12px;
+        height: 12px;
+        margin-bottom: -2px;
+        margin-left: 2px;
+    }
+    /*-------------------------------------------*/
+    /* Persoonlijk dossier */
+    #icon_dossier {
+        background-image: url(../images/icon_dossier.png);
+        background-size: cover;
+        width: 50px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    #blok2 {
+        z-index: -5;
+        background-color: #29c2de;
+        position: fixed;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 50%;
+        left: -200px;
+        box-shadow: 20px 20px 90px gray;
+    }
+    #dospak {
+        background-color: #ffffff;
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 1px 1px 12px gray;
+        border-radius: 2px;
+        overflow: hidden;
+        position: fixed;
+        top: 34%;
+        bottom: 10%;
+        left: 5%;
+    }
+    .dossier_scherm h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #70405e;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .dossier_scherm {
+        width: 100%;
+        margin-top: ;
+    }
+    .statusfilters {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .status a,
+    .status_all a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .statusfilters .status {
+        font-size: 10px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 0;
+        margin: 10px 1%;
+        width: 30%;
+    }
+    .status_all {
+        font-size: 13px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 0;
+        margin: 0px 3% 10px 3%;
+        width: 94%;
+    }
+    .status_active {
+        background-color: #29c2de;
+    }
+    .status_active a {
+        color: #fff;
+    }
+    .status_non_active {
+        background-color: #C2E9F3;
+    }
+    .status_non_active a {
+        color: #29c2de;
+    }
+    .dossiers {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .dossier {
+        width: 90%;
+        height: 100px;
+        margin: 10px 5%;
+        padding-left: 10px;
+        padding-top: 10px;
+        background-color: #fff;
+        border-bottom: 2px solid #C2E9F3;
+    }
+    .dossier_info {
+        font-size: 11px;
+        color: #707070;
+        margin-bottom: 5px;
+    }
+    .dossier_info img,
+    .dossier_info div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .dossier_info img {
+        width: 12px;
+        height: 12px;
+        margin-right: 2px;
+    }
+    .dossier .dossier_rubicon {
+        width: 55px;
+        height: 55px;
+        float: left;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #avatar {
+        background-image: url(../images/avatar.png);
+        background-size: cover;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .profiel h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #70405e;
+        font-size: 15px;
+    }
+    .login {
+        width: 100%;
+        background-color: #29c2de;
+        height: 100%;
+    }
+    #blok {
+        background-color: #ffffff;
+        position: fixed;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        overflow: scroll;
+        top: 35%;
+        left: -200px;
+        box-shadow: 20px 20px 90px black;
+    }
+    .lala {
+        width: 100vw;
+        /*margin: auto;*/
+        padding-top: 6%;
+        margin-left: 25%;
+    }
+}
+@media (min-width: 480px) {
+    .landing {
+        background-image: url(../images/test2.png);
+		background-size:cover;
+        margin: 0 auto;
+        width:100%;
+		height: 100%;
+		overflow: hidden;
+        /*		background-color: #b0ced5;*/
+    }
+    .landing h1 {
+        line-height: 45px;
+        font-size: 26px;
+        color: black;
+        margin-bottom: 20px;
+		font-family: 'Fredoka One', cursive;
+    }
+    .landing p {
+        line-height: 35px;
+        font-size: 14px;
+        color: black;
+		font-family: 'Raleway', sans-serif;
+    }
+    .landing .button {
+        padding: 10px;
+        padding-right: 25px;
+        padding-left: 25px;
+        border-radius: 20px 20px 20px 20px;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 0%;
+        border-style: none;
+        color: white;
+        background-color: #29c2de;
+		font-family: 'Raleway', sans-serif;
+    }
+    img {
+        margin-left: 50%;
+        position: absolute;
+        margin-top: 15%;
+    }
+    #logo_landing {
 		position: absolute;
-		margin-top: 15%;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+   
+    .test li {
+        display: inline;
+        padding: 30px;
+		
+		
+    }
+	
+	.test a{
+		text-decoration: none;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		
+	}
+   
+	
+	.test{
+		position: absolute;
+		margin-top: 5%;
+		margin-left: 55%;
+		
 	}
 	
-#logo_landing{
-		margin-top: 2%;
-		margin-left: 90%;
+	#tekstlanding{
+		width: 400px;
+		margin-left: 5%;
+		margin-top: 20%;
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
