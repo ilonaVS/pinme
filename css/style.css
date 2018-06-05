@@ -901,7 +901,8 @@ textarea {
 		font-family: 'Fredoka One', cursive;
     }
     .landing p {
-        line-height: 35px;
+		width: 70%;
+        line-height: 30px;
         font-size: 14px;
         color: black;
 		font-family: 'Raleway', sans-serif;
@@ -933,7 +934,7 @@ textarea {
    
     .test li {
         display: inline;
-        padding: 30px;
+        padding: 10px;
 		
 		
     }
@@ -949,7 +950,7 @@ textarea {
 	.test{
 		position: absolute;
 		margin-top: 5%;
-		margin-left: 55%;
+		margin-left: 60%;
 		
 	}
 	
