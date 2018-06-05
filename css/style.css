@@ -894,10 +894,11 @@ textarea {
         /*		background-color: #b0ced5;*/
     }
     .landing h1 {
-        line-height: 45px;
+		width: 80%;
+        line-height: 35px;
         font-size: 26px;
         color: black;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 		font-family: 'Fredoka One', cursive;
     }
     .landing p {
@@ -929,7 +930,7 @@ textarea {
     #logo_landing {
 		position: absolute;
         margin-top: 2%;
-        margin-left: 5%;
+        margin-left: 6%;
     }
    
     .test li {
@@ -956,7 +957,7 @@ textarea {
 	
 	#tekstlanding{
 		width: 400px;
-		margin-left: 5%;
+		margin-left: 6%;
 		margin-top: 15%;
 	}
 	
