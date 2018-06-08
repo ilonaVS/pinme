@@ -286,7 +286,7 @@
         public function getAllByStatus($status)
         {
             $conn = Db::getInstance();
-            $statement = $conn->prepare("SELECT pins.*, locations.streetname, locations.house_nr, locations.city, statussen.status_name, rubrieken.icon_url, rubrieken.name FROM pins, locations, statussen, rubrieken WHERE pins.user_id = :userId AND pins.location_id = locations.id AND pins.status_id = statussen.id AND pins.status_id = :status AND pins.rubriek_id = rubrieken.id ORDER BY pins.date DESC");
+            $statement = $conn->prepare("SELECT pins.*, locations.streetname, locations.house_nr, locations.city, statussen.status_name, rubrieken.icon_url, rubrieken.name FROM pins, locations, statussen, rubrieken WHERE pins.user_id = :userId AND pins.location_id = locations.id AND pins.status_id = statussen.id AND pins.status_id = :status AND pins.rubriek_id = rubrieken.id ORDER BY pins.date ASC");
             $statement->bindValue(":userId", $this->getUserId());
             $statement->bindValue(":status", $status);
             $statement->execute();
