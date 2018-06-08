@@ -38,22 +38,17 @@ $collection = $pin->getAllPins();
 	<!--<h1>Mijn dossier</h1>-->
 	
 	<div class="statusfilters">
-	    <div class="status status_non_active">
-            <a href="#" class="link1" id="1">Opgestart</a>
-        </div>
+	    
+            <a href="#" class="link1 status" id="1">Opgestart</a>
         
-        <div class="status status_non_active">
-            <a href="#" class="link1" id="2">In behandeling</a>
-        </div>
+            <a href="#" class="link1 status" id="2">In behandeling</a>
+        
+            <a href="#" class="link1 status" id="3">Afgerond</a>	
        
-       <div class="status status_non_active">
-            <a href="#" class="link1" id="3">Afgerond</a>	
-       </div>
-        
     </div>
-    <div class="status_all status_active">
-            <a href="#" class="link1" id="all">Toon alle meldingen</a>	
-       </div>
+    
+            <a href="#" class="link1 status_all status_active" id="all">Toon alle meldingen</a>	
+    
 	
 	<div class="dossiers" id="dospak" style="overflow-y: scroll; height:56%;">
 
@@ -86,9 +81,15 @@ $collection = $pin->getAllPins();
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <script src="js/clickDossier.js"></script>
+<script>
+var links = $('.link1').click(function(){
+    links.removeClass('status_active');
+    $(this).addClass('status_active');
 
+});
+
+</script>
 
 </body>
 </html>
