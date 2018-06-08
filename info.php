@@ -4,10 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Info</title>
-
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 
