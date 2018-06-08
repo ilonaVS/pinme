@@ -34,7 +34,7 @@ $(document).ready(function(){
             </div>
             <div class="dossier_info">
                 <img src="images/dossier_kalender.png" alt="icon">
-                <div>${collection[x].date}</div>
+                <div>${(collection[x].date + "").slice(8,-9)+"/"+(collection[x].date + "").slice(5,-12)+"/"+(collection[x].date + "").slice(0,-15)}</div>
             </div>				
         </div>`
                     
