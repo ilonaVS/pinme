@@ -10,18 +10,14 @@ if(!isset($_SESSION)){
 $pin = new Pin();
 $pin->setUserId($_SESSION['user']);
 $collection = $pin->getAllPins();
-//$collection = $pin->getAllByStatus(1);
 
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	
 	<title>Mijn dossier</title>
-   
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="css/flexboxgrid.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,27 +25,16 @@ $collection = $pin->getAllPins();
 
 <?php include_once("nav.inc.php"); ?>
 
-
 <div id="icon_dossier"></div>
 <div class="dossier_scherm">
-
-
-	
-	<!--<h1>Mijn dossier</h1>-->
 	
 	<div class="statusfilters">
-	    
             <a href="#" class="link1 status" id="1">Opgestart</a>
-        
             <a href="#" class="link1 status" id="2">In behandeling</a>
-        
             <a href="#" class="link1 status" id="3">Afgerond</a>	
-       
     </div>
-    
             <a href="#" class="link1 status_all status_active" id="all">Toon alle meldingen</a>	
     
-	
 	<div class="dossiers" id="dospak" style="overflow-y: scroll; height:56%;">
 
 		<?php foreach($collection as $c): ?>

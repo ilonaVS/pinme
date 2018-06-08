@@ -23,7 +23,6 @@ $countUsers = $user->getAmountUsers();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title></title>
-    <link rel="stylesheet" href="css/flexboxgrid.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 

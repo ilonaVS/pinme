@@ -705,9 +705,10 @@ textarea {
     }
     .btn_forward {
         display: block;
+        position:absolute;
         width: 90px;
-        margin-top: 55%;
-        margin-left: 55%;
+        right: 40px;
+        bottom:40px;
     }
     .btn_forward a img {
         width: 12px;
@@ -736,19 +737,6 @@ textarea {
         top: 50%;
         left: -200px;
         box-shadow: 20px 20px 90px gray;
-    }
-    #dospak {
-        background-color: #ffffff;
-        padding: 5px;
-        width: 90%;
-        margin: 0 auto;
-        box-shadow: 1px 1px 12px gray;
-        border-radius: 2px;
-        overflow: hidden;
-        position: fixed;
-        top: 34%;
-        bottom: 10%;
-        left: 5%;
     }
     .dossier_scherm h1 {
         text-align: center;
@@ -797,8 +785,14 @@ textarea {
         color: #fff;
     }
     .dossiers {
-        width: 100%;
-        margin-bottom: 80px;
+        background-color: #fff;
+        padding: 5px;
+        width: 90%;
+        margin: 0 5% 80px 5%;
+        box-shadow: 1px 1px 12px gray;
+        border-radius: 2px;
+        position: fixed;
+        top: 195px;
     }
     .dossier {
         width: 90%;
@@ -837,7 +831,7 @@ textarea {
         width: 80px;
         height: 80px;
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 10px;
     }
     .profiel h1 {

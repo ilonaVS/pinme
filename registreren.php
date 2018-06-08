@@ -49,8 +49,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Registreren</title>
-
-	<link rel="stylesheet" href="css/flexboxgrid.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
