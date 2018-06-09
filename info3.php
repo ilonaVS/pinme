@@ -11,7 +11,7 @@
 </head>
 <body>
 
- 
+ <div class="info_main">
 
 <div class="info_3">
     
@@ -29,6 +29,6 @@
    <a href="registreren.php"><img src="images/pinme_forwardbtn.png"></a>
 </div>
 
-
+</div>
 </body>
 </html>

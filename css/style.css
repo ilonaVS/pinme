@@ -153,6 +153,10 @@ textarea {
         background-color:#fbfbfb;
         height:100%;
     }
+    .info_main {
+        width:100%;
+        height:100%;
+    }
     .info_animatie {
         width:100%;
         margin-top:80px;
@@ -469,7 +473,7 @@ textarea {
         transition-timing-function: ease-in;
         animation-fill-mode: both;
     }
-    .main {
+    .main, .info_main {
         -webkit-animation-name: fadeInRight;
         animation-duration: 0.25s;
         transition-timing-function: ease-in;

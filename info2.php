@@ -11,8 +11,7 @@
 </head>
 <body>
 
- 
-
+<div class="info_main">
 <div class="info_2">
 
 	<img class="info_animatie" src="images/PinMe_animatie.gif" alt="melding animatie">
@@ -28,6 +27,7 @@
    <a href="info3.php"><img src="images/pinme_forwardbtn.png"></a>
 </div>
 
+</div>
 
 </body>
 </html>
