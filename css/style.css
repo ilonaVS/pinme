@@ -879,10 +879,83 @@ textarea {
         margin-left: 25%;
     }
 	#landingspagina{
-		visibility: hidden;
+	
 	}
 	
+	#logo_landing{
+		visibility: hidden
+	}
 	
+	#logo_landing2{
+		position: absolute;
+		top: 20px;
+		 left: 44%;
+	}
+	
+	 .landing img {
+        position: absolute;
+		top: 150px; 
+		 left: 30%;
+		
+    }
+	
+	.landing{
+		width: 100%;
+		margin: 0 auto;
+		background-color: #29c2de;
+		
+	}
+	
+	.landing h1{
+			font-size: 16px;
+		color: white;
+		font-family: 'Fredoka One', cursive;
+		letter-spacing: 1.2px;
+		
+	}
+	
+	.landing p{
+		font-size: 12px;
+		text-align: center;
+		padding-left: 30px;
+		padding-right: 30px;
+		line-height: 16px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.test{
+			visibility: hidden;
+	}
+	
+	#tekstlanding{
+		margin-top: 350px;
+		color: white;
+	}
+	
+	.footer{
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		background-color: white;
+	}
+	
+	.footer h2{
+		font-size: 9px;
+		text-align: center;
+		
+	}
+	
+	.landing .button{
+		width: 120px;
+		font-size: 11px;
+		 box-shadow: 1px 1px 2px #9B9B9B;
+		margin: 0 auto;
+		margin-top: 50px;
+	border:solid 1px #29c2de;
+		background-color: #fff;
+		color: #29c2de;
+	}
+	
+  
 }
 @media (min-width: 480px) {
 	
@@ -929,7 +1002,7 @@ textarea {
 		font-family: 'Raleway', sans-serif;
 		margin-bottom: 20px;
     }
-    img {
+    .landing img {
         margin-left: 50%;
         position: absolute;
         margin-top: 15%;
@@ -979,4 +1052,11 @@ textarea {
 		font-family: 'Raleway', sans-serif;
 		margin-top: -35px;
 	}
+		#logo_landing2{
+		visibility: hidden;
+	}
+		#logo_landing{
+		visibility: visible;
+	}
+	
 }

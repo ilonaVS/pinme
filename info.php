@@ -19,7 +19,7 @@
 	
 	<div class="infotext">
 	<h4>Welkom op de meldingsapp van Mechelen!</h4>
-    <p>Zie jij ook weleens een overvolle vuilnisbak? Of maken je buren teveel lawaai?</p>
+    <p>Zie jij ook weleens een overvolle vuilnisbak? Of maken je buren te veel lawaai?</p>
     <p>Meld dan vanaf nu jouw ongemakken of problemen in de stad en blijf op de hoogte van de vooruitgang van je melding! </p>
 	</div>
 	

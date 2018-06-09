@@ -33,12 +33,14 @@
 
         <img src="images/test.png" alt="" width="45%">
         <img id="logo_landing" src="images/pinme_logo.png" alt="logo" width="5%">
+        <img id="logo_landing2" src="images/logo_wit.png" alt="" width="15%;">
 	
         <div id="tekstlanding">
 
         <h1>De nieuwe meldingsapp van Mechelen</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima voluptatem blanditiis quis ipsum dolorem amet sunt autem dolor tenetur quod, qui optio similique vel velit iste illum, ducimus aliquam quasi.</p>
+    <p>Zie jij ook weleens een overvolle vuilnisbak? Of maken je buren te veel lawaai?</p><br>
+    <p>Meld dan vanaf nu jouw ongemakken of problemen in de stad en blijf op de hoogte van de vooruitgang van je melding!
 
 
 
