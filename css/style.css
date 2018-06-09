@@ -98,6 +98,7 @@ textarea {
     }
     /*-------------------------------------------*/
     /*info scherm*/
+    
     #lijn {
         background-color: #29c2de;
         width: 800px;
@@ -110,59 +111,83 @@ textarea {
         z-index: -4;
         box-shadow: 1px 1px 2px #9B9B9B;
     }
-    .info {
-        background-color: #29c2de;
+    .info, .info_2, .info_3 {
         width: 100%;
     }
     .infotext {
-        margin: 0px 7.5% 40px 7.5%;
-        width: 85%;
-        height: 200px;
+        margin: 0px 5% 40px 5%;
+        width: 90%;
         padding: 0px;
         text-align: center;
+        color: #fff;
     }
     .info_logo {
-        width:50%;
-        margin:60px 25% 60px 25%;
+        width:40%;
+        margin:80px 30% 60px 30%;
     }
-    .info p {
-        color: #ffffff;
+    .info p, .info_2 p, .info_3 p {
         font-size: 14px;
         line-height: 1.8em;
         margin-bottom: 20px;
     }
-    .info h4 {
-        width:90%;
-        margin:0px 5% 30px 5%;
+    h4 {
+        width:100%;
         font-size:20px;
-        color: #fff;
         font-weight:bold;
         line-height:1.5em;
         text-align:center;
-        margin-bottom:20px;
+        margin-bottom:30px;
     }
-    #informatie {
+    .info_skip {
         position: absolute;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        text-align: center;
-        color: #ffffff;
-        font-size: 26px;
-        line-height: 90px;
-        background-color: #72405E;
-        box-shadow: 1px 1px 2px #9B9B9B;
-        margin-left: 250px;
-        top: 85%;
+        bottom:20px;
+        right:20px;
+        z-index:2;
     }
-    .stap_info {
-        border-radius: 20px;
-        background-color: #72405E;
-        opacity: 0.8;
-        width: 80px;
-        height: 10px;
-        margin: 10px;
+    .info_skip img {
+        width:25px;
+        height:25px;
     }
+    .info_2 {
+        overflow:hidden;
+        background-color:#fbfbfb;
+        height:100%;
+    }
+    .info_main {
+        width:100%;
+        height:100%;
+    }
+    .info_animatie {
+        width:100%;
+        margin-top:80px;
+        transform: scale(2,2);
+        z-index:-4;
+    }
+    .info_2 .infotext {
+        position:absolute;
+        z-index:1;
+        color:#72405E;
+        margin:80px 5% 0px 5%;
+    }
+    .info_2 h4, .info_3 h4 {
+        margin-bottom:10px;
+    }
+    .info_3 .infotext {
+        color:#72405E;
+        margin:0px 5% 0px 5%;
+    }
+    .info_3 img {
+        width:60%;
+        margin:20px 20%;
+    }
+    .info_3 .button a {
+        text-decoration:none;
+        color:#fff;
+    }
+    .info_3 p {
+        margin-bottom:10px;
+    }
+    
     /*-------------------------------------------*/
     /*profiel scherm*/
     .profiel {
@@ -273,7 +298,7 @@ textarea {
     }
     .registratie #logo {
         width: 40%;
-        margin: 40px 30% 50px 30%;
+        margin: 40px 30% 120px 30%;
     }
     .field-group {
         /*indien 'wachtwoord onthouden' wel*/
@@ -432,6 +457,28 @@ textarea {
     }
     /*-------------------------------------------*/
     /* Melding toevoegen - locatie bepalen */
+    @-webkit-keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+          }
+    }
+    #melding1 {
+        -webkit-animation-name: fadeIn;
+        animation-duration: 0.25s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+    }
+    .main, .info_main {
+        -webkit-animation-name: fadeInRight;
+        animation-duration: 0.25s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+    }
     .above_map {
         position: relative;
         font-family: 'Open sans';
@@ -710,9 +757,21 @@ textarea {
         width: 200px;
         display: block;
         margin: 30% auto 0 auto;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
+    }
+    @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
     }
     .melding_succes h3 {
         font-size: 20px;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
     }
     .melding_succes a {
         font-size: 14px;
@@ -725,6 +784,10 @@ textarea {
         width: 90px;
         right: 40px;
         bottom:40px;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
     }
     .btn_forward a img {
         width: 12px;
@@ -801,14 +864,16 @@ textarea {
         color: #fff;
     }
     .dossiers {
+        overflow: scroll;
         background-color: #fff;
         padding: 5px;
         width: 90%;
-        margin: 0 5% 80px 5%;
+        margin: 0 5% 40px 5%;
         box-shadow: 1px 1px 12px gray;
         border-radius: 2px;
         position: fixed;
         top: 195px;
+        bottom:20px;
     }
     .dossier {
         width: 90%;
@@ -931,6 +996,7 @@ textarea {
 		color: white;
 	}
 	
+<<<<<<< HEAD
 	.footer{
 		position: absolute;
 		bottom: 0px;
@@ -956,6 +1022,8 @@ textarea {
 	}
 	
   
+=======
+>>>>>>> infoscreens
 }
 @media (min-width: 480px) {
 	

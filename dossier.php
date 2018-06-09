@@ -35,7 +35,7 @@ $collection = $pin->getAllPins();
     </div>
             <a href="#" class="link1 status_all status_active" id="all">Toon alle meldingen</a>	
     
-	<div class="dossiers" id="dospak" style="overflow-y: scroll; height:56%;">
+	<div class="dossiers" id="dospak">
 
 		<?php foreach($collection as $c): ?>
         <div class="dossier">

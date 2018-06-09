@@ -64,7 +64,7 @@ $_SESSION["locatieId"] = $pin->getLocationId($streetname, $streetnr, $zip_city[1
 <body>
 <?php include_once("nav.inc.php"); ?>
 
-<div class="main" id="form_step2">
+<div class="main" id="form_step2 melding2">
 
 <a href="melding_1.php" class="back_btn"><img src="images/pinme_backbtn.png" alt="back button"></a>
 <h2>Melding toevoegen</h2>
@@ -113,6 +113,7 @@ $_SESSION["locatieId"] = $pin->getLocationId($streetname, $streetnr, $zip_city[1
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="js/previewFoto.js"></script>
 </body>
 </html>
