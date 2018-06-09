@@ -29,6 +29,10 @@
         </ul>
 	
 </nav>
+   
+
+
+ </div>
     <div id="container" class="landing">
 
         <img src="images/test.png" alt="" width="45%">
@@ -61,7 +65,45 @@
 
 
     </footer>
-    </div>
+
+    
+    
+    <script>
+	  
+
+
+	
+		var knop = document.querySelector("#menuButton");
+		var nav = document.querySelector("nav");
+		var lijntjes = document.querySelector("#lijnen");
+	  
+	  
+		
+		
+		knop.addEventListener("click", menuOpenDicht);
+		lijntjes.addEventListener("click", veranderen);
+       
+	 
+	
+		
+		
+		function menuOpenDicht(evt){
+			nav.classList.toggle("klappen");
+		}
+		
+		
+        function veranderen(evt) {
+            lijntjes.classList.toggle("rotate");
+           
+
+        }
+	  
+
+      
+		
+	</script>
+    
+    
 </body>
 
 </html>
