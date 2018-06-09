@@ -923,7 +923,7 @@ textarea {
 		font-family: 'Raleway', sans-serif;
 	}
 	.test{
-		visibility: hidden;
+			visibility: hidden;
 	}
 	
 	#tekstlanding{
@@ -955,7 +955,6 @@ textarea {
 		color: #29c2de;
 	}
 	
-	  
   
 }
 @media (min-width: 480px) {
@@ -1059,12 +1058,5 @@ textarea {
 		#logo_landing{
 		visibility: visible;
 	}
-	
-	#menuButton {
-        display: none;
-    }
-    .verborgen {
-        top: 0;
-    }
 	
 }
