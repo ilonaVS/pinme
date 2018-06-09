@@ -1,6 +1,5 @@
 function initMap() {
 var mapProp= {
-    center:new google.maps.LatLng(51.024902, 4.479083),
     zoom:15,
     zoomControl: false,
     mapTypeControl: false,
@@ -30,6 +29,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
         
         var userMarker = new google.maps.Marker({
             position: latLng,
+            animation: google.maps.Animation.DROP,
             map: map
             
         });

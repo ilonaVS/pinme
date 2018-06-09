@@ -453,6 +453,28 @@ textarea {
     }
     /*-------------------------------------------*/
     /* Melding toevoegen - locatie bepalen */
+    @-webkit-keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+          }
+    }
+    #melding1 {
+        -webkit-animation-name: fadeIn;
+        animation-duration: 0.25s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+    }
+    .main {
+        -webkit-animation-name: fadeInRight;
+        animation-duration: 0.25s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+    }
     .above_map {
         position: relative;
         font-family: 'Open sans';
@@ -731,9 +753,21 @@ textarea {
         width: 200px;
         display: block;
         margin: 30% auto 0 auto;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
+    }
+    @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
     }
     .melding_succes h3 {
         font-size: 20px;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
     }
     .melding_succes a {
         font-size: 14px;
@@ -746,6 +780,10 @@ textarea {
         width: 90px;
         right: 40px;
         bottom:40px;
+        -webkit-animation-name:fadeIn;
+        -webkit-animation-duration:0.25s;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
     }
     .btn_forward a img {
         width: 12px;
@@ -904,7 +942,6 @@ textarea {
 	#landingspagina{
 		visibility: hidden;
 	}
-	
 	
 }
 @media (min-width: 480px) {

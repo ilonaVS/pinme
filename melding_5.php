@@ -27,7 +27,7 @@ if (isset($_POST['subrub'])) {
 </head>
 <body>
 <?php include_once("nav.inc.php"); ?>
-
+<div class="main">
 <a href="melding_4.php" class="back_btn"><img src="images/pinme_backbtn.png"></a>
 <h2>Melding toevoegen</h2>
 
@@ -56,7 +56,8 @@ if (isset($_POST['subrub'])) {
     </div> 
     
 </form>
-
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 </html>

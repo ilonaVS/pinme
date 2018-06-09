@@ -20,7 +20,7 @@ if(!isset($_SESSION)){
 </head>
 <body>
 <?php include_once("nav.inc.php"); ?>
-
+<div id="melding1">
 <div id="googleMap"></div>
     
     
@@ -39,6 +39,6 @@ if(!isset($_SESSION)){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/googleMaps.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEovYLDDYFLJ6SCyDn-lxjl3N2WHM27DI&callback=initMap"></script> 
-
+</div>
 </body>
 </html>
