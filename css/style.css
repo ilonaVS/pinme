@@ -114,21 +114,32 @@ textarea {
         background-color: #29c2de;
         width: 100%;
     }
-    #tekst {
-        margin: 60px 0% 70px 10%;
-        width: 80%;
+    .infotext {
+        margin: 0px 7.5% 40px 7.5%;
+        width: 85%;
         height: 200px;
-        font-size: 14px;
         padding: 0px;
+        text-align: center;
     }
-    .info #logo {
-        margin: 30% 20% 0px 20%;
+    .info_logo {
+        width:50%;
+        margin:60px 25% 60px 25%;
     }
     .info p {
         color: #ffffff;
-        text-align: center;
-        line-height: 22px;
-        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.8em;
+        margin-bottom: 20px;
+    }
+    .info h4 {
+        width:90%;
+        margin:0px 5% 30px 5%;
+        font-size:20px;
+        color: #fff;
+        font-weight:bold;
+        line-height:1.5em;
+        text-align:center;
+        margin-bottom:20px;
     }
     #informatie {
         position: absolute;

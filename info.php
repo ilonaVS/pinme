@@ -15,11 +15,12 @@
 <div class="info">
   <div id="lijn"></div>
 	
-	<img id="logo" src="images/logo_wit.png" alt="logo">
+	<img class="info_logo" src="images/logo_wit.png" alt="logo">
 	
-	<div id="tekst">
-	<p>Dit is de meldingsapp van Mechelen. Met één pin help je Mechelen tot een betere stad.</p>
-    <p>Bekijk alle meldingen in real-time en raadpleeg jouw persoonlijk dossier.</p>
+	<div class="infotext">
+	<h4>Welkom op de meldingsapp van Mechelen!</h4>
+    <p>Zie jij ook weleens een overvolle vuilnisbak? Of maken je buren teveel lawaai?</p>
+    <p>Meld dan vanaf nu jouw ongemakken of problemen in de stad en blijf op de hoogte van de vooruitgang van je melding! </p>
 	</div>
 	
 	</div>
